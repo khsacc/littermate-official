@@ -1,10 +1,11 @@
-# Littermate-official 
+# Littermate-official
+
 本プロジェクトでは [Next.js](https://nextjs.org/) を Typescript で使用します。
 
 ## 環境構築
 
-- パッケージ管理には``yarn``を用います。``npm``は利用しません。
-- node のバージョンは 15.0.0 です。
+- パッケージ管理には`yarn`を用います。`npm`は利用しません。
+- node のバージョンは 15.0.1 です。
 - エディタには VSCode を推奨し、VSCode 用の設定ファイル類も git の管理下に含めることにします。
   - 拡張機能として、prettier / eslint をインストールしてください。
 
@@ -20,8 +21,8 @@ yarn dev
 
 ## Contributions
 
-- 基本的には機能別にブランチを切ってください。たとえば``feature/top-page``のような命名にしてください。
-- 特定のバグフィックスなどの修正を目的とする場合、``fix/loading-animation``のような命名にしてください。
+- 基本的には機能別にブランチを切ってください。たとえば`feature/top-page`のような命名にしてください。
+- 特定のバグフィックスなどの修正を目的とする場合、`fix/loading-animation`のような命名にしてください。
 - コミットはできるだけ細かく！
-- 一通り開発が終了したら、``dev``ブランチに向けてPull Requestを出してください。
+- 一通り開発が終了したら、`dev`ブランチに向けて Pull Request を出してください。
 - 修正すべき事項はできる限り Issue で管理してください。
