@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Littermate-official 
+本プロジェクトでは [Next.js](https://nextjs.org/) を Typescript で使用します。
 
-## Getting Started
+## 環境構築
 
-First, run the development server:
+- パッケージ管理には``yarn``を用います。``npm``は利用しません。
+- node のバージョンは 15.0.0 です。
+- エディタには VSCode を推奨し、VSCode 用の設定ファイル類も git の管理下に含めることにします。
+  - 拡張機能として、prettier / eslint をインストールしてください。
+
+## 開発用サーバーの起動
+
+ターミナルで
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+を実行してください。 [http://localhost:3000](http://localhost:3000) にコンパイルされた結果が表示されます。
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributions
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 基本的には機能別にブランチを切ってください。たとえば``feature/top-page``のような命名にしてください。
+- 特定のバグフィックスなどの修正を目的とする場合、``fix/loading-animation``のような命名にしてください。
+- コミットはできるだけ細かく！
+- 一通り開発が終了したら、``dev``ブランチに向けてPull Requestを出してください。
+- 修正すべき事項はできる限り Issue で管理してください。
