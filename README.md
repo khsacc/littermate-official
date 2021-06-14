@@ -34,3 +34,11 @@ yarn dev
 - コミットはできるだけ細かく！
 - 一通り開発が終了したら、`dev`ブランチに向けて Pull Request を出してください。
 - 修正すべき事項はできる限り Issue で管理してください。
+
+## Coding
+
+- `.eslintrc.js`以外の全てのファイルは TypeScript で記述します。
+- エディタとして VSCode を利用してください。自動でコードがフォーマットされます。
+- CSS には CSS-in-JS ライブラリとして[`@material-ui/core`](https://material-ui.com/)を利用します。
+  - レスポンシブ対応に関する既知のバグがありますが、react-jss など他のライブラリでは gsap が利用できなかったので諦めました。
+- アニメーション関連のライブラリとして、gsap と [react-gsap](https://bitworking.github.io/react-gsap/) を導入しています。基本的には react-gsap の記法に従い、それでは実現できない場合（`<ScrollTrigger>`周りの型システムに不完全な部分があるようです）には gsap の記法を使うというルールにしようと思います。
