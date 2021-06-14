@@ -40,5 +40,5 @@ yarn dev
 - `.eslintrc.js`以外の全てのファイルは TypeScript で記述します。
 - エディタとして VSCode を利用してください。自動でコードがフォーマットされます。
 - CSS には CSS-in-JS ライブラリとして[`@material-ui/core`](https://material-ui.com/)を利用します。
-  - レスポンシブ対応に関する既知のバグがありますが、react-jss など他のライブラリでは gsap が利用できなかったので諦めました。
+  - レスポンシブ対応に関する既知のバグがありますが、react-jss など他のライブラリでは gsap が利用できなかったので諦めました。基本的に「モバイルファースト」で書けば問題ないはずです。iPhone SE 対応したい場合相談してください。
 - アニメーション関連のライブラリとして、gsap と [react-gsap](https://bitworking.github.io/react-gsap/) を導入しています。基本的には react-gsap の記法に従い、それでは実現できない場合（`<ScrollTrigger>`周りの型システムに不完全な部分があるようです）には gsap の記法を使うというルールにしようと思います。
