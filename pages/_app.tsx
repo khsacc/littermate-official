@@ -5,6 +5,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "../styles/theme";
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -29,8 +30,9 @@ export default function MyApp(props) {
       <ThemeProvider theme={Theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Header></Header>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </React.Fragment>
   );
