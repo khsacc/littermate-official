@@ -15,6 +15,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           {/* todo: add meta tags */}
+          {/* Adobe Fonts */}
+          <link
+            rel="stylesheet"
+            href="https://use.typekit.net/vpq5jbc.css"
+          ></link>
         </Head>
         <body>
           <Main />
