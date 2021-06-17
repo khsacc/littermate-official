@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../../styles/theme";
+import { LittermateLogo } from "../../Logo";
 import { topImage } from "./parameters";
 
 const useStyles = makeStyles((theme) => {
@@ -13,9 +14,14 @@ const useStyles = makeStyles((theme) => {
       backgroundSize: "auto 100vh",
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
+      position: "relative",
     },
-    img: {
-      height: "100vh",
+    topLogo: {
+      position: "absolute",
+      width: "40vw",
+      right: 25,
+      top: 45,
+      color: "white",
     },
   };
 });
@@ -24,7 +30,9 @@ export const Catch: NextPage = () => {
   const classes = useStyles(Theme);
   return (
     <>
-      <div className={classes.imgWrapper}></div>
+      <div className={classes.imgWrapper}>
+        <LittermateLogo className={classes.topLogo} />
+      </div>
     </>
   );
 };
