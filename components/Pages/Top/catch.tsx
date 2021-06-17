@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => {
       backgroundAttachment: "fixed",
       position: "relative",
     },
+    // todo: iPhone X で上部が隠れないことを確認する
     topLogo: {
       position: "absolute",
       width: "40vw",
