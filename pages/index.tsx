@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { NextPage } from "next";
-import { Catch } from "../components/Pages/Top";
+import { Catch, Story, ItemComponent } from "../components/Pages/Top";
 import { Theme } from "../styles/theme";
 
 const useStyles = makeStyles((theme) => ({}));
@@ -10,6 +10,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Catch />
+      <Story />
+      <ItemComponent />
     </>
   );
 };

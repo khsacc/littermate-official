@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           {/* todo: add meta tags */}
 
           {/* Adobe Fonts */}
-          <link rel="stylesheet" href="https://use.typekit.net/vpq5jbc.css" />
+          <link rel="stylesheet" href="https://use.typekit.net/zah0lux.css" />
           {/* Google Analytics */}
 
           <>
