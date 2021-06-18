@@ -4,7 +4,7 @@ import { Theme } from "../../styles/theme";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    padding: 30,
+    // padding: 30,
     background: "#111",
     color: "white",
   },
@@ -12,5 +12,5 @@ const useStyles = makeStyles((theme) => ({
 
 export const Header: NextPage = () => {
   const classes = useStyles(Theme);
-  return <header className={classes.wrapper}>header</header>;
+  return <header className={classes.wrapper}></header>;
 };
