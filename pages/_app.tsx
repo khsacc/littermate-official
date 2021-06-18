@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -6,17 +6,34 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "../styles/theme";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import router from "next/router";
+import * as gtag from "../plugins/gtag";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
+  // Remove the server-side injected CSS to avoid hydration errors.
   React.useEffect(() => {
-    // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+
+  useEffect(() => {
+    if (!gtag.isGaIdSet) {
+      return;
+    }
+
+    const handleRouteChange = (path: string) => {
+      gtag.pageView(path);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <React.Fragment>

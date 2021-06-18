@@ -2,6 +2,7 @@ import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import { Theme } from "../styles/theme";
+import { GA_ID, isGaIdSet } from "../plugins/gtag";
 
 export default class MyDocument extends Document {
   render() {
@@ -10,11 +11,34 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={Theme.palette.primary.main} />
+          {/* Roboto font (default font for material-ui) */}
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           {/* todo: add meta tags */}
+
+          {/* Adobe Fonts */}
+          <link rel="stylesheet" href="https://use.typekit.net/zah0lux.css" />
+          {/* Google Analytics */}
+
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+            <script
+              async
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GA_ID}', {
+                      page_path: window.location.pathname,
+                    });`,
+              }}
+            />
+          </>
         </Head>
         <body>
           <Main />
