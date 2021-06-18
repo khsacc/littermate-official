@@ -26,18 +26,18 @@ const Home: NextPage = () => {
   const classes = useStyles(Theme);
   return (
     <>
-      {/* <Catch />
+      <Catch />
       <Story />
-      <ItemComponent /> */}
+      <ItemComponent />
       {/* 仮置 */}
-      <div className={classes.comingSoon}>
+      {/* <div className={classes.comingSoon}>
         <div>
           <LittermateLogo className={classes.logo} /> <br />
           <Typography className={classes.letters} variant="body1">
             Official Website Coming Soon
           </Typography>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
