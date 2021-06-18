@@ -11,4 +11,11 @@ export const Theme = createMuiTheme({
       xl: 1920,
     },
   },
+  typography: {
+    h2: {
+      fontFamily: "mr-eaves-modern, sans-serif",
+      fontWeight: 200,
+      fontStyle: "italic",
+    },
+  },
 });
