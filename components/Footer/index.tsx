@@ -36,7 +36,7 @@ export const Footer: NextPage = () => {
   const classes = useStyles(Theme);
   return (
     <footer className={classes.wrapper}>
-      <LittermateLogo className={classes.logo} />
+      {/* <LittermateLogo className={classes.logo} /> */}
       {/* SNS logo */}
       <a href="https://www.instagram.com/littermate_official/">
         <img className={classes.social} src="/image/social/instagram.svg" />
