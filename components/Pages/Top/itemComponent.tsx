@@ -2,99 +2,122 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
+import { itemData, ItemDatum, ItemImage } from "../../../data/item";
 
-const useStyles = makeStyles((theme) => ({
-  imgContainer: {
-    width: "100vw",
-    height: "70vh",
-    backgroundPosition: "center",
-    backgroundSize: "auto 100vh",
-    backgroundRepeat: "no-repeat",
-    transition: "all 0.7s ease-in-out",
-  },
-  heading: {
-    textAlign: "center",
-    paddingTop: 10,
-  },
-  colourNumber: {
-    textAlign: "center",
-    padding: 5,
-  },
-  colourIndicatorContainer: {
-    // textAlign: "right",
-    padding: 5,
-    height: 40,
-    // verticalAlign: "center",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  colourIndicator: {
-    width: 25,
-    height: 25,
-    borderRadius: "50%",
-    margin: "0 10px",
-    transition: "all 0.1s ease-out",
-  },
-  colourIndicatorFocused: {
-    width: 30,
-    height: 30,
-  },
-}));
+const useStyles = makeStyles((theme) => {
+  const left = "12vw";
+  return {
+    imgContainer: {
+      width: "100%",
+      height: "100%",
+      backgroundPosition: "center",
+      backgroundSize: "auto 100vh",
+      backgroundRepeat: "no-repeat",
+      transition: "all 0.7s ease-in-out",
+      position: "absolute",
+      top: 0,
+      left: "26vw",
+    },
+    heading: {
+      textAlign: "center",
+      paddingTop: 10,
+    },
+    kind: {
+      fontWeight: 700,
+      paddingLeft: "7.5vw",
+      marginBottom: "1vh",
+      marginTop: "115px",
+    },
+    itemContainer: {
+      // display: "grid",
+      position: "relative",
+      gridTemplateColumns: "25vw 1fr",
+      height: 500,
+      marginTop: "40px",
+    },
+    itemName: {
+      transform: `rotate(-90deg) translateX(-22%) translateY(-15vw)`,
+      fontSize: "20vw",
+      transformOrigin: "center",
+      height: "fit-content",
+      width: "fit-content",
+      position: "absolute",
+      top: 0,
+      left: "11vw",
+    },
+    itemImage: {},
+    itemColours: {
+      position: "absolute",
+      bottom: 0,
+      left: "8.5vw",
+      textAlign: "right",
+      width: "fit-content",
+      fontSize: "6vw",
+      fontFamily: "futura-pt-condensed, sans-serif",
+      fontWeight: 700,
+      fontStyle: "normal",
+      lineHeight: 2,
+      padding: 0,
+    },
+    itemColour: {
+      listStyle: "none",
+    },
+  };
+});
 
-export const ItemComponent: NextPage = () => {
+export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   const classes = useStyles(Theme);
 
   const [currentDataIndex, setCurrentDataIndex] = useState(0);
-  const data = [
-    {
-      colorDisplay: "green",
-      colour: "#81ed66",
-      img: "/image/S310/Green_2_2.jpg",
-    },
-    {
-      colorDisplay: "blue",
-      colour: "#66b0ed",
-      img: "/image/S310/Blue_3_3.jpg",
-    },
-    {
-      colorDisplay: "red",
-      colour: "#ed6666",
-      img: "/image/S310/Red_3_2.jpg",
-    },
-  ];
+  const displayData = {
+    ...datum,
+    topImages: datum.images.reduce((pre: ItemImage[], cur) => {
+      return pre.some((__preDatum) => __preDatum.colour === cur.colour)
+        ? pre
+        : [...pre, cur];
+    }, []),
+  };
+
   return (
     <>
-      <div
-        className={classes.imgContainer}
-        style={{ backgroundImage: `url(${data[currentDataIndex].img})` }}
-      ></div>
-      <Typography variant="h3" className={classes.heading}>
-        S310
-      </Typography>
-      <Typography className={classes.colourNumber}>
+      <Typography className={classes.kind} variant="h3">
         Long Sleeve T-shirt <br />
-        {data.length} Colours
+        {/* {data.length} Colours */}
       </Typography>
-      <div className={classes.colourIndicatorContainer}>
-        {data.map((datum, idx) => (
-          <div
-            key={idx}
-            className={[
-              classes.colourIndicator,
-              idx === currentDataIndex ? classes.colourIndicatorFocused : "",
-            ].join(" ")}
-            style={
-              idx === currentDataIndex
-                ? { backgroundColor: datum.colour }
-                : { border: `${datum.colour} 5px solid` }
-            }
-            onClick={() => {
-              setCurrentDataIndex(idx);
-            }}
-          ></div>
-        ))}
+      <div className={classes.itemContainer}>
+        <Typography variant="h3" className={classes.itemName}>
+          S310
+        </Typography>
+        <div
+          className={classes.imgContainer}
+          style={{
+            backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
+          }}
+        ></div>
+        <ul className={classes.itemColours}>
+          {displayData.topImages.map((colour, colourIdx) => (
+            <li key={colourIdx} className={classes.itemColour}>
+              <a
+                onClick={() => {
+                  setCurrentDataIndex(colourIdx);
+                }}
+              >
+                {colour.colour}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
+    </>
+  );
+};
+
+export const ItemList: NextPage = () => {
+  return (
+    <>
+      {itemData.map((datum) => (
+        <ItemComponent datum={datum} key={datum.name} />
+      ))}
     </>
   );
 };
