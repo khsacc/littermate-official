@@ -36,7 +36,11 @@ export const Social: NextPage = () => {
   return (
     <div className={classes.wrapper}>
       {/* SNS logo */}
-      <a href="https://www.instagram.com/littermate_official/">
+      <a
+        href="https://www.instagram.com/littermate_official/"
+        target="_blank"
+        rel="external nofollow"
+      >
         <img className={classes.social} src="/image/social/instagram.svg" />
       </a>
       <a
