@@ -20,12 +20,13 @@ const useStyles = makeStyles((theme) => {
       justifyContent: "center",
       alignItems: "center",
       flexDirection: "column",
-      animation: "$wrapperAnimation 0.2s 0.6s ease-in-out",
+      animation: "$wrapperAnimation 0.2s 0.6s ease-in-out 1",
     },
     logo: {
       display: "block",
       width: "40%",
-      animation: "$logoAnimation 0.3s ease-in-out",
+      maxWidth: "350px",
+      animation: "$logoAnimation 0.3s ease-in-out 1",
     },
     "@keyframes logoAnimation": {
       "0%": { opacity: 0 },
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => {
     },
     "@keyframes wrapperAnimation": {
       "0%": { opacity: 1 },
-      "100%": { opacity: 0 },
+      "100%": { opacity: 0, transform: "translateY(-10px)" },
     },
   };
 });
