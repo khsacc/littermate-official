@@ -17,7 +17,27 @@ const useStyles = makeStyles((theme) => {
       position: "absolute",
       top: 0,
       left: "26vw",
+      [theme.breakpoints.up("sm")]: {
+        backgroundSize: "100%",
+        // display: "none",
+      },
     },
+    // imgContainerPc: {
+    //   width: "100%",
+    //   height: "180%",
+    //   backgroundPosition: "center",
+    //   backgroundSize: "auto 100vh",
+    //   backgroundRepeat: "no-repeat",
+    //   transition: "all 0.7s ease-in-out",
+    //   position: "absolute",
+    //   top: 0,
+    //   left: "26vw",
+    //   display: "none",
+    //   [theme.breakpoints.up("sm")]: {
+    //     // backgroundSize: "100%",
+    //     display: "block",
+    //   },
+    // },
     heading: {
       textAlign: "center",
       paddingTop: 10,
@@ -34,6 +54,9 @@ const useStyles = makeStyles((theme) => {
       // gridTemplateColumns: "25vw 1fr",
       height: 500,
       // marginTop: "40px",
+      [theme.breakpoints.up("sm")]: {
+        height: 700,
+      },
     },
     itemName: {
       transform: `rotate(-90deg) translateX(-22%) translateY(-15vw)`,
@@ -47,6 +70,17 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up(540)]: {
         fontSize: 120,
         transform: `rotate(-90deg) translateX(-22%) translateY(-70%)`,
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 70,
+        transform: `rotate(0) translateX(0%) translateY(0)`,
+        left: "7.5vw",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 90,
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: 100,
       },
     },
     itemImage: {},
@@ -65,6 +99,11 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up(540)]: {
         fontSize: 35,
         left: "8%",
+      },
+      [theme.breakpoints.up("sm")]: {
+        left: "7.5vw",
+        textAlign: "left",
+        top: "150px",
       },
     },
     itemColour: {
@@ -102,6 +141,12 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
             backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
           }}
         ></div>
+        {/* <div
+          className={classes.imgContainerPc}
+          style={{
+            backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
+          }}
+        ></div> */}
         <ul className={classes.itemColours}>
           {displayData.topImages.map((colour, colourIdx) => (
             <li key={colourIdx} className={classes.itemColour}>
