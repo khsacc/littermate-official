@@ -8,8 +8,10 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import router from "next/router";
 import * as gtag from "../plugins/gtag";
+import { MenuSp } from "../components/Menu/menuSp";
+import { MenuPc } from "../components/Menu/menuPc";
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((theme) => {
   return {
     wholeWrapper: {
       position: "relative",
@@ -21,10 +23,19 @@ const useStyles = makeStyles(() => {
       right: 0,
       height: "100%",
       width: "50%",
+      maxWidth: 300,
       backgroundImage: "url('/image/sequence/sequence.svg')",
+      [theme.breakpoints.up("sm")]: {
+        // display: "none",
+      },
     },
     pageWrapper: {
       minHeight: "100vh",
+      overflow: "hidden",
+      [theme.breakpoints.up("sm")]: {
+        width: "calc(100vw - 300px)",
+        marginLeft: 300,
+      },
     },
   };
 });
@@ -71,6 +82,8 @@ export default function MyApp(props) {
         <Header />
         <div className={classes.wholeWrapper}>
           <div className={classes.sequence}></div>
+          <MenuSp />
+          <MenuPc />
           <div className={classes.pageWrapper}>
             <Component {...pageProps} />
           </div>

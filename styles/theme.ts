@@ -5,7 +5,7 @@ export const Theme = createMuiTheme({
     values: {
       // とりあえずデフォルト値。何かと便利なので外に出しておく
       xs: 0,
-      sm: 600,
+      sm: 750,
       md: 960,
       lg: 1280,
       xl: 1920,

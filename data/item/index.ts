@@ -5,13 +5,14 @@ export type ItemImage = {
 export type ItemDatum = {
   name: string;
   kind: string;
-
+  isNew: boolean;
   images: ItemImage[];
 };
 export const itemData: ItemDatum[] = [
   {
     name: "S310",
     kind: "long-sleeve T-shirt",
+    isNew: true,
     images: [
       {
         colour: "Green",

@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../styles/theme";
-import { LittermateLogo } from "../Logo";
+import { MenuContent } from "./menuContent";
 
 const useStyles = makeStyles((theme) => {
   const menuBars = {
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => {
       right: "20px",
       bottom: "20px",
       zIndex: 9999,
+      [theme.breakpoints.up("sm")]: {
+        display: "none",
+      },
     },
     wrapper: {
       position: "relative",
@@ -65,24 +68,24 @@ const useStyles = makeStyles((theme) => {
       bottom: 0,
       height: "100vh",
       width: 150,
-      background: theme.palette.grey[900],
       opacity: 0,
       transition: "0.5s",
       zIndex: 9998,
+      transform: "translateX(150px)",
+      // display: "none",
+      [theme.breakpoints.up("sm")]: {
+        display: "none",
+      },
     },
     menuModalOpen: {
       opacity: 1,
-    },
-    logo: {
-      color: "white",
-      width: "80%",
-      display: "block",
-      margin: "30px auto",
+      transform: "translateX(0px)",
+      // display: "",
     },
   };
 });
 
-export const Menu: NextPage = () => {
+export const MenuSp: NextPage = () => {
   const classes = useStyles(Theme);
   const [toggleOpen, setToggleOpen] = useState(false);
   return (
@@ -93,10 +96,10 @@ export const Menu: NextPage = () => {
           toggleOpen ? classes.menuModalOpen : "",
         ].join(" ")}
       >
-        <LittermateLogo className={classes.logo} />
+        <MenuContent />
       </div>
       <div className={classes.fix}>
-        <div
+        <menu
           className={[
             classes.wrapper,
             toggleOpen ? classes.wrapperOpen : "",
@@ -112,7 +115,7 @@ export const Menu: NextPage = () => {
           >
             <div></div>
           </div>
-        </div>
+        </menu>
       </div>
     </>
   );
