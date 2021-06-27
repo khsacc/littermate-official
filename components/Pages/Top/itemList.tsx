@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => {
       position: "relative",
       gridTemplateColumns: "25vw 1fr",
       height: 500,
-      marginTop: "40px",
+      // marginTop: "40px",
     },
     itemName: {
       transform: `rotate(-90deg) translateX(-22%) translateY(-15vw)`,
@@ -44,6 +44,10 @@ const useStyles = makeStyles((theme) => {
       position: "absolute",
       top: 0,
       left: "11vw",
+      [theme.breakpoints.up(540)]: {
+        fontSize: 120,
+        transform: `rotate(-90deg) translateX(-22%) translateY(-70%)`,
+      },
     },
     itemImage: {},
     itemColours: {
@@ -58,6 +62,10 @@ const useStyles = makeStyles((theme) => {
       fontStyle: "normal",
       lineHeight: 2,
       padding: 0,
+      [theme.breakpoints.up(540)]: {
+        fontSize: 35,
+        left: "8%",
+      },
     },
     itemColour: {
       listStyle: "none",

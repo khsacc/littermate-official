@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => {
     pageWrapper: {
       minHeight: "100vh",
       overflow: "hidden",
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up(850)]: {
         width: "calc(100vw - 300px)",
         marginLeft: 300,
       },
@@ -88,7 +88,6 @@ export default function MyApp(props) {
             <Component {...pageProps} />
           </div>
         </div>
-
         <Footer />
       </ThemeProvider>
     </React.Fragment>
