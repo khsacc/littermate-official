@@ -5,6 +5,15 @@ import { Theme } from "../../styles/theme";
 import { LittermateLogo } from "../Logo";
 
 const useStyles = makeStyles((theme) => {
+  const menuBars = {
+    background: theme.palette.grey[900],
+    content: "''",
+    display: "block",
+    height: 4,
+    borderRadius: 1,
+    margin: "7px 0",
+    transition: "0.5s",
+  };
   return {
     fix: {
       position: "fixed",
@@ -18,12 +27,13 @@ const useStyles = makeStyles((theme) => {
       height: 90,
       width: 90,
       padding: 20,
-      border: `1.5px solid ${theme.palette.primary.main}`,
+      border: `1.5px solid ${theme.palette.grey[900]}`,
       borderRadius: "50%",
       transition: "0.5s",
     },
     wrapperOpen: {
-      background: theme.palette.primary.main,
+      background: theme.palette.grey[900],
+      border: `1.5px solid white`,
     },
     menu: {
       top: "50%",
@@ -31,33 +41,9 @@ const useStyles = makeStyles((theme) => {
       transform: "translate(-50%, -50%)",
       position: "absolute",
       width: "50px",
-      "&:before": {
-        background: theme.palette.primary.main,
-        content: "''",
-        display: "block",
-        height: 4,
-        borderRadius: 1,
-        margin: "7px 0",
-        transition: "0.5s",
-      },
-      "&:after": {
-        background: theme.palette.primary.main,
-        content: "''",
-        display: "block",
-        height: 4,
-        borderRadius: 1,
-        margin: "7px 0",
-        transition: "0.5s",
-      },
-      "& div": {
-        background: theme.palette.primary.main,
-        content: "''",
-        display: "block",
-        height: 4,
-        borderRadius: 1,
-        margin: "7px 0",
-        transition: "0.5s",
-      },
+      "&:before": menuBars,
+      "&:after": menuBars,
+      "& div": menuBars,
     },
     menuOpen: {
       "&:before": {
@@ -82,6 +68,7 @@ const useStyles = makeStyles((theme) => {
       background: theme.palette.grey[900],
       opacity: 0,
       transition: "0.5s",
+      zIndex: 9998,
     },
     menuModalOpen: {
       opacity: 1,
