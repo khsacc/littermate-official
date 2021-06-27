@@ -26,9 +26,9 @@ export const Story: NextPage = () => {
         Brand Story
       </Typography>
       <Typography variant="body1" className={classes.bodyCopy}>
-        情に棹させば流される。
+        情に棹させば流される。あああああああ
         <br />
-        智に働けば角が立つ。
+        智に働けば角が立つ。ああああ
         <br />
         どこへ越しても住みにくいと悟った時、
         <br />

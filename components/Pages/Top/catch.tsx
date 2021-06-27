@@ -32,7 +32,7 @@ export const Catch: NextPage = () => {
   return (
     <>
       <div className={classes.imgWrapper}>
-        <LittermateLogo className={classes.topLogo} />
+        <LittermateLogo size="min" className={classes.topLogo} />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
-import { Catch, Story, ItemComponent } from "../components/Pages/Top";
+import { Catch, Story, ItemList } from "../components/Pages/Top";
 import { Theme } from "../styles/theme";
 import { LittermateLogo } from "../components/Logo";
 
@@ -28,16 +28,7 @@ const Home: NextPage = () => {
     <>
       <Catch />
       <Story />
-      <ItemComponent />
-      {/* 仮置 */}
-      {/* <div className={classes.comingSoon}>
-        <div>
-          <LittermateLogo className={classes.logo} /> <br />
-          <Typography className={classes.letters} variant="body1">
-            Official Website Coming Soon
-          </Typography>
-        </div>
-      </div> */}
+      <ItemList />
     </>
   );
 };
