@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => {
     itemContainer: {
       // display: "grid",
       position: "relative",
-      gridTemplateColumns: "25vw 1fr",
+      // gridTemplateColumns: "25vw 1fr",
       height: 500,
       // marginTop: "40px",
     },
