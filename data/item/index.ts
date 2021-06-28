@@ -16,11 +16,11 @@ export const itemData: ItemDatum[] = [
     images: [
       {
         colour: "Green",
-        img: "/image/S310/Green_2_2.jpg",
+        img: "/image/S310/Green_3_2.jpg",
       },
       {
         colour: "Blue",
-        img: "/image/S310/Blue_3_3.jpg",
+        img: "/image/S310/Blue_1_2.jpg",
       },
       {
         colour: "Red",

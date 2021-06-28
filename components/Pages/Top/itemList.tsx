@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => {
   return {
     imgContainer: {
       width: "100%",
+      maxWidth: 750,
       height: "100%",
       backgroundPosition: "center",
       backgroundSize: "auto 100vh",
@@ -47,6 +48,13 @@ const useStyles = makeStyles((theme) => {
       paddingLeft: "7.5vw",
       marginBottom: "1vh",
       marginTop: "115px",
+    },
+    new: {
+      background: theme.palette.grey[900],
+      color: "white",
+      display: "inline-block",
+      padding: "0 5px",
+      marginRight: 5,
     },
     itemContainer: {
       // display: "grid",
@@ -108,6 +116,27 @@ const useStyles = makeStyles((theme) => {
     },
     itemColour: {
       listStyle: "none",
+      // position: "relative",
+    },
+    itemColourLink: {
+      position: "relative",
+      cursor: "pointer",
+    },
+
+    selectedColour: {
+      width: 8,
+      height: 4,
+      display: "block",
+      position: "absolute",
+      right: "-35%",
+      top: "50%",
+      // transform: "translateY(-50%)",
+      backgroundColor: theme.palette.grey[900],
+      opacity: 1,
+      transition: "0.5s",
+    },
+    selectedColourHidden: {
+      opacity: 0,
     },
   };
 });
@@ -128,12 +157,13 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   return (
     <>
       <Typography className={classes.kind} variant="h3">
-        Long Sleeve T-shirt <br />
+        {datum.isNew && <span className={classes.new}>NEW</span>}
+        {datum.kind}
         {/* {data.length} Colours */}
       </Typography>
       <div className={classes.itemContainer}>
         <Typography variant="h3" className={classes.itemName}>
-          S310
+          {datum.name}
         </Typography>
         <div
           className={classes.imgContainer}
@@ -151,11 +181,22 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
           {displayData.topImages.map((colour, colourIdx) => (
             <li key={colourIdx} className={classes.itemColour}>
               <a
+                className={classes.itemColourLink}
                 onClick={() => {
                   setCurrentDataIndex(colourIdx);
                 }}
               >
                 {colour.colour}
+                {
+                  <span
+                    className={[
+                      classes.selectedColour,
+                      colourIdx === currentDataIndex
+                        ? ""
+                        : classes.selectedColourHidden,
+                    ].join(" ")}
+                  ></span>
+                }
               </a>
             </li>
           ))}
