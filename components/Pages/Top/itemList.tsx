@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
 import { itemData, ItemDatum, ItemImage } from "../../../data/item";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme) => {
   const left = "12vw";
@@ -18,6 +19,10 @@ const useStyles = makeStyles((theme) => {
       position: "absolute",
       top: 0,
       left: "26vw",
+      overflow: "hidden",
+      "&:hover": {
+        transform: "scale(1.01)",
+      },
       [theme.breakpoints.up("sm")]: {
         backgroundSize: "100%",
         // display: "none",
@@ -165,12 +170,16 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         <Typography variant="h3" className={classes.itemName}>
           {datum.name}
         </Typography>
-        <div
-          className={classes.imgContainer}
-          style={{
-            backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
-          }}
-        ></div>
+        <Link href={`/item/${datum.name}`}>
+          <a>
+            <div
+              className={classes.imgContainer}
+              style={{
+                backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
+              }}
+            ></div>
+          </a>
+        </Link>
         {/* <div
           className={classes.imgContainerPc}
           style={{
