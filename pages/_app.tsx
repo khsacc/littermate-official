@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => {
       maxWidth: 300,
       backgroundImage: "url('/image/sequence/sequence.svg')",
       backgroundPosition: "right",
-      backgroundRepeat: "no-repeat",
+      // backgroundRepeat: "no-repeat",
+      zIndex: -1,
       [theme.breakpoints.up("sm")]: {
         // display: "none",
       },
