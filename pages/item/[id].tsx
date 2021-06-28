@@ -69,7 +69,7 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
           {/* {data.length} Colours */}
         </Typography>
         <Typography variant="h1" className={classes.itemName}>
-          {id}
+          {data.name}
         </Typography>
 
         {data.comment.split("\n").map((line) => (
@@ -97,14 +97,14 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
 
 export async function getStaticPaths() {
   return {
-    paths: itemData.map((datum) => `/item/${datum.name}`),
+    paths: itemData.map((datum) => `/item/${datum.id}`),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const id = params.id;
-  const data = itemData.find((e) => e.name === id) || null;
+  const data = itemData.find((e) => e.id === id) || null;
   // const prjIdx = worksData.findIndex(e => e.id === id);
   // const nextPrjIdx = prjIdx + 1;
   return { props: { id, data } };

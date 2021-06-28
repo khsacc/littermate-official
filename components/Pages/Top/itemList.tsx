@@ -28,22 +28,6 @@ const useStyles = makeStyles((theme) => {
         // display: "none",
       },
     },
-    // imgContainerPc: {
-    //   width: "100%",
-    //   height: "180%",
-    //   backgroundPosition: "center",
-    //   backgroundSize: "auto 100vh",
-    //   backgroundRepeat: "no-repeat",
-    //   transition: "all 0.7s ease-in-out",
-    //   position: "absolute",
-    //   top: 0,
-    //   left: "26vw",
-    //   display: "none",
-    //   [theme.breakpoints.up("sm")]: {
-    //     // backgroundSize: "100%",
-    //     display: "block",
-    //   },
-    // },
     heading: {
       textAlign: "center",
       paddingTop: 10,
@@ -65,24 +49,32 @@ const useStyles = makeStyles((theme) => {
       // display: "grid",
       position: "relative",
       // gridTemplateColumns: "25vw 1fr",
-      height: 500,
+      height: 600,
       // marginTop: "40px",
       [theme.breakpoints.up("sm")]: {
         height: 700,
       },
     },
     itemName: {
-      transform: `rotate(-90deg) translateX(-22%) translateY(-15vw)`,
-      fontSize: "20vw",
+      transform: `rotate(-90deg) translateX(-90%) translateY(65%)`,
+      msTransformOrigin: "left",
+      MozTransformOrigin: "left",
+      WebkitTransformOrigin: "left",
+      fontSize: 70,
+      fontFamily: "mr-eaves-modern, sans-serif",
+      fontWeight: 700,
+      // fontSize: 35,
+      fontStyle: "normal",
       transformOrigin: "center",
-      height: "fit-content",
-      width: "fit-content",
+      // height: "fit-content",
+      // width: "fit-content",
       position: "absolute",
       top: 0,
-      left: "11vw",
+      left: "8vw",
+      lineHeight: "0.5",
       [theme.breakpoints.up(540)]: {
         fontSize: 120,
-        transform: `rotate(-90deg) translateX(-22%) translateY(-70%)`,
+        // transform: `rotate(-90deg) translateX(-22%) translateY(-32%)`,
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: 70,
@@ -96,11 +88,16 @@ const useStyles = makeStyles((theme) => {
         fontSize: 100,
       },
     },
+    rotateLetter: {
+      // display: "inline-block",
+      // transform: "rotate(-90deg)",
+    },
     itemImage: {},
     itemColours: {
       position: "absolute",
       bottom: 0,
-      left: "8.5vw",
+      right: "75vw",
+      // transform: "translateX(-100%)",
       textAlign: "right",
       width: "fit-content",
       fontSize: "6vw",
@@ -109,12 +106,13 @@ const useStyles = makeStyles((theme) => {
       fontStyle: "normal",
       lineHeight: 2,
       padding: 0,
+      margin: 0,
       [theme.breakpoints.up(540)]: {
         fontSize: 35,
-        left: "8%",
+        // left: "8%",
       },
       [theme.breakpoints.up("sm")]: {
-        left: "7.5vw",
+        // left: "7.5vw",
         textAlign: "left",
         top: "150px",
       },
@@ -133,7 +131,7 @@ const useStyles = makeStyles((theme) => {
       height: 4,
       display: "block",
       position: "absolute",
-      right: "-35%",
+      right: "-20px",
       top: "50%",
       // transform: "translateY(-50%)",
       backgroundColor: theme.palette.grey[900],
@@ -172,9 +170,21 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         {/* {data.length} Colours */}
       </Typography>
       <div className={classes.itemContainer}>
-        <Typography variant="h3" className={classes.itemName}>
-          {datum.name}
-        </Typography>
+        {/* <Typography variant="h3" className={classes.itemName}> */}
+        <div className={classes.itemName}>
+          {Array.from(datum.name)
+            // .reverse()
+            .map((letter, idx) => (
+              <>
+                <span key={idx} className={classes.rotateLetter}>
+                  {letter}
+                </span>
+                {/* <br /> */}
+              </>
+            ))}
+        </div>
+
+        {/* </Typography> */}
         <Link href={`/item/${datum.id}`}>
           <a>
             <div
@@ -201,7 +211,7 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
                 }}
               >
                 {colour.colour}
-                {
+                {/* {
                   <span
                     className={[
                       classes.selectedColour,
@@ -210,7 +220,7 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
                         : classes.selectedColourHidden,
                     ].join(" ")}
                   ></span>
-                }
+                } */}
               </a>
             </li>
           ))}
