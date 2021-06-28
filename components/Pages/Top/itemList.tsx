@@ -162,7 +162,12 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   return (
     <>
       <Typography className={classes.kind} variant="h3">
-        {datum.isNew && <span className={classes.new}>NEW</span>}
+        {datum.isNew && (
+          <>
+            <span className={classes.new}>NEW</span>
+            <br />
+          </>
+        )}
         {datum.kind}
         {/* {data.length} Colours */}
       </Typography>
@@ -170,7 +175,7 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         <Typography variant="h3" className={classes.itemName}>
           {datum.name}
         </Typography>
-        <Link href={`/item/${datum.name}`}>
+        <Link href={`/item/${datum.id}`}>
           <a>
             <div
               className={classes.imgContainer}
