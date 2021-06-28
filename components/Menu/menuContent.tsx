@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import { Theme } from "../../styles/theme";
 import { Social } from "../Footer/social";
 import { LittermateLogo } from "../Logo";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -28,7 +29,12 @@ export const MenuContent: NextPage = () => {
   const classes = useStyles(Theme);
   return (
     <div className={classes.wrapper}>
-      <LittermateLogo className={classes.logo} />
+      <Link href="/">
+        <a>
+          <LittermateLogo className={classes.logo} />
+        </a>
+      </Link>
+
       <Social />
     </div>
   );
