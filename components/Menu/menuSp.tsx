@@ -1,5 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { NextPage } from "next";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Theme } from "../../styles/theme";
 import { MenuContent } from "./menuContent";
@@ -88,6 +90,10 @@ const useStyles = makeStyles((theme) => {
 export const MenuSp: NextPage = () => {
   const classes = useStyles(Theme);
   const [toggleOpen, setToggleOpen] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    setToggleOpen(false);
+  }, [router.asPath]);
   return (
     <>
       <div
