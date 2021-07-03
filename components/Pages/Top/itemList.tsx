@@ -80,6 +80,7 @@ const useStyles = makeStyles((theme) => {
         fontSize: 70,
         transform: `rotate(0) translateX(0%) translateY(0)`,
         left: "7.5vw",
+        marginTop: 20,
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 90,
@@ -96,11 +97,12 @@ const useStyles = makeStyles((theme) => {
     itemColours: {
       position: "absolute",
       bottom: 0,
-      right: "75vw",
+      left: "8%",
+      // right: "75vw",
       // transform: "translateX(-100%)",
-      textAlign: "right",
+      // textAlign: "right",
       width: "fit-content",
-      fontSize: "6vw",
+      fontSize: "5.5vw",
       fontFamily: "futura-pt-condensed, sans-serif",
       fontWeight: 700,
       fontStyle: "normal",
@@ -109,10 +111,10 @@ const useStyles = makeStyles((theme) => {
       margin: 0,
       [theme.breakpoints.up(540)]: {
         fontSize: 35,
-        // left: "8%",
+        left: "8%",
       },
       [theme.breakpoints.up("sm")]: {
-        // left: "7.5vw",
+        left: "7.5vw",
         textAlign: "left",
         top: "150px",
       },
@@ -121,6 +123,7 @@ const useStyles = makeStyles((theme) => {
       listStyle: "none",
       // position: "relative",
     },
+    itemColourSelected: {},
     itemColourLink: {
       position: "relative",
       cursor: "pointer",

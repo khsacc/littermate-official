@@ -1,6 +1,7 @@
 export type ItemImage = {
   img: string;
   colour: string;
+  lookOnly: boolean;
 };
 export type ItemDatum = {
   id: string;
@@ -9,9 +10,13 @@ export type ItemDatum = {
   isNew: boolean;
   comment: string;
   images: ItemImage[];
+  photographer?: string;
+  model?: string;
+  hair?: string;
+  stylist?: string;
 };
 
-const S309_Sweatshirt = {
+const S309_Sweatshirt: ItemDatum = {
   id: "S309_Sweatshirt",
   name: "S309",
   kind: "Sweatshirt",
@@ -22,15 +27,17 @@ const S309_Sweatshirt = {
     {
       colour: "Burgundy",
       img: "/image/S309/shirt_burgundy_1.jpg",
+      lookOnly: false,
     },
     {
       colour: "White",
       img: "/image/S309/shirt_white_1.jpg",
+      lookOnly: false,
     },
   ],
 };
 
-const S310 = {
+const S310: ItemDatum = {
   id: "S310",
   name: "S310",
   kind: "Long-sleeve T-shirt",
@@ -41,16 +48,24 @@ const S310 = {
     {
       colour: "Green",
       img: "/image/S310/Green_3_2.jpg",
+      lookOnly: false,
     },
+
     {
       colour: "Blue",
       img: "/image/S310/Blue_1_2.jpg",
+      lookOnly: false,
     },
     {
       colour: "Red",
       img: "/image/S310/Red_3_2.jpg",
+      lookOnly: false,
     },
   ],
+  photographer: "Hugo Wakui",
+  stylist: "Tomoka Kume",
+  hair: "Natsuko Ogita(UpperCrust)",
+  model: "Audrey & Takumi",
 };
 
 export const itemData: ItemDatum[] = [S310, S309_Sweatshirt];
