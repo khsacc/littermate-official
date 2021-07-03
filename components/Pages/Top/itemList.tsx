@@ -2,12 +2,16 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
-import { itemData, ItemDatum, ItemImage } from "../../../data/item";
+import { data, ItemDatum, ItemImage } from "../../../data/item";
 import Link from "next/link";
 
 const useStyles = makeStyles((theme) => {
   const left = "12vw";
+
   return {
+    category: {
+      textAlign: "center",
+    },
     imgContainer: {
       width: "100%",
       maxWidth: 750,
@@ -36,7 +40,7 @@ const useStyles = makeStyles((theme) => {
       fontWeight: 700,
       paddingLeft: "7.5vw",
       marginBottom: "1vh",
-      marginTop: "115px",
+      // marginTop: "115px",
     },
     new: {
       background: theme.palette.grey[900],
@@ -50,6 +54,7 @@ const useStyles = makeStyles((theme) => {
       position: "relative",
       // gridTemplateColumns: "25vw 1fr",
       height: 600,
+      marginBottom: 65,
       // marginTop: "40px",
       [theme.breakpoints.up("sm")]: {
         height: 700,
@@ -234,10 +239,18 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
 };
 
 export const ItemList: NextPage = () => {
+  const classes = useStyles(Theme);
   return (
     <>
-      {itemData.map((datum) => (
-        <ItemComponent datum={datum} key={datum.name} />
+      {data.map((category) => (
+        <div id={category.category}>
+          <Typography variant="h2" className={classes.category}>
+            {category.category}
+          </Typography>
+          {category.items.map((datum) => (
+            <ItemComponent datum={datum} key={datum.name} />
+          ))}
+        </div>
       ))}
     </>
   );

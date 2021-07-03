@@ -1,7 +1,7 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { Linear } from "gsap/all";
 import { NextPage } from "next";
-import { itemData, ItemDatum } from "../../data/item";
+import { data, ItemDatum } from "../../data/item";
 import { Theme } from "../../styles/theme";
 
 const useStyles = makeStyles((theme) => {
@@ -137,17 +137,20 @@ const LookPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
 
 export async function getStaticPaths() {
   return {
-    paths: itemData.map((datum) => `/look/${datum.id}`),
+    paths: data.reduce(
+      (pre, cur) => [...pre, cur.items.map((item) => `item/${item.id}`)],
+      [] as string[]
+    ),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const id = params.id;
-  const data = itemData.find((e) => e.id === id) || null;
-  // const prjIdx = worksData.findIndex(e => e.id === id);
-  // const nextPrjIdx = prjIdx + 1;
-  return { props: { id, data } };
+  const itemsArray = data.reduce((pre, cur) => {
+    return [...pre, ...cur.items];
+  }, [] as ItemDatum[]);
+  const currentData = itemsArray.find((e) => e.id === id) || null;
+  return { props: { id, data: currentData } };
 }
-
 export default LookPage;

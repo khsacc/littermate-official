@@ -16,6 +16,11 @@ export type ItemDatum = {
   stylist?: string;
 };
 
+export type Category = {
+  category: string;
+  items: ItemDatum[];
+};
+
 const S309_Sweatshirt: ItemDatum = {
   id: "S309_Sweatshirt",
   name: "S309",
@@ -68,4 +73,9 @@ const S310: ItemDatum = {
   model: "Audrey & Takumi",
 };
 
-export const itemData: ItemDatum[] = [S310, S309_Sweatshirt];
+export const data: Category[] = [
+  {
+    category: "T-shirt",
+    items: [S310, S309_Sweatshirt],
+  },
+];
