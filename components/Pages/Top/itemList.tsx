@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Theme } from "../../../styles/theme";
 import { data, ItemDatum, ItemImage } from "../../../data/item";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const useStyles = makeStyles((theme) => {
   const left = "12vw";
@@ -179,18 +181,7 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
       </Typography>
       <div className={classes.itemContainer}>
         {/* <Typography variant="h3" className={classes.itemName}> */}
-        <div className={classes.itemName}>
-          {Array.from(datum.name)
-            // .reverse()
-            .map((letter, idx) => (
-              <>
-                <span key={idx} className={classes.rotateLetter}>
-                  {letter}
-                </span>
-                {/* <br /> */}
-              </>
-            ))}
-        </div>
+        <div className={classes.itemName}>{datum.name}</div>
 
         {/* </Typography> */}
         <Link href={`/item/${datum.id}`}>
@@ -240,10 +231,34 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
 
 export const ItemList: NextPage = () => {
   const classes = useStyles(Theme);
+  const router = useRouter();
+  const scrollToWrapFunc = (id: string) => {
+    if (document) {
+      const tar = document.getElementById(id).offsetTop;
+      console.log(tar);
+      if (tar) {
+        window.scrollTo({ top: tar, behavior: "smooth" });
+      }
+    }
+  };
+  useEffect(() => {
+    if (router.asPath.includes("category=")) {
+      const category = router.asPath
+        .split("?")[1]
+        .match(/category=[^\&\=]+/)[0]
+        .split("=")[1];
+      console.log(category);
+      window.onload = () => {
+        setTimeout(() => {
+          scrollToWrapFunc(category);
+        }, 650);
+      };
+    }
+  }, []);
   return (
     <>
       {data.map((category) => (
-        <div id={category.category}>
+        <div id={category.category} key={category.category}>
           <Typography variant="h2" className={classes.category}>
             {category.category}
           </Typography>

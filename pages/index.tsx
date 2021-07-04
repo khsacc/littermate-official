@@ -3,6 +3,8 @@ import { NextPage } from "next";
 import { Catch, Story, ItemList } from "../components/Pages/Top";
 import { Theme } from "../styles/theme";
 import { LittermateLogo } from "../components/Logo";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const useStyles = makeStyles((theme) => ({
   comingSoon: {
@@ -24,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Home: NextPage = () => {
   const classes = useStyles(Theme);
+  const router = useRouter();
   return (
     <>
       <Catch />

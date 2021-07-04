@@ -4,6 +4,8 @@ import { Theme } from "../../styles/theme";
 import { Social } from "../Footer/social";
 import { LittermateLogo } from "../Logo";
 import Link from "next/link";
+import { data } from "../../data/item";
+import { useRouter } from "next/router";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -22,11 +24,29 @@ const useStyles = makeStyles((theme) => {
       display: "block",
       margin: "0 auto",
     },
+    categoryLink: {
+      color: "white",
+      fontSize: "1.75em",
+      textDecoration: "underline",
+      cursor: "pointer",
+    },
   };
 });
 
 export const MenuContent: NextPage = () => {
   const classes = useStyles(Theme);
+  const router = useRouter();
+  const handleScroll = (id: string) => {
+    if (document) {
+      const tar = document.getElementById(id);
+      if (tar) {
+        window.scrollTo({
+          top: tar.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
   return (
     <div className={classes.wrapper}>
       <Link href="/">
@@ -34,8 +54,24 @@ export const MenuContent: NextPage = () => {
           <LittermateLogo className={classes.logo} />
         </a>
       </Link>
-
       <Social />
+      {data.map((category, idx) =>
+        router.pathname !== "/" ? (
+          <Link key={idx} href={`/?category=${category.category}`}>
+            <a className={classes.categoryLink}>{category}</a>
+          </Link>
+        ) : (
+          <a
+            key={idx}
+            className={classes.categoryLink}
+            onClick={() => {
+              handleScroll(category.category);
+            }}
+          >
+            {category.category}
+          </a>
+        )
+      )}
     </div>
   );
 };
