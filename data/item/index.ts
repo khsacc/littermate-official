@@ -54,3 +54,10 @@ const S310 = {
 };
 
 export const itemData: ItemDatum[] = [S310, S309_Sweatshirt];
+
+export const categoryData = [
+  {
+    category: "T-shirt",
+    items: [S310, S309_Sweatshirt],
+  },
+];
