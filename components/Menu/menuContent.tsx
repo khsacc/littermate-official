@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => {
       width: "100%",
       height: "100%",
       padding: "30px 10%",
+      color: "white",
       [theme.breakpoints.up("sm")]: {
         padding: "30px 10%",
       },
@@ -55,10 +56,19 @@ export const MenuContent: NextPage = () => {
         </a>
       </Link>
       <Social />
+      {/* <h2>Item</h2> */}
+      {/* <Link href={`/look`}>
+        <a className={classes.categoryLink}>
+          Look
+          <br />
+        </a>
+      </Link> */}
       {data.map((category, idx) =>
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
-            <a className={classes.categoryLink}>{category}</a>
+            <a className={classes.categoryLink}>
+              {category} <br />
+            </a>
           </Link>
         ) : (
           <a

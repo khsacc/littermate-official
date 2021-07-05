@@ -79,3 +79,7 @@ export const data: Category[] = [
     items: [S310, S309_Sweatshirt],
   },
 ];
+
+export const itemData = data.reduce((pre, cur) => {
+  return [...pre, ...cur.items];
+}, [] as ItemDatum[]);

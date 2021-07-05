@@ -1,6 +1,6 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
-import { Category, data, ItemDatum } from "../../data/item";
+import { Category, itemData, ItemDatum } from "../../data/item";
 import { Theme } from "../../styles/theme";
 
 const useStyles = makeStyles((theme) => {
@@ -97,20 +97,18 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
 
 export async function getStaticPaths() {
   return {
-    paths: data.reduce(
-      (pre, cur) => [...pre, cur.items.map((item) => `item/${item.id}`)],
-      [] as string[]
-    ),
+    paths: itemData.map((datum) => `/item/${datum.id}`),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const id = params.id;
-  const itemsArray = data.reduce((pre, cur: Category) => {
-    return [...pre, ...cur.items];
-  }, [] as ItemDatum[]);
-  const currentData = itemsArray.find((e) => e.id === id) || null;
+  // const itemsArray = data.reduce((pre, cur: Category) => {
+  //   return [...pre, ...cur.items];
+  // }, [] as ItemDatum[]);
+  // const currentData = itemsArray.find((e) => e.id === id) || null;
+  const currentData = itemData.find((datum) => datum.id === id) || null;
   return { props: { id, data: currentData } };
 }
 

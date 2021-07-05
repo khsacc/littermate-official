@@ -5,6 +5,7 @@ import { Theme } from "../styles/theme";
 import { LittermateLogo } from "../components/Logo";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { itemData } from "../data/item";
 
 const useStyles = makeStyles((theme) => ({
   comingSoon: {
