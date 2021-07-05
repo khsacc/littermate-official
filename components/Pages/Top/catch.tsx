@@ -19,10 +19,11 @@ const useStyles = makeStyles((theme) => {
     // todo: iPhone X で上部が隠れないことを確認する
     topLogo: {
       position: "absolute",
-      width: "40vw",
-      right: "30%",
-      top: "40%",
-      color: "black",
+      //width: "65vw",
+      width: "50vw",
+      left: "25%",
+      top: "7%",
+      color: "theme.palette.grey[900]",
     },
   };
 });
