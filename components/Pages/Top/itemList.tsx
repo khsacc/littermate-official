@@ -260,8 +260,10 @@ export const ItemCategory: NextPage<{ category: Category }> = ({
         .split("=")[1];
       console.log(__category);
       if (__category === category.category) {
-        console.log(ref);
-        ref.current.scrollIntoView();
+        setTimeout(() => {
+          ref.current.scrollIntoView();
+          console.log(ref);
+        }, 300);
       }
     }
   }, []);
