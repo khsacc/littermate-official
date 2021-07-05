@@ -34,13 +34,13 @@ const S309_Sweatshirt: ItemDatum = {
       colour: "Burgundy",
       img: "/image/S309/shirt_burgundy_1.jpg",
       lookOnly: false,
-      baseLink: "https://littermate.thebase.in/items/36132113",
+      baseLink: "https://littermate.thebase.in/items/36132089",
     },
     {
       colour: "White",
       img: "/image/S309/shirt_white_1.jpg",
       lookOnly: false,
-      baseLink: "https://littermate.thebase.in/items/36132089",
+      baseLink: "https://littermate.thebase.in/items/36132113",
     },
   ],
 };
