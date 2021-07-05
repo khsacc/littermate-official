@@ -56,13 +56,7 @@ export const MenuContent: NextPage = () => {
         </a>
       </Link>
       <Social />
-      {/* <h2>Item</h2> */}
-      {/* <Link href={`/look`}>
-        <a className={classes.categoryLink}>
-          Look
-          <br />
-        </a>
-      </Link> */}
+
       {categoryData.map((category, idx) =>
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
@@ -82,6 +76,12 @@ export const MenuContent: NextPage = () => {
           </a>
         )
       )}
+      <Link href={`/look`}>
+        <a className={classes.categoryLink}>
+          Look
+          <br />
+        </a>
+      </Link>
     </div>
   );
 };

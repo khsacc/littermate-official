@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
 import {
+  Category,
   categoryData,
   itemData,
   ItemDatum,
@@ -11,6 +12,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { useRef } from "react";
 
 const useStyles = makeStyles((theme) => {
   const left = "12vw";
@@ -244,44 +246,42 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   );
 };
 
-export const ItemList: NextPage = () => {
+export const ItemCategory: NextPage<{ category: Category }> = ({
+  category,
+}) => {
   const classes = useStyles(Theme);
   const router = useRouter();
-  const scrollToWrapFunc = (id: string) => {
-    if (document) {
-      const tar = document.getElementById(id).offsetTop;
-      console.log(tar);
-      if (tar) {
-        window.scrollTo({ top: tar, behavior: "smooth" });
-      }
-    }
-  };
+  const ref = useRef(null!);
   useEffect(() => {
     if (router.asPath.includes("category=")) {
-      const category = router.asPath
+      const __category = router.asPath
         .split("?")[1]
         .match(/category=[^\&\=]+/)[0]
         .split("=")[1];
-      console.log(category);
-      window.onload = () => {
-        setTimeout(() => {
-          scrollToWrapFunc(category);
-          console.log("scrolled");
-        }, 650);
-      };
+      console.log(__category);
+      if (__category === category.category) {
+        console.log(ref);
+        ref.current.scrollIntoView();
+      }
     }
   }, []);
   return (
+    <div id={category.category} key={category.category} ref={ref}>
+      <Typography variant="h2" className={classes.category}>
+        {category.category}
+      </Typography>
+      {category.items.map((datum) => (
+        <ItemComponent datum={datum} key={datum.name} />
+      ))}
+    </div>
+  );
+};
+
+export const ItemList: NextPage = () => {
+  return (
     <>
       {categoryData.map((category) => (
-        <div id={category.category} key={category.category}>
-          <Typography variant="h2" className={classes.category}>
-            {category.category}
-          </Typography>
-          {category.items.map((datum) => (
-            <ItemComponent datum={datum} key={datum.name} />
-          ))}
-        </div>
+        <ItemCategory category={category} key={category.category} />
       ))}
     </>
   );
