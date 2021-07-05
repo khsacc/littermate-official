@@ -48,16 +48,16 @@ export const CreateHead: NextPage<{
           property: "og:locale",
           content: "ja_JP",
         },
-      ].map((e) => (
-        <meta property={e.property} content={e.content}></meta>
+      ].map((e, i) => (
+        <meta property={e.property} content={e.content} key={i}></meta>
       ))}
       {[
         {
           name: "twitter:card",
           content: twitterCard,
         },
-      ].map((e) => (
-        <meta name={e.name} content={e.content}></meta>
+      ].map((e, i) => (
+        <meta name={e.name} content={e.content} key={i}></meta>
       ))}
     </Head>
   );
