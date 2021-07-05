@@ -26,7 +26,9 @@ const useStyles = makeStyles((theme) => {
     social: {
       height: 50,
       display: "block",
-      margin: 10,
+      marginRight: 20,
+      marginTop: 10,
+      marginBottom: 10,
     },
   };
 });

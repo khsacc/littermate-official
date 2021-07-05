@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../styles/theme";
-import { Social } from "../Footer/social";
+import { Social } from "../Common/social";
 import { LittermateLogo } from "../Logo";
 import Link from "next/link";
 import { categoryData } from "../../data/item";
@@ -30,6 +30,11 @@ const useStyles = makeStyles((theme) => {
       fontSize: "1.75em",
       textDecoration: "underline",
       cursor: "pointer",
+      display: "block",
+      width: "fit-content",
+    },
+    lookLink: {
+      marginTop: 30,
     },
   };
 });
@@ -60,9 +65,7 @@ export const MenuContent: NextPage = () => {
       {categoryData.map((category, idx) =>
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
-            <a className={classes.categoryLink}>
-              {category.category} <br />
-            </a>
+            <a className={classes.categoryLink}>{category.category}</a>
           </Link>
         ) : (
           <a
@@ -77,9 +80,8 @@ export const MenuContent: NextPage = () => {
         )
       )}
       <Link href={`/look`}>
-        <a className={classes.categoryLink}>
+        <a className={[classes.categoryLink, classes.lookLink].join(" ")}>
           Look
-          <br />
         </a>
       </Link>
     </div>
