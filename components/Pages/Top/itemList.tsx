@@ -2,7 +2,12 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
-import { data, ItemDatum, ItemImage } from "../../../data/item";
+import {
+  categoryData,
+  itemData,
+  ItemDatum,
+  ItemImage,
+} from "../../../data/item";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -257,7 +262,7 @@ export const ItemList: NextPage = () => {
   }, []);
   return (
     <>
-      {data.map((category) => (
+      {categoryData.map((category) => (
         <div id={category.category} key={category.category}>
           <Typography variant="h2" className={classes.category}>
             {category.category}

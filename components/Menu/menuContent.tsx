@@ -67,7 +67,7 @@ export const MenuContent: NextPage = () => {
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
             <a className={classes.categoryLink}>
-              {category} <br />
+              {category.category} <br />
             </a>
           </Link>
         ) : (

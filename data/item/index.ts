@@ -73,11 +73,15 @@ const S310: ItemDatum = {
   model: "Audrey & Takumi",
 };
 
-export const itemData: ItemDatum[] = [S310, S309_Sweatshirt];
+// export const itemData: ItemDatum[] = [S310, S309_Sweatshirt];
 
-export const categoryData = [
+export const categoryData: Category[] = [
   {
     category: "T-shirt",
     items: [S310, S309_Sweatshirt],
   },
 ];
+
+export const itemData = categoryData.reduce((pre, cur) => {
+  return [...pre, ...cur.items];
+}, [] as ItemDatum[]);

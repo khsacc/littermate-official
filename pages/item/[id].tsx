@@ -104,8 +104,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const id = params.id;
-  const currentData = itemData.find((datum) => datum.id === id) || null;
-  return { props: { id, data: currentData } };
+  const data = itemData.find((e) => e.id === id) || null;
+  return { props: { id, data } };
 }
 
 export default ItemPage;
