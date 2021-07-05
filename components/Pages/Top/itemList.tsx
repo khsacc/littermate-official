@@ -2,13 +2,28 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
-import { itemData, ItemDatum, ItemImage } from "../../../data/item";
+import {
+  Category,
+  categoryData,
+  itemData,
+  ItemDatum,
+  ItemImage,
+} from "../../../data/item";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const useStyles = makeStyles((theme) => {
   const left = "12vw";
+
   return {
+    category: {
+      textAlign: "center",
+    },
     imgContainer: {
       width: "100%",
+      maxWidth: 750,
       height: "100%",
       backgroundPosition: "center",
       backgroundSize: "auto 100vh",
@@ -17,27 +32,15 @@ const useStyles = makeStyles((theme) => {
       position: "absolute",
       top: 0,
       left: "26vw",
+      overflow: "hidden",
+      "&:hover": {
+        transform: "scale(1.01)",
+      },
       [theme.breakpoints.up("sm")]: {
         backgroundSize: "100%",
         // display: "none",
       },
     },
-    // imgContainerPc: {
-    //   width: "100%",
-    //   height: "180%",
-    //   backgroundPosition: "center",
-    //   backgroundSize: "auto 100vh",
-    //   backgroundRepeat: "no-repeat",
-    //   transition: "all 0.7s ease-in-out",
-    //   position: "absolute",
-    //   top: 0,
-    //   left: "26vw",
-    //   display: "none",
-    //   [theme.breakpoints.up("sm")]: {
-    //     // backgroundSize: "100%",
-    //     display: "block",
-    //   },
-    // },
     heading: {
       textAlign: "center",
       paddingTop: 10,
@@ -46,35 +49,52 @@ const useStyles = makeStyles((theme) => {
       fontWeight: 700,
       paddingLeft: "7.5vw",
       marginBottom: "1vh",
-      marginTop: "115px",
+      // marginTop: "115px",
+    },
+    new: {
+      background: theme.palette.grey[900],
+      color: "white",
+      display: "inline-block",
+      padding: "0 5px",
+      marginRight: 5,
     },
     itemContainer: {
       // display: "grid",
       position: "relative",
       // gridTemplateColumns: "25vw 1fr",
-      height: 500,
+      height: 600,
+      marginBottom: 65,
       // marginTop: "40px",
       [theme.breakpoints.up("sm")]: {
         height: 700,
       },
     },
     itemName: {
-      transform: `rotate(-90deg) translateX(-22%) translateY(-15vw)`,
-      fontSize: "20vw",
+      transform: `rotate(-90deg) translateX(-90%) translateY(65%)`,
+      msTransformOrigin: "left",
+      MozTransformOrigin: "left",
+      WebkitTransformOrigin: "left",
+      fontSize: 70,
+      fontFamily: "mr-eaves-modern, sans-serif",
+      fontWeight: 700,
+      // fontSize: 35,
+      fontStyle: "normal",
       transformOrigin: "center",
-      height: "fit-content",
-      width: "fit-content",
+      // height: "fit-content",
+      // width: "fit-content",
       position: "absolute",
       top: 0,
-      left: "11vw",
+      left: "8vw",
+      lineHeight: "0.5",
       [theme.breakpoints.up(540)]: {
         fontSize: 120,
-        transform: `rotate(-90deg) translateX(-22%) translateY(-70%)`,
+        // transform: `rotate(-90deg) translateX(-22%) translateY(-32%)`,
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: 70,
         transform: `rotate(0) translateX(0%) translateY(0)`,
         left: "7.5vw",
+        marginTop: 20,
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 90,
@@ -83,19 +103,26 @@ const useStyles = makeStyles((theme) => {
         fontSize: 100,
       },
     },
+    rotateLetter: {
+      // display: "inline-block",
+      // transform: "rotate(-90deg)",
+    },
     itemImage: {},
     itemColours: {
       position: "absolute",
       bottom: 0,
-      left: "8.5vw",
-      textAlign: "right",
+      left: "8%",
+      // right: "75vw",
+      // transform: "translateX(-100%)",
+      // textAlign: "right",
       width: "fit-content",
-      fontSize: "6vw",
+      fontSize: "5.5vw",
       fontFamily: "futura-pt-condensed, sans-serif",
-      fontWeight: 700,
+
       fontStyle: "normal",
       lineHeight: 2,
       padding: 0,
+      margin: 0,
       [theme.breakpoints.up(540)]: {
         fontSize: 35,
         left: "8%",
@@ -108,6 +135,30 @@ const useStyles = makeStyles((theme) => {
     },
     itemColour: {
       listStyle: "none",
+      fontWeight: 500,
+      // transition: "0.3s ease-in-out font-weight",
+    },
+    itemColourSelected: {
+      fontWeight: 700,
+    },
+    itemColourLink: {
+      position: "relative",
+      cursor: "pointer",
+    },
+
+    selectedColour: {
+      width: 8,
+      height: 4,
+      display: "block",
+      position: "absolute",
+      right: "-20px",
+      top: "50%",
+      backgroundColor: theme.palette.grey[900],
+      opacity: 1,
+      transition: "0.5s",
+    },
+    selectedColourHidden: {
+      opacity: 0,
     },
   };
 });
@@ -128,19 +179,30 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   return (
     <>
       <Typography className={classes.kind} variant="h3">
-        Long Sleeve T-shirt <br />
+        {datum.isNew && (
+          <>
+            <span className={classes.new}>NEW</span>
+            <br />
+          </>
+        )}
+        {datum.kind}
         {/* {data.length} Colours */}
       </Typography>
       <div className={classes.itemContainer}>
-        <Typography variant="h3" className={classes.itemName}>
-          S310
-        </Typography>
-        <div
-          className={classes.imgContainer}
-          style={{
-            backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
-          }}
-        ></div>
+        {/* <Typography variant="h3" className={classes.itemName}> */}
+        <div className={classes.itemName}>{datum.name}</div>
+
+        {/* </Typography> */}
+        <Link href={`/item/${datum.id}`}>
+          <a>
+            <div
+              className={classes.imgContainer}
+              style={{
+                backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
+              }}
+            ></div>
+          </a>
+        </Link>
         {/* <div
           className={classes.imgContainerPc}
           style={{
@@ -149,13 +211,32 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         ></div> */}
         <ul className={classes.itemColours}>
           {displayData.topImages.map((colour, colourIdx) => (
-            <li key={colourIdx} className={classes.itemColour}>
+            <li
+              key={colourIdx}
+              className={[
+                classes.itemColour,
+                colourIdx === currentDataIndex
+                  ? classes.itemColourSelected
+                  : "",
+              ].join(" ")}
+            >
               <a
+                className={classes.itemColourLink}
                 onClick={() => {
                   setCurrentDataIndex(colourIdx);
                 }}
               >
                 {colour.colour}
+                {/* {
+                  <span
+                    className={[
+                      classes.selectedColour,
+                      colourIdx === currentDataIndex
+                        ? ""
+                        : classes.selectedColourHidden,
+                    ].join(" ")}
+                  ></span>
+                } */}
               </a>
             </li>
           ))}
@@ -165,11 +246,44 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   );
 };
 
+export const ItemCategory: NextPage<{ category: Category }> = ({
+  category,
+}) => {
+  const classes = useStyles(Theme);
+  const router = useRouter();
+  const ref = useRef(null!);
+  useEffect(() => {
+    if (router.asPath.includes("category=")) {
+      const __category = router.asPath
+        .split("?")[1]
+        .match(/category=[^\&\=]+/)[0]
+        .split("=")[1];
+      console.log(__category);
+      if (__category === category.category) {
+        setTimeout(() => {
+          ref.current.scrollIntoView();
+          console.log(ref);
+        }, 300);
+      }
+    }
+  }, []);
+  return (
+    <div id={category.category} key={category.category} ref={ref}>
+      <Typography variant="h2" className={classes.category}>
+        {category.category}
+      </Typography>
+      {category.items.map((datum) => (
+        <ItemComponent datum={datum} key={datum.name} />
+      ))}
+    </div>
+  );
+};
+
 export const ItemList: NextPage = () => {
   return (
     <>
-      {itemData.map((datum) => (
-        <ItemComponent datum={datum} key={datum.name} />
+      {categoryData.map((category) => (
+        <ItemCategory category={category} key={category.category} />
       ))}
     </>
   );

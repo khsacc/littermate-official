@@ -2,7 +2,7 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../styles/theme";
 import { LittermateLogo } from "../Logo";
-import { Social } from "./social";
+import { Social } from "../Common/social";
 
 const useStyles = makeStyles((theme) => {
   return {
