@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => {
       width: "100%",
       height: "100%",
       padding: "30px 10%",
+      color: "white",
       [theme.breakpoints.up("sm")]: {
         padding: "30px 10%",
       },
