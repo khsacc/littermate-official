@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => {
       width: "fit-content",
       fontSize: "5.5vw",
       fontFamily: "futura-pt-condensed, sans-serif",
-      fontWeight: 700,
+
       fontStyle: "normal",
       lineHeight: 2,
       padding: 0,
@@ -133,9 +133,12 @@ const useStyles = makeStyles((theme) => {
     },
     itemColour: {
       listStyle: "none",
-      // position: "relative",
+      fontWeight: 500,
+      // transition: "0.3s ease-in-out font-weight",
     },
-    itemColourSelected: {},
+    itemColourSelected: {
+      fontWeight: 700,
+    },
     itemColourLink: {
       position: "relative",
       cursor: "pointer",
@@ -148,7 +151,6 @@ const useStyles = makeStyles((theme) => {
       position: "absolute",
       right: "-20px",
       top: "50%",
-      // transform: "translateY(-50%)",
       backgroundColor: theme.palette.grey[900],
       opacity: 1,
       transition: "0.5s",
@@ -207,7 +209,15 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         ></div> */}
         <ul className={classes.itemColours}>
           {displayData.topImages.map((colour, colourIdx) => (
-            <li key={colourIdx} className={classes.itemColour}>
+            <li
+              key={colourIdx}
+              className={[
+                classes.itemColour,
+                colourIdx === currentDataIndex
+                  ? classes.itemColourSelected
+                  : "",
+              ].join(" ")}
+            >
               <a
                 className={classes.itemColourLink}
                 onClick={() => {
@@ -256,6 +266,7 @@ export const ItemList: NextPage = () => {
       window.onload = () => {
         setTimeout(() => {
           scrollToWrapFunc(category);
+          console.log("scrolled");
         }, 650);
       };
     }

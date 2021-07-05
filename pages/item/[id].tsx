@@ -2,6 +2,8 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { Category, itemData, ItemDatum } from "../../data/item";
 import { Theme } from "../../styles/theme";
+import { GetItemButton } from "../../components/Common/GetItemButton";
+import { PhotoInfo } from "../../components/Common/photoInfo";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -50,6 +52,13 @@ const useStyles = makeStyles((theme) => {
       fontStyle: "normal",
       fontSize: "1.5em",
     },
+    getItemButton: {
+      textDecoration: "none",
+      color: theme.palette.grey[800],
+    },
+    getItemButtonInner: {
+      margin: "5px auto",
+    },
   };
 });
 
@@ -72,24 +81,37 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
           {data.name}
         </Typography>
 
-        {data.comment.split("\n").map((line) => (
-          <>
+        {data.comment.split("\n").map((line, idx) => (
+          <span key={idx}>
             {line}
             <br />
-          </>
+          </span>
         ))}
       </section>
       <section>
         {data.images.map((image) => (
-          <div className={classes.imageWrapper}>
-            <span className={classes.imageColour}>{image.colour}</span>
-            <img
-              className={classes.image}
-              src={image.img}
-              alt={`${id} ${image.colour}`}
-            />
-          </div>
+          <>
+            <div className={classes.imageWrapper} key={image.img}>
+              <span className={classes.imageColour}>{image.colour}</span>
+              <img
+                className={classes.image}
+                src={image.img}
+                alt={`${id} ${image.colour}`}
+              />
+            </div>
+            <a
+              href={image.baseLink}
+              rel="external"
+              target="_blank"
+              className={classes.getItemButton}
+            >
+              <GetItemButton className={classes.getItemButtonInner} />
+            </a>
+          </>
         ))}
+      </section>
+      <section>
+        <PhotoInfo data={data} />
       </section>
     </main>
   );

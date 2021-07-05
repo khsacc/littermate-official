@@ -1,8 +1,10 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { Linear } from "gsap/all";
 import { NextPage } from "next";
-import { data, ItemDatum } from "../../data/item";
+import { itemData, ItemDatum } from "../../data/item";
 import { Theme } from "../../styles/theme";
+import { GetItemButton } from "../../components/Common/GetItemButton";
+import { PhotoInfo } from "../../components/Common/photoInfo";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -65,7 +67,7 @@ const useStyles = makeStyles((theme) => {
       fontSize: "1.5em",
     },
     description: {
-      textAlign: "center",
+      // textAlign: "center",
       margin: "40px 0",
     },
   };
@@ -104,32 +106,7 @@ const LookPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
             </span>
           ))}
         </p>
-        <p>
-          {data.photographer && (
-            <span>
-              Photographer: {data.photographer}
-              <br />
-            </span>
-          )}
-          {data.stylist && (
-            <span>
-              Stylist: {data.stylist}
-              <br />
-            </span>
-          )}
-          {data.hair && (
-            <span>
-              Hair {"&"} Make: {data.hair}
-              <br />
-            </span>
-          )}
-          {data.model && (
-            <span>
-              Model: {data.model}
-              <br />
-            </span>
-          )}
-        </p>
+        <PhotoInfo data={data} />
       </section>
     </main>
   );
@@ -137,20 +114,14 @@ const LookPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
 
 export async function getStaticPaths() {
   return {
-    paths: data.reduce(
-      (pre, cur) => [...pre, cur.items.map((item) => `item/${item.id}`)],
-      [] as string[]
-    ),
+    paths: itemData.map((datum) => `/look/${datum.id}`),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const id = params.id;
-  const itemsArray = data.reduce((pre, cur) => {
-    return [...pre, ...cur.items];
-  }, [] as ItemDatum[]);
-  const currentData = itemsArray.find((e) => e.id === id) || null;
+  const currentData = itemData.find((e) => e.id === id) || null;
   return { props: { id, data: currentData } };
 }
 export default LookPage;
