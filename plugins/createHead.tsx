@@ -9,7 +9,7 @@ const defaultValues = {
   twitterCard: "summary_large_image" as TwitterCard,
 };
 
-const CreateHead: NextPage<{
+export const CreateHead: NextPage<{
   title?: string;
   image?: string;
   description?: string;
