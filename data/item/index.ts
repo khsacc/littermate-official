@@ -1,6 +1,7 @@
 export type ItemImage = {
   img: string;
   colour: string;
+  baseLink: string;
   lookOnly: boolean;
 };
 export type ItemDatum = {
@@ -33,11 +34,13 @@ const S309_Sweatshirt: ItemDatum = {
       colour: "Burgundy",
       img: "/image/S309/shirt_burgundy_1.jpg",
       lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36132113",
     },
     {
       colour: "White",
       img: "/image/S309/shirt_white_1.jpg",
       lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36132089",
     },
   ],
 };
@@ -54,17 +57,20 @@ const S310: ItemDatum = {
       colour: "Green",
       img: "/image/S310/Green_3_2.jpg",
       lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077806",
     },
 
     {
       colour: "Blue",
       img: "/image/S310/Blue_1_2.jpg",
       lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077546",
     },
     {
       colour: "Red",
       img: "/image/S310/Red_3_2.jpg",
       lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077956",
     },
   ],
   photographer: "Hugo Wakui",
