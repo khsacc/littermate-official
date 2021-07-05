@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => {
       width: "100vw",
       backgroundImage: `url(${topImage})`,
       backgroundPosition: "center",
-      backgroundSize: "auto 100vh",
+      backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
       position: "relative",
@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => {
     topLogo: {
       position: "absolute",
       width: "40vw",
-      right: 25,
-      top: 45,
-      color: "white",
+      right: "30%",
+      top: "40%",
+      color: "black",
     },
   };
 });
