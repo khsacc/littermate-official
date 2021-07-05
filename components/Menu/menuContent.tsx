@@ -4,7 +4,7 @@ import { Theme } from "../../styles/theme";
 import { Social } from "../Footer/social";
 import { LittermateLogo } from "../Logo";
 import Link from "next/link";
-import { data } from "../../data/item";
+import { categoryData } from "../../data/item";
 import { useRouter } from "next/router";
 
 const useStyles = makeStyles((theme) => {
@@ -63,7 +63,7 @@ export const MenuContent: NextPage = () => {
           <br />
         </a>
       </Link> */}
-      {data.map((category, idx) =>
+      {categoryData.map((category, idx) =>
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
             <a className={classes.categoryLink}>
