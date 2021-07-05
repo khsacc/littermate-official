@@ -11,6 +11,7 @@ export type ItemDatum = {
   isNew: boolean;
   comment: string;
   images: ItemImage[];
+  ogimage?: string;
   photographer?: string;
   model?: string;
   hair?: string;
@@ -73,6 +74,7 @@ const S310: ItemDatum = {
       baseLink: "https://littermate.thebase.in/items/44077956",
     },
   ],
+  ogimage: "/image/S310/ogimage-item-S310.jpg",
   photographer: "Hugo Wakui",
   stylist: "Tomoka Kume",
   hair: "Natsuko Ogita(UpperCrust)",

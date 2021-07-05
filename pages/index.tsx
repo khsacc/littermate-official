@@ -1,11 +1,13 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
+import Head from "next/head";
 import { Catch, Story, ItemList } from "../components/Pages/Top";
 import { Theme } from "../styles/theme";
 import { LittermateLogo } from "../components/Logo";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { itemData } from "../data/item";
+import { CreateHead } from "../plugins/createHead";
 
 const useStyles = makeStyles((theme) => ({
   comingSoon: {
@@ -30,6 +32,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   return (
     <>
+      <CreateHead />
       <Catch />
       <Story />
       <ItemList />
