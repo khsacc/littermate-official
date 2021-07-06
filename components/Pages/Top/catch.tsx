@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => {
       width: "100vw",
       backgroundImage: `url(${topImage})`,
       backgroundPosition: "center",
-      backgroundSize: "auto 100vh",
+      backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
       position: "relative",
@@ -19,10 +19,14 @@ const useStyles = makeStyles((theme) => {
     // todo: iPhone X で上部が隠れないことを確認する
     topLogo: {
       position: "absolute",
-      width: "40vw",
-      right: 25,
-      top: 45,
-      color: "white",
+      //width: "65vw",
+      width: "50vw",
+      left: "25%",
+      top: "7%",
+      color: "theme.palette.grey[900]",
+      [theme.breakpoints.up("sm")]: {
+        display: "none",
+      },
     },
   };
 });
