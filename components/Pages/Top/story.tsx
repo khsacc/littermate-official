@@ -14,6 +14,8 @@ const useStyle = makeStyles((theme) => ({
     position: "absolute",
     color: "theme.palette.grey[900]",
   },
+  //CSSわからないぜ
+
   heading: {
     position: "relative",
     textAlign: "center",
