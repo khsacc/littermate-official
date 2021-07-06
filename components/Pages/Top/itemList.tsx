@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useRef } from "react";
+import { ViewMore } from "../../Common/viewMore";
 
 const useStyles = makeStyles((theme) => {
   const left = "12vw";
@@ -160,6 +161,11 @@ const useStyles = makeStyles((theme) => {
     selectedColourHidden: {
       opacity: 0,
     },
+    more: {
+      position: "absolute",
+      bottom: "5%",
+      right: "5%",
+    },
   };
 });
 
@@ -191,7 +197,6 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
       <div className={classes.itemContainer}>
         {/* <Typography variant="h3" className={classes.itemName}> */}
         <div className={classes.itemName}>{datum.name}</div>
-
         {/* </Typography> */}
         <Link href={`/item/${datum.id}`}>
           <a>
@@ -203,6 +208,7 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
             ></div>
           </a>
         </Link>
+        <ViewMore className={classes.more} />
         {/* <div
           className={classes.imgContainerPc}
           style={{
