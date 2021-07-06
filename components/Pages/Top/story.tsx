@@ -33,25 +33,28 @@ export const Story: NextPage = () => {
   return (
     <>
       <div className={classes.dnaWrapper}>
-        <LittermateDna className={classes.dnaImage} />
+        {/* <LittermateDna className={classes.dnaImage} /> */}
       </div>
       <Typography variant="h2" className={classes.heading}>
         About Us
       </Typography>
       <Typography variant="body1" className={classes.bodyCopy}>
-        Biology is ambivalent
-        <br />
-        生物学とは精密で、厳格で、論理的なものです。
-        <br />
-        清潔感のある白を基調とした研究室、液晶に表示される無機質な数字、淡々と保守的に事実を述べる研究者の姿ーー
-        <br />
-        一方で、常に型にはまらない新しい手法を探しながら、時には自然に逆らって遺伝子を改変し、動物実験を繰り返しながらも生き物の真理を追求する。
-        <br />
-        生物学はまた、自由で挑戦的でもあるのです。
-        <br />
-        Biology is ambivalent <br />
-        そんな二面性を持つ生物学のカルチャーを、現役の大学院生が発信します。
-        <br />
+        <p>Biology is ambivalent</p>
+        <p>
+          生物学とは精密で、厳格で、論理的なものです。
+          <br />
+          清潔感のある白を基調とした研究室、液晶に表示される無機質な数字、淡々と保守的に事実を述べる研究者の姿ーー
+        </p>
+        <p>
+          一方で、常に型にはまらない新しい手法を探しながら、時には自然に逆らって遺伝子を改変し、動物実験を繰り返しながらも生き物の真理を追求する。
+          <br />
+          生物学はまた、自由で挑戦的でもあるのです。
+        </p>
+        <p>
+          Biology is ambivalent <br />
+          そんな二面性を持つ生物学のカルチャーを、現役の大学院生が発信します。
+          <br />
+        </p>
       </Typography>
     </>
   );
