@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => {
       width: "50vw",
       left: "25%",
       top: "7%",
-      color: "theme.palette.grey[900]",
+      color: theme.palette.grey[900],
       [theme.breakpoints.up("sm")]: {
         display: "none",
       },
