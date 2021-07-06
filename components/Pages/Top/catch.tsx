@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => {
       left: "25%",
       top: "7%",
       color: "theme.palette.grey[900]",
+      [theme.breakpoints.up("sm")]: {
+        display: "none",
+      },
     },
   };
 });
