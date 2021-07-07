@@ -3,6 +3,8 @@ export type ItemImage = {
   colour: string;
   baseLink: string;
   lookOnly: boolean;
+  productOnly?: boolean;
+  okiga?: boolean;
 };
 export type ItemDatum = {
   id: string;
@@ -11,6 +13,7 @@ export type ItemDatum = {
   isNew: boolean;
   comment: string;
   images: ItemImage[];
+  ogimage?: string;
   photographer?: string;
   model?: string;
   hair?: string;
@@ -59,6 +62,20 @@ const S310: ItemDatum = {
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077806",
     },
+    {
+      colour: "Green",
+      img: "/image/S310/Green_3_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077806",
+      okiga: true,
+    },
+    {
+      colour: "Green",
+      img: "/image/S310/Green_3_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077806",
+      okiga: true,
+    },
 
     {
       colour: "Blue",
@@ -73,6 +90,7 @@ const S310: ItemDatum = {
       baseLink: "https://littermate.thebase.in/items/44077956",
     },
   ],
+  ogimage: "/image/S310/ogimage-item-S310.jpg",
   photographer: "Hugo Wakui",
   stylist: "Tomoka Kume",
   hair: "Natsuko Ogita(UpperCrust)",

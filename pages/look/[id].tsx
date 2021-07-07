@@ -5,6 +5,7 @@ import { itemData, ItemDatum } from "../../data/item";
 import { Theme } from "../../styles/theme";
 import { GetItemButton } from "../../components/Common/GetItemButton";
 import { PhotoInfo } from "../../components/Common/photoInfo";
+import { CreateHead } from "../../plugins/createHead";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -76,39 +77,42 @@ const useStyles = makeStyles((theme) => {
 const LookPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
   const classes = useStyles(Theme);
   return (
-    <main className={classes.wrapper}>
-      <section className={classes.commentWrapper}>
-        <Typography className={classes.kind} variant="h3">
-          {data.kind}
-        </Typography>
-        <Typography variant="h1" className={classes.itemName}>
-          {data.name}
-        </Typography>
-      </section>
-      <section className={classes.imagesWrapper}>
-        {data.images.map((image) => (
-          <div className={classes.imageWrapper} key={image.img}>
-            <span className={classes.imageColour}>{image.colour}</span>
-            <img
-              className={classes.image}
-              src={image.img}
-              alt={`${id} ${image.colour}`}
-            />
-          </div>
-        ))}
-      </section>
-      <section className={classes.description}>
-        <p>
-          {data.comment.split("\n").map((line) => (
-            <span key={line}>
-              {line}
-              <br />
-            </span>
+    <>
+      <CreateHead title={`Look / ${data.name}`} />
+      <main className={classes.wrapper}>
+        <section className={classes.commentWrapper}>
+          <Typography className={classes.kind} variant="h3">
+            {data.kind}
+          </Typography>
+          <Typography variant="h1" className={classes.itemName}>
+            {data.name}
+          </Typography>
+        </section>
+        <section className={classes.imagesWrapper}>
+          {data.images.map((image) => (
+            <div className={classes.imageWrapper} key={image.img}>
+              <span className={classes.imageColour}>{image.colour}</span>
+              <img
+                className={classes.image}
+                src={image.img}
+                alt={`${id} ${image.colour}`}
+              />
+            </div>
           ))}
-        </p>
-        <PhotoInfo data={data} />
-      </section>
-    </main>
+        </section>
+        <section className={classes.description}>
+          <p>
+            {data.comment.split("\n").map((line) => (
+              <span key={line}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </p>
+          <PhotoInfo data={data} />
+        </section>
+      </main>
+    </>
   );
 };
 
