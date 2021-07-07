@@ -6,6 +6,7 @@ import { LittermateLogo } from "../Logo";
 import Link from "next/link";
 import { categoryData } from "../../data/item";
 import { useRouter } from "next/router";
+import * as gtag from "../../plugins/gtag";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -75,7 +76,18 @@ export const MenuContent: NextPage = () => {
       {categoryData.map((category, idx) =>
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
-            <a className={classes.categoryLink}>{category.category}</a>
+            <a
+              className={classes.categoryLink}
+              onClick={() => {
+                gtag.logClickEvent({
+                  category: "menu-button",
+                  label: category.category,
+                  route: router.asPath,
+                });
+              }}
+            >
+              {category.category}
+            </a>
           </Link>
         ) : (
           <a
@@ -83,6 +95,11 @@ export const MenuContent: NextPage = () => {
             className={classes.categoryLink}
             onClick={() => {
               handleScroll(category.category);
+              gtag.logClickEvent({
+                category: "menu-button",
+                label: category.category,
+                route: router.asPath,
+              });
             }}
           >
             {category.category}

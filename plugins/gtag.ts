@@ -30,11 +30,11 @@ export const event = ({ action, category, label, value = "" }) => {
   });
 };
 
-export const logClickEvent = ({ category, label }) => {
-  const router = useRouter();
+export const logClickEvent = ({ category, label, route }) => {
+  // const router = useRouter();
   event({
     action: "click",
     category: category,
-    label: `${label} @${router.asPath}`,
+    label: `${label} @${route}`,
   });
 };
