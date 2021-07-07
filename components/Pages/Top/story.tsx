@@ -5,26 +5,33 @@ import { LittermateLogo } from "../../Logo";
 import { LittermateDna } from "./parameters";
 
 const useStyle = makeStyles((theme) => ({
+  whole: {
+    display: "flex",
+    flexDirection: "row-reverse",
+    margin: 30,
+  },
   dnaWrapper: {
-    height: "30vh",
-    width: "70vw",
-    position: "absolute",
+    height: 170,
+    width: "100%",
+    // position: "absolute",
+    backgroundSize: "auto 100%",
   },
   dnaImage: {
     position: "absolute",
-    color: "theme.palette.grey[900]",
+    color: theme.palette.grey[900],
   },
-  //CSSわからないぜ
-
+  dnaContainer: {},
   heading: {
     position: "relative",
-    textAlign: "center",
-    margin: "30px auto",
+    // textAlign: "center",
+    // margin: "30px auto",
+    writingMode: "vertical-rl",
+    fontWeight: 700,
   },
   bodyCopy: {
     textAlign: "left",
     lineHeight: 1.9,
-    margin: "30px",
+    // margin: "30px",
   },
 }));
 
@@ -32,30 +39,35 @@ export const Story: NextPage = () => {
   const classes = useStyle(Theme);
   return (
     <>
-      <div className={classes.dnaWrapper}>
-        {/* <LittermateDna className={classes.dnaImage} /> */}
+      <div className={classes.whole}>
+        <Typography variant="h2" className={classes.heading}>
+          About Us
+        </Typography>
+        <div>
+          <div
+            className={classes.dnaWrapper}
+            style={{ backgroundImage: `url(${LittermateDna})` }}
+          />
+          <Typography variant="body1" className={classes.bodyCopy}>
+            <p>Biology is ambivalent</p>
+            <p>
+              生物学とは精密で、厳格で、論理的なものです。
+              <br />
+              清潔感のある白を基調とした研究室、液晶に表示される無機質な数字、淡々と保守的に事実を述べる研究者の姿ーー
+            </p>
+            <p>
+              一方で、常に型にはまらない新しい手法を探しながら、時には自然に逆らって遺伝子を改変し、動物実験を繰り返しながらも生き物の真理を追求する。
+              <br />
+              生物学はまた、自由で挑戦的でもあるのです。
+            </p>
+            <p>
+              Biology is ambivalent <br />
+              そんな二面性を持つ生物学のカルチャーを、現役の大学院生が発信します。
+              <br />
+            </p>
+          </Typography>
+        </div>
       </div>
-      <Typography variant="h2" className={classes.heading}>
-        About Us
-      </Typography>
-      <Typography variant="body1" className={classes.bodyCopy}>
-        <p>Biology is ambivalent</p>
-        <p>
-          生物学とは精密で、厳格で、論理的なものです。
-          <br />
-          清潔感のある白を基調とした研究室、液晶に表示される無機質な数字、淡々と保守的に事実を述べる研究者の姿ーー
-        </p>
-        <p>
-          一方で、常に型にはまらない新しい手法を探しながら、時には自然に逆らって遺伝子を改変し、動物実験を繰り返しながらも生き物の真理を追求する。
-          <br />
-          生物学はまた、自由で挑戦的でもあるのです。
-        </p>
-        <p>
-          Biology is ambivalent <br />
-          そんな二面性を持つ生物学のカルチャーを、現役の大学院生が発信します。
-          <br />
-        </p>
-      </Typography>
     </>
   );
 };
