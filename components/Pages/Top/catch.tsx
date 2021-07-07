@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => {
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
       position: "relative",
+      [theme.breakpoints.up(2500)]: {
+        height: "150vh",
+        backgroundAttachment: "scroll",
+      },
     },
     // todo: iPhone X で上部が隠れないことを確認する
     topLogo: {
@@ -23,7 +27,8 @@ const useStyles = makeStyles((theme) => {
       width: "50vw",
       left: "25%",
       top: "7%",
-      color: theme.palette.grey[900],
+      // color: theme.palette.grey[900],
+      color: "white",
       [theme.breakpoints.up("sm")]: {
         display: "none",
       },

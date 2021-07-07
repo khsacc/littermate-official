@@ -22,6 +22,12 @@ const useStyles = makeStyles((theme) => {
     category: {
       textAlign: "center",
     },
+    categoryWrapper: {
+      [theme.breakpoints.up(1620)]: {
+        maxWidth: 1320,
+        margin: "0 auto",
+      },
+    },
     imgContainer: {
       width: "100%",
       maxWidth: 750,
@@ -41,6 +47,10 @@ const useStyles = makeStyles((theme) => {
         backgroundSize: "100%",
         // display: "none",
       },
+      [theme.breakpoints.up(1620)]: {
+        // maxWidth: 1320,
+        left: "calc(1620px * 0.26)",
+      },
     },
     heading: {
       textAlign: "center",
@@ -48,7 +58,7 @@ const useStyles = makeStyles((theme) => {
     },
     kind: {
       fontWeight: 700,
-      paddingLeft: "7.5vw",
+      paddingLeft: "6.5vw",
       marginBottom: "1vh",
       // marginTop: "115px",
     },
@@ -71,18 +81,17 @@ const useStyles = makeStyles((theme) => {
       },
     },
     itemName: {
-      transform: `rotate(-90deg) translateX(-90%) translateY(65%)`,
-      msTransformOrigin: "left",
-      MozTransformOrigin: "left",
-      WebkitTransformOrigin: "left",
+      // transform: `rotate(-90deg) translateX(-90%) translateY(65%)`,
+      // msTransformOrigin: "left",
+      // MozTransformOrigin: "left",
+      // WebkitTransformOrigin: "left",
+      writingMode: "vertical-rl",
+      transform: "rotate(180deg)",
       fontSize: 70,
       fontFamily: "mr-eaves-modern, sans-serif",
       fontWeight: 700,
-      // fontSize: 35,
       fontStyle: "normal",
       transformOrigin: "center",
-      // height: "fit-content",
-      // width: "fit-content",
       position: "absolute",
       top: 0,
       left: "8vw",
@@ -93,7 +102,7 @@ const useStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: 70,
-        transform: `rotate(0) translateX(0%) translateY(0)`,
+        // transform: `rotate(0) translateX(0%) translateY(0)`,
         left: "7.5vw",
         marginTop: 20,
       },
@@ -131,7 +140,7 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up("sm")]: {
         left: "7.5vw",
         textAlign: "left",
-        top: "150px",
+        // top: "210px",
       },
     },
     itemColour: {
@@ -192,29 +201,9 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
           </>
         )}
         {datum.kind}
-        {/* {data.length} Colours */}
       </Typography>
       <div className={classes.itemContainer}>
-        {/* <Typography variant="h3" className={classes.itemName}> */}
         <div className={classes.itemName}>{datum.name}</div>
-        {/* </Typography> */}
-        <Link href={`/item/${datum.id}`}>
-          <a>
-            <div
-              className={classes.imgContainer}
-              style={{
-                backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
-              }}
-            ></div>
-          </a>
-        </Link>
-        <ViewMore className={classes.more} />
-        {/* <div
-          className={classes.imgContainerPc}
-          style={{
-            backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
-          }}
-        ></div> */}
         <ul className={classes.itemColours}>
           {displayData.topImages.map((colour, colourIdx) => (
             <li
@@ -233,20 +222,22 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
                 }}
               >
                 {colour.colour}
-                {/* {
-                  <span
-                    className={[
-                      classes.selectedColour,
-                      colourIdx === currentDataIndex
-                        ? ""
-                        : classes.selectedColourHidden,
-                    ].join(" ")}
-                  ></span>
-                } */}
               </a>
             </li>
           ))}
         </ul>
+
+        <Link href={`/item/${datum.id}`}>
+          <a>
+            <div
+              className={classes.imgContainer}
+              style={{
+                backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
+              }}
+            ></div>
+            <ViewMore className={classes.more} />
+          </a>
+        </Link>
       </div>
     </>
   );
@@ -274,7 +265,12 @@ export const ItemCategory: NextPage<{ category: Category }> = ({
     }
   }, []);
   return (
-    <div id={category.category} key={category.category} ref={ref}>
+    <div
+      id={category.category}
+      key={category.category}
+      ref={ref}
+      className={classes.categoryWrapper}
+    >
       <Typography variant="h2" className={classes.category}>
         {category.category}
       </Typography>

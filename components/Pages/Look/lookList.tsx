@@ -7,6 +7,9 @@ import Link from "next/link";
 
 const useStyles = makeStyles((theme) => {
   return {
+    whole: {
+      marginBottom: 300,
+    },
     itemContainer: {
       height: 600,
       width: "100%",
@@ -49,6 +52,10 @@ const useStyles = makeStyles((theme) => {
         // backgroundSize: "cover",
       },
     },
+    wrapAtag: {
+      textDecoration: "none",
+      color: theme.palette.grey[900],
+    },
     itemName: {
       position: "absolute",
       display: "inline-block",
@@ -64,7 +71,7 @@ const useStyles = makeStyles((theme) => {
       bottom: "5%",
       right: "5%",
       [theme.breakpoints.up(940)]: {
-        color: theme.palette.grey[900],
+        // color: theme.palette.grey[900],
       },
     },
   };
@@ -74,7 +81,7 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
   return (
     <>
       <Link href={`/look/${itemDatum.id}`}>
-        <a>
+        <a className={classes.wrapAtag}>
           <div
             className={classes.itemContainer}
             style={{ backgroundImage: `url(${itemDatum.images[0].img})` }}
@@ -89,11 +96,12 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
 };
 
 export const LookList: NextPage = () => {
+  const classes = useStyles(Theme);
   return (
-    <>
+    <div className={classes.whole}>
       {itemData.map((item, idx) => (
         <LookItem itemDatum={item} key={idx} />
       ))}
-    </>
+    </div>
   );
 };

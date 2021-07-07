@@ -15,8 +15,12 @@ const useStyles = makeStyles((theme) => {
       height: "100%",
       padding: "30px 10%",
       color: "white",
+      fontFamily: "mr-eaves-modern, sans-serif",
+      fontWeight: 400,
+      fontSize: "1em",
       [theme.breakpoints.up("sm")]: {
         padding: "30px 10%",
+        fontSize: "1.5em",
       },
     },
     logo: {
@@ -34,7 +38,7 @@ const useStyles = makeStyles((theme) => {
       width: "fit-content",
     },
     lookLink: {
-      marginTop: 30,
+      margin: "10px 0",
     },
   };
 });
@@ -61,6 +65,12 @@ export const MenuContent: NextPage = () => {
         </a>
       </Link>
       <Social />
+
+      <Link href={`/`}>
+        <a className={[classes.categoryLink, classes.lookLink].join(" ")}>
+          Top
+        </a>
+      </Link>
 
       {categoryData.map((category, idx) =>
         router.pathname !== "/" ? (

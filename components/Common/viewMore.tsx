@@ -5,25 +5,27 @@ import { Theme } from "../../styles/theme";
 const useStyles = makeStyles((theme) => {
   return {
     more: {
-      // color: "white",
+      color: "white",
       // position: "absolute",
       // bottom: "5%",
       // right: "5%",
       fontFamily: "mr-eaves-modern, sans-serif",
       fontWeight: 200,
       fontStyle: "italic",
-      fontSize: "2.5em",
+      fontSize: "2em",
       // [theme.breakpoints.up(940)]: {
-      color: theme.palette.grey[900],
+      // color: theme.palette.grey[900],
       // },
+      background: theme.palette.grey[800],
+      padding: 5,
       "&:before": {
-        // background: "white",
+        background: "white",
         content: "''",
         display: "inline-block",
         height: 1,
         width: 75,
         // [theme.breakpoints.up(940)]: {
-        background: theme.palette.grey[900],
+        // background: theme.palette.grey[900],
         // },
       },
     },

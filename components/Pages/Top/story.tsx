@@ -1,7 +1,7 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../../styles/theme";
-import { LittermateLogo } from "../../Logo";
+// import { LittermateLogo } from "../../Logo";
 import { LittermateDna } from "./parameters";
 
 const useStyle = makeStyles((theme) => ({
@@ -9,12 +9,14 @@ const useStyle = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row-reverse",
     margin: 30,
+    justifyContent: "center",
   },
   dnaWrapper: {
     height: 170,
     width: "100%",
     // position: "absolute",
     backgroundSize: "auto 100%",
+    backgroundPosition: "right",
   },
   dnaImage: {
     position: "absolute",
@@ -48,7 +50,7 @@ export const Story: NextPage = () => {
             className={classes.dnaWrapper}
             style={{ backgroundImage: `url(${LittermateDna})` }}
           />
-          <Typography variant="body1" className={classes.bodyCopy}>
+          <div className={classes.bodyCopy}>
             <p>Biology is ambivalent</p>
             <p>
               生物学とは精密で、厳格で、論理的なものです。
@@ -65,7 +67,7 @@ export const Story: NextPage = () => {
               そんな二面性を持つ生物学のカルチャーを、現役の大学院生が発信します。
               <br />
             </p>
-          </Typography>
+          </div>
         </div>
       </div>
     </>
