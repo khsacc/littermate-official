@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => {
     },
     categoryLink: {
       color: "white",
-      fontSize: "1.75em",
+      fontSize: "1.5em",
       textDecoration: "underline",
       cursor: "pointer",
       display: "block",

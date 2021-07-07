@@ -3,6 +3,8 @@ export type ItemImage = {
   colour: string;
   baseLink: string;
   lookOnly: boolean;
+  productOnly?: boolean;
+  okiga?: boolean;
 };
 export type ItemDatum = {
   id: string;
@@ -59,6 +61,20 @@ const S310: ItemDatum = {
       img: "/image/S310/Green_3_2.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077806",
+    },
+    {
+      colour: "Green",
+      img: "/image/S310/Green_3_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077806",
+      okiga: true,
+    },
+    {
+      colour: "Green",
+      img: "/image/S310/Green_3_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077806",
+      okiga: true,
     },
 
     {

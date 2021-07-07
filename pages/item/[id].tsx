@@ -1,6 +1,6 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
-import { itemData, ItemDatum } from "../../data/item";
+import { itemData, ItemDatum, ItemImage } from "../../data/item";
 import { Theme } from "../../styles/theme";
 import { GetItemButton } from "../../components/Common/GetItemButton";
 import { PhotoInfo } from "../../components/Common/photoInfo";
@@ -33,15 +33,26 @@ const useStyles = makeStyles((theme) => {
       color: "white",
       background: theme.palette.grey[900],
     },
+    imageSection: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+    },
     imageWrapper: {
       marginTop: 20,
       position: "relative",
       maxWidth: 500,
-      margin: "0 auto",
+      // margin: "0 auto",
     },
     image: {
       display: "block",
       width: "100%",
+      marginTop: 20,
+    },
+    imageSmall: {
+      display: "block",
+      width: "48%",
+      // marginRight: 20,
     },
     imageColour: {
       position: "absolute",
@@ -56,6 +67,9 @@ const useStyles = makeStyles((theme) => {
     getItemButton: {
       textDecoration: "none",
       color: theme.palette.grey[800],
+      width: "fit-content",
+      display: "block",
+      margin: "10px auto",
     },
     getItemButtonInner: {
       margin: "5px auto",
@@ -65,6 +79,27 @@ const useStyles = makeStyles((theme) => {
 
 const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
   const classes = useStyles(Theme);
+  const imagesSorted = new Map();
+  data.images
+    // .sort((a, b) => {
+    //   if (a.okiga && b.okiga) {
+    //     return 0;
+    //   } else if (a.okiga) {
+    //     return 1;
+    //   } else {
+    //     return -1;
+    //   }
+    // })
+    .forEach((image) => {
+      const __colour = imagesSorted.get(image.colour);
+      if (__colour) {
+        imagesSorted.set(image.colour, [...__colour, image]);
+      } else {
+        imagesSorted.set(image.colour, [image]);
+      }
+    });
+  const imagesSortedArray = Array.from(imagesSorted);
+  console.log(imagesSortedArray);
   return (
     <>
       <CreateHead title={data.name} image={data.ogimage || ""} />
@@ -92,25 +127,34 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
           ))}
         </section>
         <section>
-          {data.images.map((image) => (
-            <>
-              <div className={classes.imageWrapper} key={image.img}>
-                <span className={classes.imageColour}>{image.colour}</span>
-                <img
-                  className={classes.image}
-                  src={image.img}
-                  alt={`${id} ${image.colour}`}
-                />
-              </div>
+          {imagesSortedArray.map((colour, idx) => (
+            <div key={idx} className={classes.imageSection}>
+              {colour[1].map((item: ItemImage) => (
+                <>
+                  {/* <div className={classes.imageWrapper} key={item.img}> */}
+                  {!item.okiga && (
+                    <span className={classes.imageColour}>{item.colour}</span>
+                  )}
+                  <img
+                    className={[
+                      classes.image,
+                      item.okiga ? classes.imageSmall : "",
+                    ].join(" ")}
+                    src={item.img}
+                    alt={`${id} ${item.colour}`}
+                  />
+                  {/* </div> */}
+                </>
+              ))}
               <a
-                href={image.baseLink}
+                href={colour[1][0].baseLink}
                 rel="external"
                 target="_blank"
                 className={classes.getItemButton}
               >
                 <GetItemButton className={classes.getItemButtonInner} />
               </a>
-            </>
+            </div>
           ))}
         </section>
         <section>
