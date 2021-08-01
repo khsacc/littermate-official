@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { itemData } from "../data/item";
 import { CreateHead } from "../plugins/createHead";
+import { News } from "../components/Pages/Top/news";
 
 const useStyles = makeStyles((theme) => ({
   comingSoon: {
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
       <CreateHead />
       <Catch />
       <Story />
+      <News />
       <ItemList />
     </>
   );

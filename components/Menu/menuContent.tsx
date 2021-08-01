@@ -73,7 +73,7 @@ export const MenuContent: NextPage = () => {
         </a>
       </Link>
 
-      {categoryData.map((category, idx) =>
+      {/* {categoryData.map((category, idx) =>
         router.pathname !== "/" ? (
           <Link key={idx} href={`/?category=${category.category}`}>
             <a
@@ -105,12 +105,52 @@ export const MenuContent: NextPage = () => {
             {category.category}
           </a>
         )
+      )} */}
+
+      {router.pathname !== "/" ? (
+        <Link href={`/?category=news}`}>
+          <a
+            className={classes.categoryLink}
+            onClick={() => {
+              gtag.logClickEvent({
+                category: "menu-button",
+                label: "news",
+                route: router.asPath,
+              });
+            }}
+          >
+            News
+          </a>
+        </Link>
+      ) : (
+        <a
+          className={classes.categoryLink}
+          onClick={() => {
+            handleScroll("news");
+            gtag.logClickEvent({
+              category: "menu-button",
+              label: "news",
+              route: router.asPath,
+            });
+          }}
+        >
+          News
+        </a>
       )}
+
       <Link href={`/look`}>
         <a className={[classes.categoryLink, classes.lookLink].join(" ")}>
           Look
         </a>
       </Link>
+      <a
+        className={[classes.categoryLink, classes.lookLink].join(" ")}
+        href="https://littermate.thebase.in/"
+        rel="external nofollow"
+        target="_blank"
+      >
+        Online Shop
+      </a>
     </div>
   );
 };
