@@ -25,6 +25,65 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S307: ItemDatum = {
+  id: "S307",
+  name: "S307",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `変異マウスシリーズ第五弾。
+  地球上の多くの生物は、地球の自転により変動する外界の環境に適応するために約24時間周期で体内の状態や行動を制御する「概日時計」という機能を獲得しました。
+
+  マウスは行動時にゲージ内の輪回しをするという特性を活かし、
+  時計の研究ではしばしば輪回しの回転数をカウントして行動を測る方法が用いられます。
+
+  マウスをはじめ哺乳類の概日時計はいくつかの時計タンパク質の相互作用によって成立していますが、この時計タンパク質の遺伝子を欠損した本作のマウスは約24時間周期の規則正しい行動が損なわれ、昼夜問わず寝たり起きたりして輪を回します。　`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S307/S307_B_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176797",
+    },
+    {
+      colour: "Black",
+      img: "/image/S307/S307_B_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176797",
+    },
+    {
+      colour: "Black",
+      img: "/image/S307/S307_BN_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176797",
+    },
+
+    {
+      colour: "White",
+      img: "/image/S307/S307_W_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176836",
+    },
+    {
+      colour: "White",
+      img: "/image/S307/S307_W_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176836",
+    },
+    {
+      colour: "White",
+      img: "/image/S307/S307_W_5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176836",
+    },
+    {
+      colour: "White",
+      img: "/image/S307/S307_W_6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176836",
+    },
+  ],
+};
+
 const S308: ItemDatum = {
   id: "S308",
   name: "S308",
@@ -448,7 +507,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee],
+    items: [S310, S401, coffee, S307],
   },
 ];
 
