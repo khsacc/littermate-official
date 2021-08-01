@@ -201,13 +201,13 @@ const S401_Hoodie: ItemDatum = {
   手に持っているのは実験で用いられるチューブで、目を離したすきに研究者が取られてしまったみたいです。`,
   images: [
     {
-      colour: "Cream",
+      colour: "Natural",
       img: "/image/S401/S401_H_1.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/33861789",
     },
     {
-      colour: "Cream",
+      colour: "Natural",
       img: "/image/S401/S401_H_7.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/33861789",
