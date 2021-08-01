@@ -25,6 +25,94 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const TET: ItemDatum = {
+  id: "TET",
+  name: "TET",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `本ブランドのメインロゴにもなっている、マウスを識別するためのイヤタグ。
+  今作ではそのイヤタグが背中に大きく3つプリントされています。
+
+  4色展開となっていますので、是非お好きな色をご購入ください`,
+  images: [
+    {
+      colour: "Blue Green",
+      img: "/image/TET/TET_B_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152635",
+    },
+    {
+      colour: "Blue Green",
+      img: "/image/TET/TET_B_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152635",
+    },
+    {
+      colour: "Blue Green",
+      img: "/image/TET/TET_B_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152635",
+    },
+
+    {
+      colour: "Charcoal",
+      img: "/image/TET/TET_C_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152688",
+    },
+    {
+      colour: "Charcoal",
+      img: "/image/TET/TET_C_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152688",
+    },
+    {
+      colour: "Charcoal",
+      img: "/image/TET/TET_C_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152688",
+    },
+
+    {
+      colour: "Pink",
+      img: "/image/TET/TET_P_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152604",
+    },
+    {
+      colour: "Pink",
+      img: "/image/TET/TET_P_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152604",
+    },
+    {
+      colour: "Pink",
+      img: "/image/TET/TET_P_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152604",
+    },
+    {
+      colour: "Pink",
+      img: "/image/TET/TET_YP_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152604",
+    },
+
+    {
+      colour: "Yellow",
+      img: "/image/TET/TET_Y_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152393",
+    },
+    {
+      colour: "Yellow",
+      img: "/image/TET/TET_YP_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32152393",
+    },
+  ],
+};
+
 const S301: ItemDatum = {
   id: "S301",
   name: "S301",
@@ -756,7 +844,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302, S301],
+    items: [S201, S308, S303, S302, S301, TET],
   },
   {
     category: "Hoodie",
