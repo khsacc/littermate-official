@@ -25,6 +25,56 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S306: ItemDatum = {
+  id: "S306",
+  name: "S306 Coach Jacket",
+  kind: "Jacket",
+  isNew: false,
+  comment: `変異マウスシリーズの第三弾であるS305のマイナーチェンジ。
+
+  バイオ実験ではしばしば、ある因子の機能を人為的に欠くことでどんな影響が変異体に表れるかを調べます。
+  そして
+  「この流れでわかった目的の因子の機能は〇〇である」
+  という主張をサポートするために『レスキュー実験』というものを行うことがあります。
+  これは目的因子を欠いた個体に再びその因子を外入れすることで、変異によって影響を受けた個体の性質が“回復”するか調べるというものです。
+
+  前作で前帯状皮質(ACC)の神経活性が損なわれ、遠隔記憶ができなくたったマウス。
+  この責任因子がわかれば、レスキューによって記憶の形成を回復させることができるかもしれません！　`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S306/S306_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/26786875",
+    },
+    {
+      colour: "Black",
+      img: "/image/S306/S306_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/26786875",
+    },
+    {
+      colour: "Black",
+      img: "/image/S306/S306_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/26786875",
+    },
+    {
+      colour: "Black",
+      img: "/image/S306/S306_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/26786875",
+    },
+    {
+      colour: "Black",
+      img: "/image/S306/S306_5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/26786875",
+    },
+  ],
+};
+
+
 const S307: ItemDatum = {
   id: "S307",
   name: "S307",
@@ -508,6 +558,10 @@ export const categoryData: Category[] = [
   {
     category: "Long-sleeve T-shirt",
     items: [S310, S401, coffee, S307],
+  },
+  {
+    category: "Jacket",
+    items: [S306]
   },
 ];
 
