@@ -25,6 +25,62 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S401_Hoodie: ItemDatum = {
+  id: "S401_Hoodie",
+  name: "S401",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `今作のテーマはコモンマーモセットと呼ばれる小型のサルの一種です。
+
+  マーモセットは生理学・解剖学的特徴が人間と近いことから霊長類のモデル生物として生命科学研究に利用されています。
+
+  創薬研究にも用いられており、みなさんが使っている薬もマーモセットによって有効性が確かめられたものかもしれません。
+
+  手に持っているのは実験で用いられるチューブで、目を離したすきに研究者が取られてしまったみたいです。`,
+  images: [
+    {
+      colour: "Cream",
+      img: "/image/S401/S401_H_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/33861789",
+    },
+    {
+      colour: "Cream",
+      img: "/image/S401/S401_H_7.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/33861789",
+    },
+  ],
+};
+
+const S401: ItemDatum = {
+  id: "S401_Long-sleeve T-shirt",
+  name: "S401",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `今作のテーマはコモンマーモセットと呼ばれる小型のサルの一種です。
+
+  マーモセットは生理学・解剖学的特徴が人間と近いことから霊長類のモデル生物として生命科学研究に利用されています。
+
+  創薬研究にも用いられており、みなさんが使っている薬もマーモセットによって有効性が確かめられたものかもしれません。
+
+  手に持っているのは実験で用いられるチューブで、目を離したすきに研究者が取られてしまったみたいです。`,
+  images: [
+    {
+      colour: "Green",
+      img: "/image/S401/S401_LT_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/33861469",
+    },
+    {
+      colour: "Green",
+      img: "/image/S401/S401_LT_6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/33861469",
+    },
+  ],
+};
+
 const S309_Hoodie: ItemDatum = {
   id: "S309_Hoodie",
   name: "S309",
@@ -218,7 +274,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt, S309_Hoodie],
+    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401],
   },
 ];
 
