@@ -53,39 +53,97 @@ const S310: ItemDatum = {
   name: "S310",
   kind: "Long-sleeve T-shirt",
   isNew: true,
-  comment: `今作のテーマは、脳回路の研究に劇的な進歩をもたらしたオプトジェネティクス（光遺伝学）という実験手法です。
-光ファイバーなどを頭に通して光を当てることで研究対象の脳細胞だけを活性化させることができます。`,
+  comment: `今作のテーマは、脳回路の研究に劇的な進歩をもたらしたオプトジェネティクス(光遺伝学)という実験手法です。
+
+  光ファイバーなどを頭に通して光を当てることで研究対象の脳細胞だけを活性化させます。
+
+  これにより生きたまま目的の脳神経のON/OFFを切り替えられます。
+
+  例えば今作のように学習・記憶を司る脳の領域にファイバーをつなげて光らせるとマウスの物覚えがよくなる様子が観察されます。`,
   images: [
     {
       colour: "Green",
-      img: "/image/S310/Green_3_2.jpg",
+      img: "/image/S310/S310_Green_3.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077806",
     },
     {
       colour: "Green",
-      img: "/image/S310/Green_3_2.jpg",
+      img: "/image/S310/S310_Green_1.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077806",
-      okiga: true,
     },
     {
       colour: "Green",
-      img: "/image/S310/Green_3_2.jpg",
+      img: "/image/S310/S310_Green_2.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077806",
-      okiga: true,
+    },
+    {
+      colour: "Green",
+      img: "/image/S310/S310_Green_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077806",
     },
 
     {
       colour: "Blue",
-      img: "/image/S310/Blue_1_2.jpg",
+      img: "/image/S310/S310_Blue_6.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077546",
     },
     {
+      colour: "Blue",
+      img: "/image/S310/S310_Blue_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077546",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S310/S310_Blue_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077546",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S310/S310_Blue_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077546",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S310/S310_Blue_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077546",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S310/S310_Blue_5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077546",
+    },
+
+    {
       colour: "Red",
-      img: "/image/S310/Red_3_2.jpg",
+      img: "/image/S310/S310_Red_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077956",
+    },
+    {
+      colour: "Red",
+      img: "/image/S310/S310_Red_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077956",
+    },
+    {
+      colour: "Red",
+      img: "/image/S310/S310_Red_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/44077956",
+    },
+    {
+      colour: "Red",
+      img: "/image/S310/S310_Red_4.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/44077956",
     },
