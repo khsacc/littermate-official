@@ -25,6 +25,57 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S301: ItemDatum = {
+  id: "S301",
+  name: "S301",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `生物実験のモデル生物として非常によく使われるマウス（Mus musculus）。
+
+  これから実験を始めるためにまずマウスを持たなければなりません。
+  素早いマウスをゲージから持ち上げる時はいきなり体を掴むのはかなり困難。
+  マウスに気づかれないように尻尾を掴み、優しく持ち上げましょう。
+  。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/S301/S301_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494178",
+    },
+    {
+      colour: "White",
+      img: "/image/S301/S301_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494178",
+    },
+    {
+      colour: "White",
+      img: "/image/S301/S301_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494178",
+    },
+    {
+      colour: "White",
+      img: "/image/S301/S301_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494178",
+    },
+    {
+      colour: "White",
+      img: "/image/S301/S301_5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494178",
+    },
+    {
+      colour: "White",
+      img: "/image/S301/S301_6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494178",
+    },
+  ],
+};
+
 const S302: ItemDatum = {
   id: "S302",
   name: "S302",
@@ -705,7 +756,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302],
+    items: [S201, S308, S303, S302, S301],
   },
   {
     category: "Hoodie",
