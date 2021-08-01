@@ -25,6 +25,43 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const coffee: ItemDatum = {
+  id: "coffee",
+  name: "Iced Coffee",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `Littermateカフェのアイスコーヒー。
+  LサイズとMサイズがございます。
+
+  通常のロンTと比べて、よりゆったりとしたトレンドに合ったシルエットとなっております。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/coffee/coffee_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34789986",
+    },
+    {
+      colour: "White",
+      img: "/image/coffee/coffee_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34789986",
+    },
+    {
+      colour: "White",
+      img: "/image/coffee/coffee_7.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34789986",
+    },
+    {
+      colour: "White",
+      img: "/image/coffee/coffee_8.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34789986",
+    },
+  ],
+};
+
 const falling: ItemDatum = {
   id: "falling",
   name: "Falling Mouse",
@@ -304,7 +341,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling],
+    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling, coffee],
   },
 ];
 
