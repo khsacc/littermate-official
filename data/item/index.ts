@@ -25,6 +25,36 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const falling: ItemDatum = {
+  id: "falling",
+  name: "Falling Mouse",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `秋冬にぴったりの裏起毛のフーディ。
+  ゲージの上にある餌を取ろうとしたマウスが、足を踏み外して落ちてしまったシーンが刺繍にて施されています。`,
+  images: [
+    {
+      colour: "Blue",
+      img: "/image/falling/falling_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34742723",
+    },
+    {
+      colour: "Blue",
+      img: "/image/falling/falling_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34742723",
+    },
+    {
+      colour: "Blue",
+      img: "/image/falling/falling_6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/34742723",
+    },
+  ],
+};
+
+
 const S401_Hoodie: ItemDatum = {
   id: "S401_Hoodie",
   name: "S401",
@@ -274,7 +304,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401],
+    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling],
   },
 ];
 
