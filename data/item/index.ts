@@ -25,6 +25,36 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S201: ItemDatum = {
+  id: "S201",
+  name: "S201",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `ショウジョウバエは飼育の易しさと世代交代の短さからモデル生物として重宝されています。
+
+  ショウジョウバエを用いた遺伝学により多くの重要な遺伝子が発見されてきました。
+
+  そんな中、本来触角に当たる位置に「脚」が生えている変異体が見つかりました。
+
+  この変異体は「アンテナ(触角)ペディア(脚)」と呼ばれ、ショウジョウバエの体のデザインの形成を制御する遺伝子群の一つが変異していたことがわかりました。
+
+  顔に脚が生えてては、どんなに大きなマスクをしていてもはみ出してしまいます。　`,
+  images: [
+    {
+      colour: "Green",
+      img: "/image/S201/S201_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32153279",
+    },
+    {
+      colour: "Green",
+      img: "/image/S201/S201_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/32153279",
+    },
+  ],
+};
+
 const coffee: ItemDatum = {
   id: "coffee",
   name: "Iced Coffee",
@@ -341,7 +371,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling, coffee],
+    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling, coffee, S201],
   },
 ];
 
