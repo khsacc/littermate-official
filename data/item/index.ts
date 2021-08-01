@@ -25,6 +25,50 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S302: ItemDatum = {
+  id: "S302",
+  name: "S302",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `生物実験のモデル生物として非常によく使われるマウス(Mus musculus)。
+
+  マウスに、麻酔を始め薬剤を投与する時のスタンダードは、マウスのお腹に注射をして
+  薬剤を腹腔内投与する方法。
+  マウスのストレスにならないよう、首根っこをキュッと掴み注射針をサクッと刺しましょう。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S302/S302_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494315",
+    },
+    {
+      colour: "Black",
+      img: "/image/S302/S302_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494315",
+    },
+    {
+      colour: "Black",
+      img: "/image/S302/S302_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494315",
+    },
+    {
+      colour: "Black",
+      img: "/image/S302/S302_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494315",
+    },
+    {
+      colour: "Black",
+      img: "/image/S302/S302_5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/22494315",
+    },
+  ],
+};
+
 const S303: ItemDatum = {
   id: "S303",
   name: "S303",
@@ -661,7 +705,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303],
+    items: [S201, S308, S303, S302],
   },
   {
     category: "Hoodie",
