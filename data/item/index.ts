@@ -25,6 +25,116 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const sequence: ItemDatum = {
+  id: "sequence",
+  name: "sequence",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `それぞれの生物は彼らをその生物たらしめる設計図を持っています。
+  ゲノムと呼ばれるその設計図はA、T、G、Cで書かれた“暗号“から成り立っています。
+  それらは３つで1つのアルファベットに“翻訳“することができます。
+  1977年、人類はついに“暗号“の文字列を読み解く技術を発明しました。
+
+  本作ではある“暗号“を読み取りました。
+  それをアルファベットに翻訳すると
+  「L」「I」「T」「T」「E」「R」...。
+  興味深い解読ができそうです。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/sequence/TagTBlack2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "Black",
+      img: "/image/sequence/TagTBlack1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "White",
+      img: "/image/sequence/TagTWhite2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "White",
+      img: "/image/sequence/TagTWhite1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "Black",
+      img: "/image/sequence/TagTWhiteBlack1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "Black",
+      img: "/image/sequence/TagTWHiteBlack2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "White",
+      img: "/image/sequence/TagTWhiteBlack1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+    {
+      colour: "White",
+      img: "/image/sequence/TagTWHiteBlack2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47796109",
+    },
+  ],
+};
+
+const Logo: ItemDatum = {
+  id: "Logo",
+  name: "Logo",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `この度私たちのブランドロゴが新しくなりました。
+  精密、厳格、論理的---
+  一方で自由で挑戦的で創造的---
+  生物学がもつそんな“二面性“を体現したロゴです。
+  そんな新ロゴがフロントに刺繍されたTシャツを作製いたしました。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/new_logo/NewLogoWomenMen1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47775644",
+    },
+    {
+      colour: "White",
+      img: "/image/new_logo/NewLogoMen1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47775644",
+    },
+    {
+      colour: "White",
+      img: "/image/new_logo/NewLogoMen2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47775644",
+    },
+    {
+      colour: "White",
+      img: "/image/new_logo/NewLogoWomen1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47775644",
+    },
+    {
+      colour: "White",
+      img: "/image/new_logo/NewLogoWomen2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/47775644",
+    },
+  ],
+};
+
 const TET: ItemDatum = {
   id: "TET",
   name: "TET",
@@ -844,7 +954,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302, S301, TET],
+    items: [S201, S308, S303, S302, S301, TET, Logo, sequence],
   },
   {
     category: "Hoodie",
