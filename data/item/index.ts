@@ -25,23 +25,81 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S309_Hoodie: ItemDatum = {
+  id: "S309_Hoodie",
+  name: "S309",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `今作のテーマは、脳回路の研究に劇的な進歩をもたらした、オプトジェネティクス(光遺伝学)という実験手法です。
+
+  光に当たることで神経を活性化させる因子を研究対象の脳細胞に発現させ、光ファイバーなどを頭に通して光を当てます。
+
+  これにより生きたまま目的の脳部位の神経活性をON/OFFに切り替えられます。
+
+  例えば今作のように脳の「快楽中枢」につなげたファイバーを光らせるとマウスが快楽に溺れる様子が観察されます。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S309/S309_Hoodie_Black_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36131917",
+    },
+    {
+      colour: "Black",
+      img: "/image/S309/S309_Hoodie_Black_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36131917",
+    },
+
+    {
+      colour: "White",
+      img: "/image/S309/S309_Hoodie_White_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36131782",
+    },
+    {
+      colour: "White",
+      img: "/image/S309/S309_Hoodie_White_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36131782",
+    },
+  ],
+};
+
 const S309_Sweatshirt: ItemDatum = {
   id: "S309_Sweatshirt",
   name: "S309",
   kind: "Sweatshirt",
   isNew: false,
-  comment: `今作のテーマは、脳回路の研究に劇的な進歩をもたらしたオプトジェネティクス（光遺伝学）という実験手法です。
-光ファイバーなどを頭に通して光を当てることで研究対象の脳細胞だけを活性化させることができます。`,
+  comment: `今作のテーマは、脳回路の研究に劇的な進歩をもたらした、オプトジェネティクス(光遺伝学)という実験手法です。
+
+  光に当たることで神経を活性化させる因子を研究対象の脳細胞に発現させ、光ファイバーなどを頭に通して光を当てます。
+
+  これにより生きたまま目的の脳部位の神経活性をON/OFFに切り替えられます。
+
+  例えば今作のように脳の「快楽中枢」につなげたファイバーを光らせるとマウスが快楽に溺れる様子が観察されます。`,
   images: [
     {
       colour: "Burgundy",
-      img: "/image/S309/shirt_burgundy_1.jpg",
+      img: "/image/S309/S309_Sweartshirt_Burgundy_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36132089",
+    },
+    {
+      colour: "Burgundy",
+      img: "/image/S309/S309_Sweartshirt_Burgundy_4.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/36132089",
     },
     {
       colour: "White",
-      img: "/image/S309/shirt_white_1.jpg",
+      img: "/image/S309/S309_Sweartshirt_White_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/36132113",
+    },
+    {
+      colour: "White",
+      img: "/image/S309/S309_Sweartshirt_White_4.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/36132113",
     },
@@ -160,7 +218,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt],
+    items: [S310, S309_Sweatshirt, S309_Hoodie],
   },
 ];
 
