@@ -25,6 +25,71 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S308: ItemDatum = {
+  id: "S308",
+  name: "S308",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `夜行性のマウスには、光が当たると行動量が抑制されるという現象が見られます。
+
+  こういった光刺激は体内時計による規則正しい行動リズムを「覆い隠す」ような効果をもつためマスキング(masking)と呼ばれます。
+
+  今作のマウスは元気に動いていたところ光を当てられて行動が落ち着き、布団に引きこもろうとしています。
+
+  昼行性の私たちで言えば、夜中パッと電気が点けられた時に元気になって部屋をウロウロしてしまうようなものですね。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/S308/S308_W_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+    {
+      colour: "White",
+      img: "/image/S308/S308_W_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+    {
+      colour: "White",
+      img: "/image/S308/S308_W_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+    {
+      colour: "White",
+      img: "/image/S308/S308_W_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+
+    {
+      colour: "Sand",
+      img: "/image/S308/S308_S_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+    {
+      colour: "Sand",
+      img: "/image/S308/S308_S_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+    {
+      colour: "Sand",
+      img: "/image/S308/S308_S_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+    {
+      colour: "Sand",
+      img: "/image/S308/S308_S_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/31899670",
+    },
+  ],
+};
+
 const S201: ItemDatum = {
   id: "S201",
   name: "S201",
@@ -371,7 +436,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling, coffee, S201],
+    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling, coffee, S201, S308],
   },
 ];
 
