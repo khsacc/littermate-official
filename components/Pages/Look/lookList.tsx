@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => {
       },
 
       [theme.breakpoints.up(940)]: {
-        width: 800,
+        // width: 800,
         margin: "40px auto",
         backgroundSize: "cover",
         backgroundPosition: "right",

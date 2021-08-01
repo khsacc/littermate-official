@@ -5,6 +5,7 @@ import { Theme } from "../../styles/theme";
 import { GetItemButton } from "../../components/Common/GetItemButton";
 import { PhotoInfo } from "../../components/Common/photoInfo";
 import { CreateHead } from "../../plugins/createHead";
+import { MutableRefObject, useRef } from "react";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -16,6 +17,15 @@ const useStyles = makeStyles((theme) => {
       // paddingLeft: "7.5vw",
       marginBottom: "1vh",
       // marginTop: "115px",
+    },
+    colours: {
+      textAlign: "center",
+    },
+    colour: {
+      display: "inline-block",
+      margin: 10,
+      textDecoration: "underline",
+      cursor: "pointer",
     },
     new: {
       color: theme.palette.grey[900],
@@ -77,29 +87,58 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
+const ItemContainer: NextPage<{ id: string; colour }> = ({ id, colour }) => {
+  const classes = useStyles(Theme);
+  const ref = useRef(null!);
+  return (
+    <div className={classes.imageSection}>
+      {colour[1].map((item: ItemImage) => (
+        <>
+          {/* <div className={classes.imageWrapper} key={item.img}> */}
+          {!item.okiga && (
+            <span className={classes.imageColour}>{item.colour}</span>
+          )}
+          <img
+            className={[
+              classes.image,
+              item.okiga ? classes.imageSmall : "",
+            ].join(" ")}
+            src={item.img}
+            alt={`${id} ${item.colour}`}
+          />
+          {/* </div> */}
+        </>
+      ))}
+      <a
+        href={colour[1][0].baseLink}
+        rel="external"
+        target="_blank"
+        className={classes.getItemButton}
+      >
+        <GetItemButton className={classes.getItemButtonInner} />
+      </a>
+    </div>
+  );
+};
+
 const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
   const classes = useStyles(Theme);
   const imagesSorted = new Map();
-  data.images
-    // .sort((a, b) => {
-    //   if (a.okiga && b.okiga) {
-    //     return 0;
-    //   } else if (a.okiga) {
-    //     return 1;
-    //   } else {
-    //     return -1;
-    //   }
-    // })
-    .forEach((image) => {
-      const __colour = imagesSorted.get(image.colour);
-      if (__colour) {
-        imagesSorted.set(image.colour, [...__colour, image]);
-      } else {
-        imagesSorted.set(image.colour, [image]);
-      }
-    });
+  data.images.forEach((image) => {
+    const __colour = imagesSorted.get(image.colour);
+    if (__colour) {
+      imagesSorted.set(image.colour, [...__colour, image]);
+    } else {
+      imagesSorted.set(image.colour, [image]);
+    }
+  });
   const imagesSortedArray = Array.from(imagesSorted);
-  console.log(imagesSortedArray);
+  const colourRefs = imagesSortedArray.reduce(
+    (pre, cur, idx) => {
+      return idx === 0 ? pre : [...pre, useRef(null!)];
+    },
+    [useRef(null)]
+  );
   return (
     <>
       <CreateHead title={data.name} image={data.ogimage || ""} />
@@ -127,8 +166,28 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
           ))}
         </section>
         <section>
+          <div className={classes.colours}>
+            {imagesSortedArray.map((colour, colourIdx) => (
+              <a
+                className={classes.colour}
+                key={colourIdx}
+                onClick={() => {
+                  colourRefs[colourIdx].current.scrollIntoView();
+                }}
+              >
+                {colour[0]}
+              </a>
+            ))}
+          </div>
+        </section>
+        <section>
           {imagesSortedArray.map((colour, idx) => (
-            <div key={idx} className={classes.imageSection}>
+            // <ItemContainer colour={colour} id={id} key={idx} />
+            <div
+              className={classes.imageSection}
+              key={idx}
+              ref={colourRefs[idx]}
+            >
               {colour[1].map((item: ItemImage) => (
                 <>
                   {/* <div className={classes.imageWrapper} key={item.img}> */}
