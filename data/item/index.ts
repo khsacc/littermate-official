@@ -25,6 +25,46 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S305: ItemDatum = {
+  id: "S305",
+  name: "S305",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `変異マウスシリーズの第三弾。
+
+  人で言えば数十年という長い期間保持されるような記憶を「遠隔記憶」と呼びます。
+  昔の自分の住所や電話番号は歳をとっても忘れにくいのではないでしょうか。
+
+  「記憶といえば海馬」と思われがちですが、遠隔記憶は前帯状皮質(ACC)という別の脳領域に保存されます。
+  ACCの神経活性を欠損させたマウスでは遠隔記憶の形成ができず、地図を見ても自分の家がわかりません。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/S305/S305_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/25209207",
+    },
+    {
+      colour: "White",
+      img: "/image/S305/S305_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/25209207",
+    },
+    {
+      colour: "White",
+      img: "/image/S305/S305_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/25209207",
+    },
+    {
+      colour: "White",
+      img: "/image/S305/S305_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/25209207",
+    },
+  ],
+};
+
 const S306: ItemDatum = {
   id: "S306",
   name: "S306 Coach Jacket",
@@ -549,7 +589,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie],
+    items: [S309_Hoodie, S401_Hoodie, S305],
   },
   {
     category: "Sweatshirt",
