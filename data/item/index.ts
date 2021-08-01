@@ -62,6 +62,44 @@ const S303: ItemDatum = {
   ],
 };
 
+const S304: ItemDatum = {
+  id: "S304",
+  name: "S304",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `変異マウスシリーズ第二弾の本作。
+
+  マウスがお腹いっぱいになると、エネルギーをたくさん使うよう指令を出し、肥満を抑制するホルモンであるレプチン(leptin)。
+
+  このレプチンを受け取る受容体の遺伝子を欠損したdb/db変異個体は、糖尿病様症状を引き起こし、ぶくぶく太って通常のマウス(野生型)の倍ほどの大きさになります。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S304/S304_5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23694327",
+    },
+    {
+      colour: "Black",
+      img: "/image/S304/S304_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23694327",
+    },
+    {
+      colour: "Black",
+      img: "/image/S304/S304_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23694327",
+    },
+    {
+      colour: "Black",
+      img: "/image/S304/S304_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23694327",
+    },
+  ],
+};
+
 
 const S305: ItemDatum = {
   id: "S305",
@@ -635,7 +673,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee, S307],
+    items: [S310, S401, coffee, S307, S304],
   },
   {
     category: "Jacket",
