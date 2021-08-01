@@ -25,6 +25,44 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S303: ItemDatum = {
+  id: "S303",
+  name: "S303",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `変異マウスシリーズ第一弾の本作。
+  マウスがお腹いっぱいになると、エネルギーをたくさん使うよう指令を出し、肥満を抑制するホルモンであるレプチン(leptin)。
+
+  この遺伝子を欠損したob/ob変異個体は糖尿病様症状を引き起こし、ぶくぶく太って通常のマウス（野生型）の倍ほどの大きさになります。`,
+  images: [
+    {
+      colour: "Orange",
+      img: "/image/S303/S303_2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23042114",
+    },
+    {
+      colour: "Orange",
+      img: "/image/S303/S303_1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23042114",
+    },
+    {
+      colour: "Orange",
+      img: "/image/S303/S303_3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23042114",
+    },
+    {
+      colour: "Orange",
+      img: "/image/S303/S303_4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/23042114",
+    },
+  ],
+};
+
+
 const S305: ItemDatum = {
   id: "S305",
   name: "S305",
@@ -585,7 +623,7 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308],
+    items: [S201, S308, S303],
   },
   {
     category: "Hoodie",
