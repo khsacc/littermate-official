@@ -4,6 +4,9 @@ import { Theme } from "../../../styles/theme";
 import { itemData, ItemDatum } from "../../../data/item";
 import { ViewMore } from "../../Common/viewMore";
 import Link from "next/link";
+import { UAParser } from "ua-parser-js";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -78,14 +81,28 @@ const useStyles = makeStyles((theme) => {
 });
 const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
   const classes = useStyles(Theme);
+  const [isiOS, setIsiOs] = useState(false);
+  useEffect(() => {
+    const uaParser = new UAParser();
+    const currentOS = uaParser.getOS().name;
+    setIsiOs(currentOS === "iOS");
+  }, []);
   return (
     <>
       <Link href={`/look/${itemDatum.id}`}>
         <a className={classes.wrapAtag}>
           <div
             className={classes.itemContainer}
-            style={{ backgroundImage: `url(${itemDatum.images[0].img})` }}
+            style={
+              !isiOS && { backgroundImage: `url(${itemDatum.images[0].img})` }
+            }
           >
+            {isiOS && (
+              <img
+                src={itemDatum.images[0].img}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
+            )}
             <span className={classes.itemName}>{itemDatum.name}</span>
             <ViewMore className={classes.more} />
           </div>
