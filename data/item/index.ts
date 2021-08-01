@@ -436,7 +436,19 @@ const S310: ItemDatum = {
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S310, S309_Sweatshirt, S309_Hoodie, S401_Hoodie, S401, falling, coffee, S201, S308],
+    items: [S201, S308],
+  },
+  {
+    category: "Hoodie",
+    items: [S309_Hoodie, S401_Hoodie],
+  },
+  {
+    category: "Sweatshirt",
+    items: [S309_Sweatshirt, falling],
+  },
+  {
+    category: "Long-sleeve T-shirt",
+    items: [S310, S401, coffee],
   },
 ];
 
