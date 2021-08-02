@@ -289,7 +289,7 @@ export const ItemList: NextPage = () => {
         <ItemCategory category={category} key={category.category} />
       ))} */}
       {itemsData.map((datum) => (
-        <ItemComponent datum={datum} key={datum.name} />
+        <ItemComponent datum={datum} key={datum.id} />
       ))}
     </>
   );

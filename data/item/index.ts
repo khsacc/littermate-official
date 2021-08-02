@@ -960,7 +960,7 @@ export const itemsData: ItemDatum[] = [
   S305,
   S309_Hoodie,
   S401_Hoodie,
-  S305,
+  // S305,
   S309_Sweatshirt,
   falling,
   S310,
