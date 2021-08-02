@@ -393,7 +393,6 @@ const S304: ItemDatum = {
   ],
 };
 
-
 const S305: ItemDatum = {
   id: "S305",
   name: "S305",
@@ -482,7 +481,6 @@ const S306: ItemDatum = {
     },
   ],
 };
-
 
 const S307: ItemDatum = {
   id: "S307",
@@ -703,7 +701,6 @@ const falling: ItemDatum = {
     },
   ],
 };
-
 
 const S401_Hoodie: ItemDatum = {
   id: "S401_Hoodie",
@@ -949,7 +946,30 @@ const S310: ItemDatum = {
   model: "Audrey & Takumi",
 };
 
-// export const itemData: ItemDatum[] = [S310, S309_Sweatshirt];
+export const itemsData: ItemDatum[] = [
+  S201,
+  S308,
+  S303,
+  S302,
+  S301,
+  TET,
+  Logo,
+  sequence,
+  S309_Hoodie,
+  S401_Hoodie,
+  S305,
+  S309_Hoodie,
+  S401_Hoodie,
+  S305,
+  S309_Sweatshirt,
+  falling,
+  S310,
+  S401,
+  coffee,
+  S307,
+  S304,
+  S306,
+];
 
 export const categoryData: Category[] = [
   {
@@ -970,7 +990,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Jacket",
-    items: [S306]
+    items: [S306],
   },
 ];
 

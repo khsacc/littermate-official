@@ -8,6 +8,7 @@ import {
   itemData,
   ItemDatum,
   ItemImage,
+  itemsData,
 } from "../../../data/item";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -284,8 +285,11 @@ export const ItemCategory: NextPage<{ category: Category }> = ({
 export const ItemList: NextPage = () => {
   return (
     <>
-      {categoryData.map((category) => (
+      {/* {categoryData.map((category) => (
         <ItemCategory category={category} key={category.category} />
+      ))} */}
+      {itemsData.map((datum) => (
+        <ItemComponent datum={datum} key={datum.name} />
       ))}
     </>
   );
