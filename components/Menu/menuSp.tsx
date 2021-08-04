@@ -118,7 +118,9 @@ export const MenuSp: NextPage = () => {
             className={[classes.menu, toggleOpen ? classes.menuOpen : ""].join(
               " "
             )}
-          ></div>
+          >
+            <div></div>
+          </div>
         </menu>
       </div>
     </>
