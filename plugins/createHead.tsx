@@ -16,7 +16,8 @@ export const CreateHead: NextPage<{
   description?: string;
   twitterCard?: TwitterCard;
 }> = ({
-  title = "Littermate Official Website",
+  title,
+  //  = "Littermate Official Website",
   image = defaultValues.image,
   description = defaultValues.description,
   twitterCard = defaultValues.twitterCard,
@@ -31,7 +32,9 @@ export const CreateHead: NextPage<{
       {[
         {
           property: "og:title",
-          content: title,
+          content: title
+            ? `${title} | Littermate Official Website`
+            : "Littermate Official Website",
         },
         {
           property: "og:description",
