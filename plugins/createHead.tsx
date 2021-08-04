@@ -5,7 +5,7 @@ type TwitterCard = "summary" | "summary_large_image" | "app" | "player";
 
 const defaultValues = {
   image: "https://littermate-official.vercel.app/image/meta/common-ogimage.jpg",
-  description: "",
+  description: "Biology is ambivalent.",
   twitterCard: "summary_large_image" as TwitterCard,
   basePath: "https://littermate-official.vercel.app",
 };
