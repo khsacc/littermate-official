@@ -57,6 +57,10 @@ export const CreateHead: NextPage<{
           name: "twitter:card",
           content: twitterCard,
         },
+        {
+          name: "twitter:title",
+          content: title,
+        },
       ].map((e, i) => (
         <meta name={e.name} content={e.content} key={i}></meta>
       ))}
