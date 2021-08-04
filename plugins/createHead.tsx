@@ -5,7 +5,7 @@ type TwitterCard = "summary" | "summary_large_image" | "app" | "player";
 
 const defaultValues = {
   image: "https://littermate-official.vercel.app/image/meta/common-ogimage.jpg",
-  description: "",
+  description: "Biology is ambivalent.",
   twitterCard: "summary_large_image" as TwitterCard,
   basePath: "https://littermate-official.vercel.app",
 };
@@ -16,7 +16,8 @@ export const CreateHead: NextPage<{
   description?: string;
   twitterCard?: TwitterCard;
 }> = ({
-  title = "Littermate Official Website",
+  title,
+  //  = "Littermate Official Website",
   image = defaultValues.image,
   description = defaultValues.description,
   twitterCard = defaultValues.twitterCard,
@@ -31,7 +32,9 @@ export const CreateHead: NextPage<{
       {[
         {
           property: "og:title",
-          content: title,
+          content: title
+            ? `${title} | Littermate Official Website`
+            : "Littermate Official Website",
         },
         {
           property: "og:description",
@@ -56,6 +59,10 @@ export const CreateHead: NextPage<{
         {
           name: "twitter:card",
           content: twitterCard,
+        },
+        {
+          name: "twitter:title",
+          content: title,
         },
       ].map((e, i) => (
         <meta name={e.name} content={e.content} key={i}></meta>
