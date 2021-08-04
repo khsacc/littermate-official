@@ -1,7 +1,7 @@
 import { makeStyles, TextareaAutosize } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../../styles/theme";
-import { itemData, ItemDatum } from "../../../data/item";
+import { ItemDatum, itemsData } from "../../../data/item";
 import { ViewMore } from "../../Common/viewMore";
 import Link from "next/link";
 import { UAParser } from "ua-parser-js";
@@ -119,7 +119,7 @@ export const LookList: NextPage = () => {
   const classes = useStyles(Theme);
   return (
     <div className={classes.whole}>
-      {itemData.map((item, idx) => (
+      {itemsData.map((item, idx) => (
         <LookItem itemDatum={item} key={idx} />
       ))}
     </div>
