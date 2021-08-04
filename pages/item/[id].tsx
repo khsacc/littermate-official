@@ -141,7 +141,7 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
   );
   return (
     <>
-      <CreateHead title={data.name} image={data.ogimage || ""} />
+      <CreateHead title={data.name} />
       <main className={classes.wrapper}>
         <section className={classes.commentWrapper}>
           <Typography className={classes.kind} variant="h3">
