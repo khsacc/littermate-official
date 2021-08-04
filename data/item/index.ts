@@ -435,7 +435,7 @@ const S305: ItemDatum = {
 
 const S306: ItemDatum = {
   id: "S306",
-  name: "S306 Coach Jacket",
+  name: "S306 Jacket",
   kind: "Jacket",
   isNew: false,
   comment: `変異マウスシリーズの第三弾であるS305のマイナーチェンジ。
