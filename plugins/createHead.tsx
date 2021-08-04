@@ -7,6 +7,7 @@ const defaultValues = {
   image: "https://littermate-official.vercel.app/image/meta/common-ogimage.jpg",
   description: "",
   twitterCard: "summary_large_image" as TwitterCard,
+  basePath: "https://littermate-official.vercel.app",
 };
 
 export const CreateHead: NextPage<{
@@ -15,7 +16,7 @@ export const CreateHead: NextPage<{
   description?: string;
   twitterCard?: TwitterCard;
 }> = ({
-  title,
+  title = "Littermate Official Website",
   image = defaultValues.image,
   description = defaultValues.description,
   twitterCard = defaultValues.twitterCard,
