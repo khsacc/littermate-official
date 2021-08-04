@@ -102,7 +102,7 @@ export const MenuSp: NextPage = () => {
           toggleOpen ? classes.menuModalOpen : "",
         ].join(" ")}
       >
-        <MenuContent />
+        <MenuContent setToggleOpen={setToggleOpen} />
       </div>
       <div className={classes.fix}>
         <menu
@@ -118,9 +118,7 @@ export const MenuSp: NextPage = () => {
             className={[classes.menu, toggleOpen ? classes.menuOpen : ""].join(
               " "
             )}
-          >
-            <div></div>
-          </div>
+          ></div>
         </menu>
       </div>
     </>
