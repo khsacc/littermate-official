@@ -4,7 +4,7 @@ import Head from "next/head";
 type TwitterCard = "summary" | "summary_large_image" | "app" | "player";
 
 const defaultValues = {
-  image: "",
+  image: "https://littermate-official.vercel.app/image/meta/common-ogimage.jpg",
   description: "",
   twitterCard: "summary_large_image" as TwitterCard,
 };
