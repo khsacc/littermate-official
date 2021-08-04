@@ -84,7 +84,7 @@ const sequence: ItemDatum = {
     },
     {
       colour: "White",
-      img: "/image/sequence/TagTWHiteBlack2.jpg",
+      img: "/image/sequence/TagTWhiteBlack2.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/47796109",
     },
