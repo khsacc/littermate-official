@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, TextareaAutosize } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../../styles/theme";
 import { itemData, ItemDatum } from "../../../data/item";
@@ -85,7 +85,8 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
   useEffect(() => {
     const uaParser = new UAParser();
     const currentOS = uaParser.getOS().name;
-    setIsiOs(currentOS === "iOS");
+    // setIsiOs(currentOS === "iOS");
+    setIsiOs(true);
   }, []);
   return (
     <>
@@ -94,7 +95,9 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
           <div
             className={classes.itemContainer}
             style={
-              !isiOS && { backgroundImage: `url(${itemDatum.images[0].img})` }
+              !isiOS
+                ? { backgroundImage: `url(${itemDatum.images[0].img})` }
+                : {}
             }
           >
             {isiOS && (
