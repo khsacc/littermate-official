@@ -1,8 +1,14 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { NextPage } from "next";
-import { Catch, Story, ItemComponent } from "../components/Pages/Top";
+import Head from "next/head";
+import { Catch, Story, ItemList } from "../components/Pages/Top";
 import { Theme } from "../styles/theme";
 import { LittermateLogo } from "../components/Logo";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { itemData } from "../data/item";
+import { CreateHead } from "../plugins/createHead";
+import { News } from "../components/Pages/Top/news";
 
 const useStyles = makeStyles((theme) => ({
   comingSoon: {
@@ -24,20 +30,14 @@ const useStyles = makeStyles((theme) => ({
 
 const Home: NextPage = () => {
   const classes = useStyles(Theme);
+  const router = useRouter();
   return (
     <>
-      {/* <Catch />
+      <CreateHead />
+      <Catch />
       <Story />
-      <ItemComponent /> */}
-      {/* 仮置 */}
-      <div className={classes.comingSoon}>
-        <div>
-          <LittermateLogo className={classes.logo} /> <br />
-          <Typography className={classes.letters} variant="body1">
-            Official Website Coming Soon
-          </Typography>
-        </div>
-      </div>
+      <News />
+      <ItemList />
     </>
   );
 };

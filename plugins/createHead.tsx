@@ -4,12 +4,12 @@ import Head from "next/head";
 type TwitterCard = "summary" | "summary_large_image" | "app" | "player";
 
 const defaultValues = {
-  image: "",
+  image: "https://littermate-official.vercel.app/image/meta/common-ogimage.jpg",
   description: "",
   twitterCard: "summary_large_image" as TwitterCard,
 };
 
-const CreateHead: NextPage<{
+export const CreateHead: NextPage<{
   title?: string;
   image?: string;
   description?: string;
@@ -48,17 +48,42 @@ const CreateHead: NextPage<{
           property: "og:locale",
           content: "ja_JP",
         },
-      ].map((e) => (
-        <meta property={e.property} content={e.content}></meta>
+      ].map((e, i) => (
+        <meta property={e.property} content={e.content} key={i}></meta>
       ))}
       {[
         {
           name: "twitter:card",
           content: twitterCard,
         },
-      ].map((e) => (
-        <meta name={e.name} content={e.content}></meta>
+      ].map((e, i) => (
+        <meta name={e.name} content={e.content} key={i}></meta>
       ))}
+      {/* // favicon */}
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/image/meta/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/image/meta/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/image/meta/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/image/meta/site.webmanifest" />
+      <link
+        rel="mask-icon"
+        href="/image/meta/safari-pinned-tab.svg"
+        color="#5bbad5"
+      />
+      <meta name="msapplication-TileColor" content="#2b5797"></meta>
     </Head>
   );
 };
