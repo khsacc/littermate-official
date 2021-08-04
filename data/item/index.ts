@@ -435,7 +435,7 @@ const S305: ItemDatum = {
 
 const S306: ItemDatum = {
   id: "S306",
-  name: "S306 Coach Jacket",
+  name: "S306 Jacket",
   kind: "Jacket",
   isNew: false,
   comment: `変異マウスシリーズの第三弾であるS305のマイナーチェンジ。
@@ -947,28 +947,25 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  sequence,
+  Logo,
+  S310,
+  S309_Sweatshirt,
+  S309_Hoodie,
+  falling,
+  coffee,
+  S401_Hoodie,
+  S401,
   S201,
+  TET,
   S308,
+  S307,
+  S306,
+  S305,
+  S304,
   S303,
   S302,
   S301,
-  TET,
-  Logo,
-  sequence,
-  S309_Hoodie,
-  S401_Hoodie,
-  S305,
-  S309_Hoodie,
-  S401_Hoodie,
-  S305,
-  S309_Sweatshirt,
-  falling,
-  S310,
-  S401,
-  coffee,
-  S307,
-  S304,
-  S306,
 ];
 
 export const categoryData: Category[] = [
