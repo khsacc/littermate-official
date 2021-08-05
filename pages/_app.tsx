@@ -11,6 +11,7 @@ import * as gtag from "../plugins/gtag";
 import { MenuSp } from "../components/Menu/menuSp";
 import { MenuPc } from "../components/Menu/menuPc";
 import { LoadAnim } from "../components/LoadAnim";
+import { BackToTop } from "../components/Footer/backToTop";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -84,7 +85,7 @@ export default function MyApp(props) {
       <ThemeProvider theme={Theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <LoadAnim />
+        {/* <LoadAnim /> */}
         <Header />
         <div className={classes.wholeWrapper}>
           <div className={classes.sequence}></div>
@@ -94,6 +95,7 @@ export default function MyApp(props) {
             <Component {...pageProps} />
           </div>
         </div>
+        <BackToTop />
         <Footer />
       </ThemeProvider>
     </React.Fragment>

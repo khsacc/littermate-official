@@ -228,7 +228,7 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
           ))}
         </ul>
 
-        <Link href={`/item/${datum.id}`}>
+        <Link href={`/item/${datum.id}`} scroll={true}>
           <a>
             <div
               className={classes.imgContainer}
@@ -244,43 +244,43 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
   );
 };
 
-export const ItemCategory: NextPage<{ category: Category }> = ({
-  category,
-}) => {
-  const classes = useStyles(Theme);
-  const router = useRouter();
-  const ref = useRef(null!);
-  useEffect(() => {
-    if (router.asPath.includes("category=")) {
-      const __category = router.asPath
-        .split("?")[1]
-        .match(/category=[^\&\=]+/)[0]
-        .split("=")[1];
-      console.log(__category);
-      if (__category === category.category) {
-        setTimeout(() => {
-          ref.current.scrollIntoView();
-          console.log(ref);
-        }, 300);
-      }
-    }
-  }, []);
-  return (
-    <div
-      id={category.category}
-      key={category.category}
-      ref={ref}
-      className={classes.categoryWrapper}
-    >
-      <Typography variant="h2" className={classes.category}>
-        {category.category}
-      </Typography>
-      {category.items.map((datum) => (
-        <ItemComponent datum={datum} key={datum.name} />
-      ))}
-    </div>
-  );
-};
+// export const ItemCategory: NextPage<{ category: Category }> = ({
+//   category,
+// }) => {
+//   const classes = useStyles(Theme);
+//   const router = useRouter();
+//   const ref = useRef(null!);
+//   useEffect(() => {
+//     if (router.asPath.includes("category=")) {
+//       const __category = router.asPath
+//         .split("?")[1]
+//         .match(/category=[^\&\=]+/)[0]
+//         .split("=")[1];
+//       console.log(__category);
+//       if (__category === category.category) {
+//         setTimeout(() => {
+//           ref.current.scrollIntoView();
+//           console.log(ref);
+//         }, 300);
+//       }
+//     }
+//   }, []);
+//   return (
+//     <div
+//       id={category.category}
+//       key={category.category}
+//       ref={ref}
+//       className={classes.categoryWrapper}
+//     >
+//       <Typography variant="h2" className={classes.category}>
+//         {category.category}
+//       </Typography>
+//       {category.items.map((datum) => (
+//         <ItemComponent datum={datum} key={datum.name} />
+//       ))}
+//     </div>
+//   );
+// };
 
 export const ItemList: NextPage = () => {
   return (

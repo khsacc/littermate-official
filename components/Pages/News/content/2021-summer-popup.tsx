@@ -25,7 +25,10 @@ export const PopupNews: NextPage = () => {
         <li>
           場所：新宿マルイ本館 1F ポップアップスペース
           <br />
-          <img src="/image/popup/map.png" className={classes.map} />
+          <img
+            src="/image/news/littermate_OIOImap.jpg"
+            className={classes.map}
+          />
         </li>
       </ul>
 

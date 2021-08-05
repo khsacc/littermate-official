@@ -44,7 +44,9 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-export const MenuContent: NextPage = () => {
+export const MenuContent: NextPage<{
+  setToggleOpen?: (__toggleOpen: boolean) => void;
+}> = ({ setToggleOpen }) => {
   const classes = useStyles(Theme);
   const router = useRouter();
   const handleScroll = (id: string) => {
@@ -58,17 +60,32 @@ export const MenuContent: NextPage = () => {
       }
     }
   };
+
+  const toggleOpen = () => {
+    if (setToggleOpen) {
+      setToggleOpen(false);
+    }
+  };
   return (
     <div className={classes.wrapper}>
       <Link href="/">
-        <a>
+        <a
+          onClick={() => {
+            toggleOpen();
+          }}
+        >
           <LittermateLogo className={classes.logo} />
         </a>
       </Link>
       <Social />
 
       <Link href={`/`}>
-        <a className={[classes.categoryLink, classes.lookLink].join(" ")}>
+        <a
+          className={[classes.categoryLink, classes.lookLink].join(" ")}
+          onClick={() => {
+            toggleOpen();
+          }}
+        >
           Top
         </a>
       </Link>
@@ -108,10 +125,11 @@ export const MenuContent: NextPage = () => {
       )} */}
 
       {router.pathname !== "/" ? (
-        <Link href={`/?category=news}`}>
+        <Link href={`/news`}>
           <a
             className={classes.categoryLink}
             onClick={() => {
+              toggleOpen();
               gtag.logClickEvent({
                 category: "menu-button",
                 label: "news",
@@ -126,6 +144,7 @@ export const MenuContent: NextPage = () => {
         <a
           className={classes.categoryLink}
           onClick={() => {
+            toggleOpen();
             handleScroll("news");
             gtag.logClickEvent({
               category: "menu-button",
@@ -139,7 +158,12 @@ export const MenuContent: NextPage = () => {
       )}
 
       <Link href={`/look`}>
-        <a className={[classes.categoryLink, classes.lookLink].join(" ")}>
+        <a
+          className={[classes.categoryLink, classes.lookLink].join(" ")}
+          onClick={() => {
+            toggleOpen();
+          }}
+        >
           Look
         </a>
       </Link>
@@ -148,6 +172,9 @@ export const MenuContent: NextPage = () => {
         href="https://littermate.thebase.in/"
         rel="external nofollow"
         target="_blank"
+        onClick={() => {
+          toggleOpen();
+        }}
       >
         Online Shop
       </a>
