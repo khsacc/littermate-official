@@ -85,7 +85,7 @@ export default function MyApp(props) {
       <ThemeProvider theme={Theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        {/* <LoadAnim /> */}
+        <LoadAnim />
         <Header />
         <div className={classes.wholeWrapper}>
           <div className={classes.sequence}></div>
