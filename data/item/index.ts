@@ -516,6 +516,12 @@ const S307: ItemDatum = {
 
     {
       colour: "White",
+      img: "/image/S307/S307_W_6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/27176836",
+    },
+    {
+      colour: "White",
       img: "/image/S307/S307_W_1.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/27176836",
@@ -529,12 +535,6 @@ const S307: ItemDatum = {
     {
       colour: "White",
       img: "/image/S307/S307_W_5.jpg",
-      lookOnly: false,
-      baseLink: "https://littermate.thebase.in/items/27176836",
-    },
-    {
-      colour: "White",
-      img: "/image/S307/S307_W_6.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/27176836",
     },
