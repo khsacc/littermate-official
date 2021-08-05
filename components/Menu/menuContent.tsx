@@ -125,7 +125,7 @@ export const MenuContent: NextPage<{
       )} */}
 
       {router.pathname !== "/" ? (
-        <Link href={`/?category=news}`}>
+        <Link href={`/news`}>
           <a
             className={classes.categoryLink}
             onClick={() => {
