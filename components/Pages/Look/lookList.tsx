@@ -90,7 +90,7 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
   }, []);
   return (
     <>
-      <Link href={`/look/${itemDatum.id}`}>
+      <Link href={`/look/${itemDatum.id}`} scroll={true}>
         <a className={classes.wrapAtag}>
           <div
             className={classes.itemContainer}
