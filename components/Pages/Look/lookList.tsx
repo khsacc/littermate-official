@@ -85,8 +85,8 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
   useEffect(() => {
     const uaParser = new UAParser();
     const currentOS = uaParser.getOS().name;
-    // setIsiOs(currentOS === "iOS");
-    setIsiOs(true);
+    setIsiOs(currentOS === "iOS");
+    // setIsiOs(true);
   }, []);
   return (
     <>
