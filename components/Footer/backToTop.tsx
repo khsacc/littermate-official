@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const useStyles = makeStyles((theme) => {
   return {
-    wrap: { textAlign: "center" },
+    wrap: { textAlign: "center", paddingBottom: 25 },
     link: { color: theme.palette.grey[900], fontSize: "1.2em" },
   };
 });

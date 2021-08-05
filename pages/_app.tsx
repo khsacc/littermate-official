@@ -93,9 +93,10 @@ export default function MyApp(props) {
           <MenuPc />
           <div className={classes.pageWrapper}>
             <Component {...pageProps} />
+            <BackToTop />
           </div>
         </div>
-        <BackToTop />
+
         <Footer />
       </ThemeProvider>
     </React.Fragment>
