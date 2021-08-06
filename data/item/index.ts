@@ -25,6 +25,89 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S311: ItemDatum = {
+  id: "S311",
+  name: "S311",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `今作のテーマは「モリス水迷路試験」と呼ばれるマウスの学習と記憶を評価する実験手法です。
+
+  円形のプールの中にマウスの足が着く高さのゴール地点を設置してマウスを泳がせます。
+
+  初めマウスはプール全体をうろうろ泳ぎ回ってゴールに達しますが、何回も同様の試行を繰り返すにつれ周りの景色を記憶し、それを手掛かりにゴールの位置を割り出せるようになります。
+
+  それにより記憶力の良いマウスはゴールを探して泳ぎ回るマウスを尻目により素早くゴールに辿り着けるようになるわけです。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/S311/S311_white1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716951",
+    },
+    {
+      colour: "White",
+      img: "/image/S311/S311_white4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716951",
+    },
+    {
+      colour: "White",
+      img: "/image/S311/S311_white3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716951",
+    },
+    {
+      colour: "White",
+      img: "/image/S311/S311_white2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716951",
+    },
+    {
+      colour: "White",
+      img: "/image/S311/S311_whiteblue1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716951",
+    },
+    {
+      colour: "White",
+      img: "/image/S311/S311_whiteblue2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716951",
+    },
+
+    {
+      colour: "Blue",
+      img: "/image/S311/S311_blue1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716947",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S311/S311_blue2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716947",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S311/S311_blue3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716947",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S311/S311_whiteblue1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716947",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S311/S311_whiteblue2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/49716947",
+    },
+  ],
+};
+
 const sequence: ItemDatum = {
   id: "sequence",
   name: "sequence",
@@ -947,6 +1030,7 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  S311,
   sequence,
   Logo,
   S310,
@@ -971,7 +1055,7 @@ export const itemsData: ItemDatum[] = [
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302, S301, TET, Logo, sequence],
+    items: [S201, S308, S303, S302, S301, TET, Logo, sequence, S311],
   },
   {
     category: "Hoodie",
