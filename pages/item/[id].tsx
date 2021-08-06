@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => {
     imageSection: {
       display: "flex",
       flexWrap: "wrap",
-      justifyContent: "space-between",
+      justifyContent: "center",
     },
     imageWrapper: {
       marginTop: 20,
@@ -57,7 +57,12 @@ const useStyles = makeStyles((theme) => {
     image: {
       display: "block",
       width: "100%",
-      marginTop: 20,
+      height: "auto",
+      margin: 20,
+      [theme.breakpoints.up("md")]: {
+        width: "auto",
+        height: "80vh",
+      },
     },
     imageSmall: {
       display: "block",
@@ -182,29 +187,31 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
         </section>
         <section>
           {imagesSortedArray.map((colour, idx) => (
-            // <ItemContainer colour={colour} id={id} key={idx} />
-            <div
-              className={classes.imageSection}
-              key={idx}
-              ref={colourRefs[idx]}
-            >
-              {colour[1].map((item: ItemImage) => (
-                <>
-                  {/* <div className={classes.imageWrapper} key={item.img}> */}
-                  {!item.okiga && (
-                    <span className={classes.imageColour}>{item.colour}</span>
-                  )}
-                  <img
-                    className={[
-                      classes.image,
-                      item.okiga ? classes.imageSmall : "",
-                    ].join(" ")}
-                    src={item.img}
-                    alt={`${id} ${item.colour}`}
-                  />
-                  {/* </div> */}
-                </>
-              ))}
+            <>
+              {/* // <ItemContainer colour={colour} id={id} key={idx} /> */}
+              <div
+                className={classes.imageSection}
+                key={idx}
+                ref={colourRefs[idx]}
+              >
+                {colour[1].map((item: ItemImage) => (
+                  <>
+                    {/* <div className={classes.imageWrapper} key={item.img}> */}
+                    {!item.okiga && (
+                      <span className={classes.imageColour}>{item.colour}</span>
+                    )}
+                    <img
+                      className={[
+                        classes.image,
+                        item.okiga ? classes.imageSmall : "",
+                      ].join(" ")}
+                      src={item.img}
+                      alt={`${id} ${item.colour}`}
+                    />
+                    {/* </div> */}
+                  </>
+                ))}
+              </div>
               <a
                 href={colour[1][0].baseLink}
                 rel="external"
@@ -213,7 +220,7 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
               >
                 <GetItemButton className={classes.getItemButtonInner} />
               </a>
-            </div>
+            </>
           ))}
         </section>
         <section>
