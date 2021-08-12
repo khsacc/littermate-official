@@ -7,6 +7,11 @@ const useStyles = makeStyles((theme) => {
     map: {
       width: "100%",
       maxWidth: 400,
+      margin: "15px 0",
+    },
+    emphasize: {
+      textDecoration: "underline",
+      fontWeight: "bold",
     },
   };
 });
@@ -26,21 +31,29 @@ export const PopupNews: NextPage = () => {
         <li>
           場所：新宿マルイ本館 1F ポップアップスペース
           <br />
-          <br />
           <img src="/image/popup/map.png" className={classes.map} />
-          <br />
         </li>
       </ul>
 
       <p>
-        当日はスタッフによる<b><u>リアルタイムサイエンスショー</u></b>も予定しております。
+        当日はスタッフによる
+        <span className={classes.emphasize}>リアルタイムサイエンスショー</span>
+        も予定しております。
         <br />
-        また、Littermate公式インスタグラムのフォローでお好きな<b><u>ステッカー</u></b>をプレゼントいたします。
+        また、Littermate公式インスタグラムのフォローでお好きな
+        <span className={classes.emphasize}>ステッカー</span>
+        をプレゼントいたします。
         <br />
         <br />
         現在売り切れとなっているこれまでのシリーズも再入荷する上、秋物の新作も発売いたしますので、是非足を運んでみてください！
         <br />
-        <a href="https://www.0101.co.jp/003/store-info/fair.html?article_id=40386&from=01_pc_st003_store-news-feature_ft-list_article_3969">新宿マルイ公式サイト</a>
+        <a
+          href="https://www.0101.co.jp/003/store-info/fair.html?article_id=40386&from=01_pc_st003_store-news-feature_ft-list_article_3969"
+          rel="nofollow external noreferrer"
+          target="_blank"
+        >
+          新宿マルイ公式サイト
+        </a>
       </p>
     </>
   );
