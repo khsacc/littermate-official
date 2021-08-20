@@ -25,6 +25,101 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S312: ItemDatum = {
+  id: "S312",
+  name: "S312",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `本作のマウスは布を体に切り貼り(カット&ペースト)することで白と黒の混じった体色になっています。
+
+  実は昨今話題のゲノム編集も遺伝子の「カット&ペースト」によるものです。
+
+  細菌などの生き物がもつ免疫機構を応用した「CRISPR-Casシステム」という技法を用いると生物のDNAをカット&ペーストしゲノム編集を行うことができます。
+
+  例えば受精卵から成長する途中で白い毛を黒い毛にするようこの技法を用いると実際に本作のような白黒マウスを作ることができます。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/S312/s312_w1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50765722",
+    },
+    {
+      colour: "White",
+      img: "/image/S312/s312_w2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50765722",
+    },
+    {
+      colour: "White",
+      img: "/image/S312/s312_w3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50765722",
+    },
+
+    {
+      colour: "Gray",
+      img: "/image/S312/s312_g1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50765971",
+    },
+    {
+      colour: "Gray",
+      img: "/image/S312/s312_g2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50765971",
+    },
+    {
+      colour: "Gray",
+      img: "/image/S312/s312_g3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50765971",
+    },
+  ],
+};
+
+const S312_Hoodie: ItemDatum = {
+  id: "S312_Hoodie",
+  name: "S312",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `本作のマウスは布を体に切り貼り(カット&ペースト)することで白と黒の混じった体色になっています。
+
+  実は昨今話題のゲノム編集も遺伝子の「カット&ペースト」によるものです。
+
+  細菌などの生き物がもつ免疫機構を応用した「CRISPR-Casシステム」という技法を用いると生物のDNAをカット&ペーストしゲノム編集を行うことができます。
+
+  例えば受精卵から成長する途中で白い毛を黒い毛にするようこの技法を用いると実際に本作のような白黒マウスを作ることができます。`,
+  images: [
+    {
+      colour: "Brown",
+      img: "/image/S312/s312_b4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50766139",
+    },
+    {
+      colour: "Brown",
+      img: "/image/S312/s312_b1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50766139",
+    },
+    {
+      colour: "Brown",
+      img: "/image/S312/s312_b3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50766139",
+    },
+    {
+      colour: "Brown",
+      img: "/image/S312/s312_b2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/50766139",
+    },
+
+  ],
+};
+
+
 const S311: ItemDatum = {
   id: "S311",
   name: "S311",
@@ -1030,6 +1125,8 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  S312,
+  S312_Hoodie,
   S311,
   sequence,
   Logo,
@@ -1059,7 +1156,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie, S305],
+    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie],
   },
   {
     category: "Sweatshirt",
@@ -1067,7 +1164,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee, S307, S304],
+    items: [S310, S401, coffee, S307, S304, S312],
   },
   {
     category: "Jacket",
