@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Theme } from "../../../styles/theme";
 import { LittermateLogo } from "../../Logo";
-import { topImage } from "./parameters";
+// import { topImage } from "./parameters";
 import { UAParser } from "ua-parser-js";
 
 const useStyles = makeStyles((theme) => {
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => {
     imgWrapper: {
       height: "100vh",
       width: "100vw",
-      backgroundImage: `url(${topImage})`,
+      backgroundImage: `url(/image/S310/S310_Blue_4.jpg)`,
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
@@ -78,7 +78,7 @@ export const Catch: NextPage = () => {
     </>
   ) : (
     <div className={classes.imgWrapperiOs}>
-      <img src={topImage} className={classes.imgiOS} />
+      <img src="/image/S310/S310_Blue_4.jpg" className={classes.imgiOS} />
       <LittermateLogo size="min" className={classes.topLogo} />
     </div>
   );
