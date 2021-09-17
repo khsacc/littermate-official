@@ -116,7 +116,6 @@ const seq_Hoodie: ItemDatum = {
   ],
 };
 
-
 const S312: ItemDatum = {
   id: "S312",
   name: "S312",
@@ -207,10 +206,8 @@ const S312_Hoodie: ItemDatum = {
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/50766139",
     },
-
   ],
 };
-
 
 const S311: ItemDatum = {
   id: "S311",
