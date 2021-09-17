@@ -25,6 +25,98 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const seq_Hoodie: ItemDatum = {
+  id: "seq_Hoodie",
+  name: "sequence",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `それぞれの生物は彼らをその生物たらしめる設計図を持っています。
+  ゲノムと呼ばれるその設計図はA、T、G、Cで書かれた“暗号“から成り立っています。
+  それらは３つで1つのアルファベットに“翻訳“することができます。
+  1977年、人類はついに“暗号“の文字列を読み解く技術を発明しました。
+
+  本作ではある“暗号“を読み取りました。
+  それをアルファベットに翻訳すると
+  「L」「I」「T」「T」「E」「R」...。
+  興味深い解読ができそうです。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/seq_Hoodie/seq_Hoodie_b4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395571",
+    },
+    {
+      colour: "Black",
+      img: "/image/seq_Hoodie/seq_Hoodie_b2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395571",
+    },
+    {
+      colour: "Black",
+      img: "/image/seq_Hoodie/seq_Hoodie_b3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395571",
+    },
+    {
+      colour: "Black",
+      img: "/image/seq_Hoodie/seq_Hoodie_b1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395571",
+    },
+    {
+      colour: "Black",
+      img: "/image/seq_Hoodie/seq_Hoodie_b5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395571",
+    },
+    {
+      colour: "Black",
+      img: "/image/seq_Hoodie/seq_Hoodie_b6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395571",
+    },
+
+    {
+      colour: "White",
+      img: "/image/seq_Hoodie/seq_Hoodie_w1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395591",
+    },
+    {
+      colour: "White",
+      img: "/image/seq_Hoodie/seq_Hoodie_w2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395591",
+    },
+    {
+      colour: "White",
+      img: "/image/seq_Hoodie/seq_Hoodie_w3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395591",
+    },
+    {
+      colour: "White",
+      img: "/image/seq_Hoodie/seq_Hoodie_w4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395591",
+    },
+    {
+      colour: "White",
+      img: "/image/seq_Hoodie/seq_Hoodie_w5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395591",
+    },
+    {
+      colour: "White",
+      img: "/image/seq_Hoodie/seq_Hoodie_w6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/52395591",
+    },
+  ],
+};
+
+
 const S312: ItemDatum = {
   id: "S312",
   name: "S312",
@@ -1125,6 +1217,7 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  seq_Hoodie,
   S312,
   S312_Hoodie,
   S311,
@@ -1156,7 +1249,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie],
+    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie],
   },
   {
     category: "Sweatshirt",
