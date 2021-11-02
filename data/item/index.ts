@@ -28,7 +28,7 @@ export type Category = {
 
 const alcohol: ItemDatum = {
   id: "alcohol",
-  name: "alcohol",
+  name: "Alcohol Mice",
   kind: "Long-sleeve T-shirt",
   isNew: false,
   comment: `Littermateバーのアルコールに溺れる可愛いマウス達。
