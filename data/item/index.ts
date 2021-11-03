@@ -25,6 +25,55 @@ export type Category = {
   items: ItemDatum[];
 };
 
+
+const alcohol: ItemDatum = {
+  id: "alcohol",
+  name: "alcohol",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `Littermateバーのアルコールに溺れる可愛いマウス達。
+  発酵の化学反応式やLittermateを表す日本語も隠れているとかいないとか、、、。`,
+  images: [
+    {
+      colour: "White",
+      img: "/image/alcohol/alcohol4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54682635",
+    },
+    {
+      colour: "White",
+      img: "/image/alcohol/alcohol2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54682635",
+    },
+    {
+      colour: "White",
+      img: "/image/alcohol/alcohol3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54682635",
+    },
+    {
+      colour: "White",
+      img: "/image/alcohol/alcohol1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54682635",
+    },
+    {
+      colour: "White",
+      img: "/image/alcohol/alcohol5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54682635",
+    },
+    {
+      colour: "White",
+      img: "/image/alcohol/alcohol6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54682635",
+    },
+
+  ],
+};
+
 const seq_Hoodie: ItemDatum = {
   id: "seq_Hoodie",
   name: "sequence",
@@ -1214,6 +1263,7 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  alcohol,
   seq_Hoodie,
   S312,
   S312_Hoodie,
@@ -1254,7 +1304,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee, S307, S304, S312],
+    items: [S310, S401, coffee, S307, S304, S312, alcohol],
   },
   {
     category: "Jacket",
