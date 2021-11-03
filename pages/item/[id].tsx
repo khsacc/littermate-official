@@ -109,14 +109,16 @@ const ItemContainer: NextPage<{ id: string; colour }> = ({ id, colour }) => {
           {/* </div> */}
         </>
       ))}
-      <a
-        href={colour[1][0].baseLink}
-        rel="external"
-        target="_blank"
-        className={classes.getItemButton}
-      >
-        <GetItemButton className={classes.getItemButtonInner} />
-      </a>
+      {typeof colour[1][0].baseLink !== "undefined" && (
+        <a
+          href={colour[1][0].baseLink}
+          rel="external"
+          target="_blank"
+          className={classes.getItemButton}
+        >
+          <GetItemButton className={classes.getItemButtonInner} />
+        </a>
+      )}
     </div>
   );
 };
@@ -205,14 +207,16 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
                   {/* </div> */}
                 </>
               ))}
-              <a
-                href={colour[1][0].baseLink}
-                rel="external"
-                target="_blank"
-                className={classes.getItemButton}
-              >
-                <GetItemButton className={classes.getItemButtonInner} />
-              </a>
+              {typeof colour[1][0].baseLink !== "undefined" && (
+                <a
+                  href={colour[1][0].baseLink}
+                  rel="external"
+                  target="_blank"
+                  className={classes.getItemButton}
+                >
+                  <GetItemButton className={classes.getItemButtonInner} />
+                </a>
+              )}
             </div>
           ))}
         </section>

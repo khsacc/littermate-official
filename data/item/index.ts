@@ -1,7 +1,7 @@
 export type ItemImage = {
   img: string;
   colour: string;
-  baseLink: string;
+  baseLink?: string;
   lookOnly: boolean;
   productOnly?: boolean;
   okiga?: boolean;
