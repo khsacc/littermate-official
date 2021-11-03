@@ -33,7 +33,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   return (
     <>
-      <CreateHead />
+      <CreateHead title="Top" />
       <Catch />
       <Story />
       <News />

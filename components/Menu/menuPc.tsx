@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => {
       display: "none",
       [theme.breakpoints.up("sm")]: {
         display: "block",
+        width: 300,
       },
     },
   };

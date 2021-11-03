@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => {
     imageSection: {
       display: "flex",
       flexWrap: "wrap",
-      justifyContent: "space-between",
+      justifyContent: "center",
     },
     imageWrapper: {
       marginTop: 20,
@@ -57,7 +57,12 @@ const useStyles = makeStyles((theme) => {
     image: {
       display: "block",
       width: "100%",
-      marginTop: 20,
+      height: "auto",
+      margin: 20,
+      [theme.breakpoints.up("md")]: {
+        width: "auto",
+        height: "80vh",
+      },
     },
     imageSmall: {
       display: "block",
@@ -143,7 +148,7 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
   );
   return (
     <>
-      <CreateHead title={data.name} image={data.ogimage || ""} />
+      <CreateHead title={data.name} />
       <main className={classes.wrapper}>
         <section className={classes.commentWrapper}>
           <Typography className={classes.kind} variant="h3">
