@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => {
       listStyle: "none",
       borderLeft: `5px solid ${theme.palette.grey[900]}`,
       padding: `5px 0 5px 10px`,
+      marginTop: 10,
       background: `${theme.palette.grey[200]}`,
       transition: "all 0.3s ease-in",
       "&:hover": {
