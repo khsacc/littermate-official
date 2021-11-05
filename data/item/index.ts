@@ -25,6 +25,36 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const immune: ItemDatum = {
+  id: "immune",
+  name: "Immune Cell",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `私たちは、血中の様々な免疫細胞がそれぞれの役割をもち、互いに巧みなコミュニケーションを取ることで、外部からの感染から身を守っています。
+  細菌やウイルス、寄生虫を飲み込む細胞、飲み込んだ異物の情報を他の細胞に伝える細胞、異物に対して武器(抗体)を作り攻撃する細胞、その記憶を保持し次の感染に備える細胞…。
+  実はこれらの細胞は全て元々は｢造血幹細胞｣という同じ種類の細胞でした。
+  骨の中心部にある骨髄で作られた後、様々な種類に分化していき複雑な防衛システムを構築しているのです。`,
+  images: [
+    {
+      colour: "green",
+      img: "/image/immune/immune1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834330",
+    },
+    {
+      colour: "green",
+      img: "/image/immune/immune2.png",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834330",
+    },
+    {
+      colour: "pink",
+      img: "/image/immune/immune3.png",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54830919",
+    },
+  ],
+};
 
 const alcohol: ItemDatum = {
   id: "alcohol",
@@ -1263,6 +1293,7 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  immune,
   alcohol,
   seq_Hoodie,
   S312,
@@ -1296,7 +1327,7 @@ export const categoryData: Category[] = [
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie],
+    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie, immune],
   },
   {
     category: "Sweatshirt",
