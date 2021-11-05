@@ -1,7 +1,7 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, TextareaAutosize } from "@material-ui/core";
 import { NextPage } from "next";
 import { Theme } from "../../../styles/theme";
-import { itemData, ItemDatum } from "../../../data/item";
+import { ItemDatum, itemsData } from "../../../data/item";
 import { ViewMore } from "../../Common/viewMore";
 import Link from "next/link";
 import { UAParser } from "ua-parser-js";
@@ -86,15 +86,18 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
     const uaParser = new UAParser();
     const currentOS = uaParser.getOS().name;
     setIsiOs(currentOS === "iOS");
+    // setIsiOs(true);
   }, []);
   return (
     <>
-      <Link href={`/look/${itemDatum.id}`}>
+      <Link href={`/look/${itemDatum.id}`} scroll={true}>
         <a className={classes.wrapAtag}>
           <div
             className={classes.itemContainer}
             style={
-              !isiOS && { backgroundImage: `url(${itemDatum.images[0].img})` }
+              !isiOS
+                ? { backgroundImage: `url(${itemDatum.images[0].img})` }
+                : {}
             }
           >
             {isiOS && (
@@ -116,7 +119,7 @@ export const LookList: NextPage = () => {
   const classes = useStyles(Theme);
   return (
     <div className={classes.whole}>
-      {itemData.map((item, idx) => (
+      {itemsData.map((item, idx) => (
         <LookItem itemDatum={item} key={idx} />
       ))}
     </div>

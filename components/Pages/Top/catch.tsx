@@ -70,7 +70,7 @@ export const Catch: NextPage = () => {
     const currentOS = uaParser.getOS().name;
     setIsiOS(currentOS === "iOS");
   }, []);
-  return isiOS ? (
+  return !isiOS ? (
     <>
       <div className={classes.imgWrapper}>
         <LittermateLogo size="min" className={classes.topLogo} />

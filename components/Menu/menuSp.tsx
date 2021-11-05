@@ -102,7 +102,7 @@ export const MenuSp: NextPage = () => {
           toggleOpen ? classes.menuModalOpen : "",
         ].join(" ")}
       >
-        <MenuContent />
+        <MenuContent setToggleOpen={setToggleOpen} />
       </div>
       <div className={classes.fix}>
         <menu

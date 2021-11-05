@@ -1,7 +1,7 @@
 export type ItemImage = {
   img: string;
   colour: string;
-  baseLink: string;
+  baseLink?: string;
   lookOnly: boolean;
   productOnly?: boolean;
   okiga?: boolean;
@@ -388,7 +388,7 @@ const sequence: ItemDatum = {
     },
     {
       colour: "Black",
-      img: "/image/sequence/TagTWHiteBlack2.jpg",
+      img: "/image/sequence/TagTWhiteBlack2.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/47796109",
     },
@@ -400,7 +400,7 @@ const sequence: ItemDatum = {
     },
     {
       colour: "White",
-      img: "/image/sequence/TagTWHiteBlack2.jpg",
+      img: "/image/sequence/TagTWhiteBlack2.jpg",
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/47775349",
     },

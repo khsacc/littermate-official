@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => {
     imageSection: {
       display: "flex",
       flexWrap: "wrap",
-      justifyContent: "space-between",
+      justifyContent: "center",
     },
     imageWrapper: {
       marginTop: 20,
@@ -57,7 +57,12 @@ const useStyles = makeStyles((theme) => {
     image: {
       display: "block",
       width: "100%",
-      marginTop: 20,
+      height: "auto",
+      margin: 20,
+      [theme.breakpoints.up("md")]: {
+        width: "auto",
+        height: "80vh",
+      },
     },
     imageSmall: {
       display: "block",
@@ -109,14 +114,16 @@ const ItemContainer: NextPage<{ id: string; colour }> = ({ id, colour }) => {
           {/* </div> */}
         </>
       ))}
-      <a
-        href={colour[1][0].baseLink}
-        rel="external"
-        target="_blank"
-        className={classes.getItemButton}
-      >
-        <GetItemButton className={classes.getItemButtonInner} />
-      </a>
+      {typeof colour[1][0].baseLink !== "undefined" && (
+        <a
+          href={colour[1][0].baseLink}
+          rel="external"
+          target="_blank"
+          className={classes.getItemButton}
+        >
+          <GetItemButton className={classes.getItemButtonInner} />
+        </a>
+      )}
     </div>
   );
 };
@@ -141,7 +148,7 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
   );
   return (
     <>
-      <CreateHead title={data.name} image={data.ogimage || ""} />
+      <CreateHead title={data.name} />
       <main className={classes.wrapper}>
         <section className={classes.commentWrapper}>
           <Typography className={classes.kind} variant="h3">
@@ -205,14 +212,16 @@ const ItemPage: NextPage<{ id: string; data: ItemDatum }> = ({ id, data }) => {
                   {/* </div> */}
                 </>
               ))}
-              <a
-                href={colour[1][0].baseLink}
-                rel="external"
-                target="_blank"
-                className={classes.getItemButton}
-              >
-                <GetItemButton className={classes.getItemButtonInner} />
-              </a>
+              {typeof colour[1][0].baseLink !== "undefined" && (
+                <a
+                  href={colour[1][0].baseLink}
+                  rel="external"
+                  target="_blank"
+                  className={classes.getItemButton}
+                >
+                  <GetItemButton className={classes.getItemButtonInner} />
+                </a>
+              )}
             </div>
           ))}
         </section>

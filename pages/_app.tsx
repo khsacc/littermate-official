@@ -11,6 +11,7 @@ import * as gtag from "../plugins/gtag";
 import { MenuSp } from "../components/Menu/menuSp";
 import { MenuPc } from "../components/Menu/menuPc";
 import { LoadAnim } from "../components/LoadAnim";
+import { BackToTop } from "../components/Footer/backToTop";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -75,7 +76,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>My page</title>
+        <title>Littermate Official</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -92,8 +93,10 @@ export default function MyApp(props) {
           <MenuPc />
           <div className={classes.pageWrapper}>
             <Component {...pageProps} />
+            <BackToTop />
           </div>
         </div>
+
         <Footer />
       </ThemeProvider>
     </React.Fragment>
