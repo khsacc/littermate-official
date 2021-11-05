@@ -25,10 +25,146 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const S313: ItemDatum = {
+  id: "S313",
+  name: "S313",
+  kind: "Sweatshirt",
+  isNew: false,
+  comment: `今作のテーマは｢ヌードマウス｣として知られる変異マウス。
+  全身の体毛がないマウスとして1960年代に発見されました。
+  その体の構造を調べていると、驚くべきことに免疫細胞の工場の一つである胸腺が欠けていることがわかりました。
+  これにより免疫細胞の一つ、T細胞の産生ができなくなり、免疫不全となります。
+  この性質により、病原体の感染はもとより、他個体や多種の組織を移植しても拒絶反応を起こさないため、癌腫瘍の研究にも大きな躍進をもたらしました。`,
+  images: [
+    {
+      colour: "black",
+      img: "/image/s313/s313-1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834270",
+    },
+    {
+      colour: "black",
+      img: "/image/s313/s313-3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834270",
+    },
+    {
+      colour: "pink",
+      img: "/image/s313/s313-2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54830812",
+    },
+
+  ],
+};
+
+const nude: ItemDatum = {
+  id: "nude",
+  name: "Immune Cell",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `私たちは、血中の様々な免疫細胞がそれぞれの役割をもち、互いに巧みなコミュニケーションを取ることで、外部からの感染から身を守っています。
+  細菌やウイルス、寄生虫を飲み込む細胞、飲み込んだ異物の情報を他の細胞に伝える細胞、異物に対して武器(抗体)を作り攻撃する細胞、その記憶を保持し次の感染に備える細胞…。
+  実はこれらの細胞は全て元々は｢造血幹細胞｣という同じ種類の細胞でした。
+  骨の中心部にある骨髄で作られた後、様々な種類に分化していき複雑な防衛システムを構築しているのです。`,
+  images: [
+    {
+      colour: "green",
+      img: "/image/immune/immune1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834330",
+    },
+    {
+      colour: "green",
+      img: "/image/immune/immune2.png",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834330",
+    },
+    {
+      colour: "pink",
+      img: "/image/immune/immune3.png",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54830919",
+    },
+  ],
+};
+
+const immune: ItemDatum = {
+  id: "immune",
+  name: "Immune Cell",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `私たちは、血中の様々な免疫細胞がそれぞれの役割をもち、互いに巧みなコミュニケーションを取ることで、外部からの感染から身を守っています。
+  細菌やウイルス、寄生虫を飲み込む細胞、飲み込んだ異物の情報を他の細胞に伝える細胞、異物に対して武器(抗体)を作り攻撃する細胞、その記憶を保持し次の感染に備える細胞…。
+  実はこれらの細胞は全て元々は｢造血幹細胞｣という同じ種類の細胞でした。
+  骨の中心部にある骨髄で作られた後、様々な種類に分化していき複雑な防衛システムを構築しているのです。`,
+  images: [
+    {
+      colour: "green",
+      img: "/image/immune/immune1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834330",
+    },
+    {
+      colour: "green",
+      img: "/image/immune/immune2.png",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54834330",
+    },
+    {
+      colour: "pink",
+      img: "/image/immune/immune3.png",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54830919",
+    },
+  ],
+};
+
+const accessories: ItemDatum = {
+  id: "Accessories",
+  name: "Accessories",
+  kind: "Accessories",
+  isNew: false,
+  comment: ``,
+  images: [
+    {
+      colour: "Ear Tag",
+      img: "/image/accessories/eartag1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831026",
+    },
+    {
+      colour: "Ear Tag",
+      img: "/image/accessories/eartag2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831026",
+    },
+    {
+      colour: "Ear Tag",
+      img: "/image/accessories/eartag3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831026",
+    },
+
+    {
+      colour: "DNA",
+      img: "/image/accessories/dna1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831094",
+    },
+    {
+      colour: "DNA",
+      img: "/image/accessories/dna2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831094",
+    },
+  ],
+
+};
 
 const alcohol: ItemDatum = {
   id: "alcohol",
-  name: "alcohol",
+  name: "Alcohol Mice",
   kind: "Long-sleeve T-shirt",
   isNew: false,
   comment: `Littermateバーのアルコールに溺れる可愛いマウス達。
@@ -1263,6 +1399,9 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  S313,
+  immune,
+  accessories,
   alcohol,
   seq_Hoodie,
   S312,
@@ -1296,11 +1435,11 @@ export const categoryData: Category[] = [
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie],
+    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie, immune],
   },
   {
     category: "Sweatshirt",
-    items: [S309_Sweatshirt, falling],
+    items: [S309_Sweatshirt, falling, S313],
   },
   {
     category: "Long-sleeve T-shirt",
@@ -1310,6 +1449,10 @@ export const categoryData: Category[] = [
     category: "Jacket",
     items: [S306],
   },
+  {
+    category: "Aaccessories",
+    items: [accessories],
+  }
 ];
 
 export const itemData = categoryData.reduce((pre, cur) => {
