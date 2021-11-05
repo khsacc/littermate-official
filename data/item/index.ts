@@ -120,6 +120,48 @@ const immune: ItemDatum = {
   ],
 };
 
+const accessories: ItemDatum = {
+  id: "Accessories",
+  name: "Accessories",
+  kind: "Accessories",
+  isNew: false,
+  comment: ``,
+  images: [
+    {
+      colour: "Ear Tag",
+      img: "/image/accessories/eartag1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831026",
+    },
+    {
+      colour: "Ear Tag",
+      img: "/image/accessories/eartag2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831026",
+    },
+    {
+      colour: "Ear Tag",
+      img: "/image/accessories/eartag3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831026",
+    },
+
+    {
+      colour: "DNA",
+      img: "/image/accessories/dna1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831094",
+    },
+    {
+      colour: "DNA",
+      img: "/image/accessories/dna2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/54831094",
+    },
+  ],
+
+};
+
 const alcohol: ItemDatum = {
   id: "alcohol",
   name: "Alcohol Mice",
@@ -1359,6 +1401,7 @@ const S310: ItemDatum = {
 export const itemsData: ItemDatum[] = [
   S313,
   immune,
+  accessories,
   alcohol,
   seq_Hoodie,
   S312,
@@ -1406,6 +1449,10 @@ export const categoryData: Category[] = [
     category: "Jacket",
     items: [S306],
   },
+  {
+    category: "Aaccessories",
+    items: [accessories],
+  }
 ];
 
 export const itemData = categoryData.reduce((pre, cur) => {
