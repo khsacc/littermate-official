@@ -5,7 +5,7 @@ export const NewsList = [
   },
   {
     id: "2021-hatch-popup",
-    title: "浅草HATCH秋祭りにPOPUP出店 2021年11月3日（水・祝）",
+    title: "浅草HATCH秋祭りにPOPUP出店 2021年11月3日(水・祝)",
   },
   {
     id: "2021-summer-popup",
