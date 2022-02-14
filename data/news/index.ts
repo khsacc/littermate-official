@@ -1,10 +1,14 @@
 export const NewsList = [
   {
+    id: "2022-spring-popup",
+    title: "新宿マルイでの期間限定POPUP 2022年3月8日(火)〜3月27日(日)",
+  },
+  {
     id: "2021-hatch-popup",
-    title: "11/3（水・祝）浅草HATCH秋祭りにPOPUP出店",
+    title: "浅草HATCH秋祭りにPOPUP出店 2021年11月3日(水・祝)",
   },
   {
     id: "2021-summer-popup",
-    title: "新宿マルイでの期間限定POPUP 8/20(金)〜8/26(木)",
+    title: "新宿マルイでの期間限定POPUP 2021年8月20日(金)〜8月26日(木)",
   },
 ];
