@@ -25,6 +25,180 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const SmallLogoT: ItemDatum = {
+  id: "SmallLogoT",
+  name: "SmallLogo",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `Littermateは生物学の用語でマウスの同腹子を意味します。
+  遺伝的に近いマウスは実験場重要な意味を持つのです。
+
+  ロゴの上半分では「精密」「厳格」「論理的」---
+  一方、下半分では「自由」「挑戦的」「創造的」---
+  私たちのロゴは生物学がもつそんな“二面性”を体現しています。
+
+  今回はそんなロゴをワッペンにした作品を作成しました。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/smalllogo/t-black1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077225",
+    },
+    {
+      colour: "White",
+      img: "/image/smalllogo/t-white1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077231",
+    },
+  ],
+};
+
+const SmallLogoLongT: ItemDatum = {
+  id: "SmallLogoLongT",
+  name: "SmallLogo",
+  kind: "Long-sleeve T-shirt",
+  isNew: false,
+  comment: `Littermateは生物学の用語でマウスの同腹子を意味します。
+  遺伝的に近いマウスは実験場重要な意味を持つのです。
+
+  ロゴの上半分では「精密」「厳格」「論理的」---
+  一方、下半分では「自由」「挑戦的」「創造的」---
+  私たちのロゴは生物学がもつそんな“二面性”を体現しています。
+
+  今回はそんなロゴをワッペンにした作品を作成しました。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/smalllogo/long-black1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077151",
+    },
+    {
+      colour: "Black",
+      img: "/image/smalllogo/long-black2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077151",
+    },
+    {
+      colour: "Black",
+      img: "/image/smalllogo/long-black3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077151",
+    },
+    {
+      colour: "White",
+      img: "/image/smalllogo/long-white1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077141",
+    },
+    {
+      colour: "White",
+      img: "/image/smalllogo/long-white2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077141",
+    },
+  ],
+};
+
+const SmallLogoSweat: ItemDatum = {
+  id: "SmallLogoSweat",
+  name: "SmallLogo",
+  kind: "Sweat",
+  isNew: false,
+  comment: `Littermateは生物学の用語でマウスの同腹子を意味します。
+  遺伝的に近いマウスは実験場重要な意味を持つのです。
+
+  ロゴの上半分では「精密」「厳格」「論理的」---
+  一方、下半分では「自由」「挑戦的」「創造的」---
+  私たちのロゴは生物学がもつそんな“二面性”を体現しています。
+
+  今回はそんなロゴをワッペンにした作品を作成しました。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/smalllogo/sweat-black2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077039",
+    },
+    {
+      colour: "Black",
+      img: "/image/smalllogo/sweat-black1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077039",
+    },
+    {
+      colour: "Black",
+      img: "/image/smalllogo/sweat-black3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077039",
+    },
+    {
+      colour: "White",
+      img: "/image/smalllogo/sweat-white1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077031",
+    },
+    {
+      colour: "White",
+      img: "/image/smalllogo/sweat-white2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077031",
+    },
+    {
+      colour: "Gray",
+      img: "/image/smalllogo/sweat-gray1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077047",
+    },
+    {
+      colour: "Gray",
+      img: "/image/smalllogo/sweat-gray2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60077047",
+    },
+  ],
+};
+
+const StrucJacket: ItemDatum = {
+  id: "StrucJacket",
+  name: "Protein Structure",
+  kind: "Jacket",
+  isNew: false,
+  comment: `生命の設計図であるDNAは20種類のアミノ酸に“翻訳”できます。
+  設計図通りにアミノ酸をつなげると、タンパク質になります。タンパク質はアミノ酸の並びに基づいて自然に折りたたまれます。
+  しかし、その折りたたみの法則はあまりに複雑で、長い間解かれていませんでした。
+  その問題がついに、2021年に公開されたAIソフトのAlphaFold によって解かれ、世界で一大ムーブになっています。
+
+  本作ではブランド名のアミノ酸に見立てた時の折りたたみをAlphaFoldで予測してプリントしました。ついに人類に解かれた自然界の法則によるデザインをぜひお楽しみください。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/alphafold/alphafold3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60076663",
+    },
+    {
+      colour: "Black",
+      img: "/image/alphafold/alphafold2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60076663",
+    },
+    {
+      colour: "Black",
+      img: "/image/alphafold/alphafold1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60076663",
+    },
+    {
+      colour: "Black",
+      img: "/image/alphafold/alphafold4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60076663",
+    },
+  ],
+};
+
 const S313: ItemDatum = {
   id: "S313",
   name: "S313",
@@ -1399,6 +1573,10 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  SmallLogoT,
+  SmallLogoLongT,
+  SmallLogoSweat,
+  StrucJacket,
   S313,
   immune,
   accessories,
@@ -1431,7 +1609,7 @@ export const itemsData: ItemDatum[] = [
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302, S301, TET, Logo, sequence, S311],
+    items: [S201, S308, S303, S302, S301, TET, Logo, sequence, S311, SmallLogoT],
   },
   {
     category: "Hoodie",
@@ -1439,15 +1617,15 @@ export const categoryData: Category[] = [
   },
   {
     category: "Sweatshirt",
-    items: [S309_Sweatshirt, falling, S313],
+    items: [S309_Sweatshirt, falling, S313, SmallLogoSweat],
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee, S307, S304, S312, alcohol],
+    items: [S310, S401, coffee, S307, S304, S312, alcohol, SmallLogoLongT],
   },
   {
     category: "Jacket",
-    items: [S306],
+    items: [S306, StrucJacket],
   },
   {
     category: "Aaccessories",
