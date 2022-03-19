@@ -25,6 +25,236 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const embryoT: ItemDatum = {
+  id: "embryoT",
+  name: "Embryo Dev",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `今作のテーマは「胚発生」。
+  ヒトの体は数十兆の細胞でできていますが、その人生はたった一個の細胞からスタートをきります。
+  一つの受精卵が2つに分裂し、それが4つ、8つ...と増えていき、徐々に体の形を形作っていきます。
+  この過程を胚発生と呼びます。
+  今回は特に、その初期で、受精卵から腸や口や背骨の原型ができていく様子をデザインしました。
+  海を泳ぐ魚や空を飛ぶ鳥など、多種多様な形を持つ脊椎動物ですが、不思議なことにこの時期の個体の形態は非常に似ています。
+  生物全体を見渡せば、私たちは非常に似たグループであると言えるのです。  `,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-t-b1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241360",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-t-b2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241360",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-t-b3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241360",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-t-b4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241360",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-t.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241360",
+    },
+    {
+      colour: "White",
+      img: "/image/embryo/emb-t-w1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241342",
+    },
+    {
+      colour: "White",
+      img: "/image/embryo/emb-t-w2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241342",
+    },
+    {
+      colour: "White",
+      img: "/image/embryo/emb-t-w3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241342",
+    },
+  ],
+};
+
+const embryo_Sweat: ItemDatum = {
+  id: "embryo_Sweat",
+  name: "Embryo Dev",
+  kind: "Sweatshirt",
+  isNew: false,
+  comment: `今作のテーマは「胚発生」。
+  ヒトの体は数十兆の細胞でできていますが、その人生はたった一個の細胞からスタートをきります。
+  一つの受精卵が2つに分裂し、それが4つ、8つ...と増えていき、徐々に体の形を形作っていきます。
+  この過程を胚発生と呼びます。
+  今回は特に、その初期で、受精卵から腸や口や背骨の原型ができていく様子をデザインしました。
+  海を泳ぐ魚や空を飛ぶ鳥など、多種多様な形を持つ脊椎動物ですが、不思議なことにこの時期の個体の形態は非常に似ています。
+  生物全体を見渡せば、私たちは非常に似たグループであると言えるのです。  `,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-black2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241239",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-black1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241239",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb-black3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241239",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241239",
+    },
+    {
+      colour: "Black",
+      img: "/image/embryo/emb2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241239",
+    },
+    {
+      colour: "Blue",
+      img: "/image/embryo/emb-blue2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241242",
+    },
+    {
+      colour: "Blue",
+      img: "/image/embryo/emb-blue1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241242",
+    },
+    {
+      colour: "Blue",
+      img: "/image/embryo/emb-blue3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241242",
+    },
+  ],
+};
+
+const S314_Hoodie: ItemDatum = {
+  id: "S314_Hoodie",
+  name: "S314",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `本作では産まれる前のマウス(胎児マウス)が培養槽で飼育されています。
+  哺乳類は体内で子を育てることで、胎児の生存確率を大幅に高めました。
+  胎児は母親の子宮内で、へその緒と胎盤を介して栄養や酸素、老廃物のやり取りをしています。
+  近年、人工的に作った受精卵を子宮に入れて育てる人工受精や、胎児を子宮から一時的に取り出して薬剤投与や遺伝子導入を行うExo utero法といった技術が確立してきました。
+  ゆくゆくは完全に一から生物個体を生み出すことも可能になるかもしれません。
+  `,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S314/314Hoodie-black3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241044",
+    },
+    {
+      colour: "Black",
+      img: "/image/S314/314Hoodie-black2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241044",
+    },
+    {
+      colour: "Black",
+      img: "/image/S314/314Hoodie-black1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241044",
+    },
+    {
+      colour: "Black",
+      img: "/image/S314/314Hoodie.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241044",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S314/314Hoodie-blue3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241054",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S314/314Hoodie-blue2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241054",
+    },
+    {
+      colour: "Blue",
+      img: "/image/S314/314Hoodie-blue1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241054",
+    },
+  ],
+};
+
+const S314T: ItemDatum = {
+  id: "S314T",
+  name: "S314",
+  kind: "Long Sleeve T-shirt",
+  isNew: false,
+  comment: `本作では産まれる前のマウス(胎児マウス)が培養槽で飼育されています。
+  哺乳類は体内で子を育てることで、胎児の生存確率を大幅に高めました。
+  胎児は母親の子宮内で、へその緒と胎盤を介して栄養や酸素、老廃物のやり取りをしています。
+  近年、人工的に作った受精卵を子宮に入れて育てる人工受精や、胎児を子宮から一時的に取り出して薬剤投与や遺伝子導入を行うExo utero法といった技術が確立してきました。
+  ゆくゆくは完全に一から生物個体を生み出すことも可能になるかもしれません。
+  `,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S314/314long-b1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241111",
+    },
+    {
+      colour: "Black",
+      img: "/image/S314/314long-b2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241111",
+    },
+    {
+      colour: "Black",
+      img: "/image/S314/314long.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241111",
+    },
+    {
+      colour: "Light Blue",
+      img: "/image/S314/314long-l1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241102",
+    },
+    {
+      colour: "Light Blue",
+      img: "/image/S314/314long-l2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/60241102",
+    },
+  ],
+};
+
 const SmallLogoT: ItemDatum = {
   id: "SmallLogoT",
   name: "SmallLogo",
@@ -1573,6 +1803,10 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  embryoT,
+  embryo_Sweat,
+  S314_Hoodie,
+  S314T,
   SmallLogoT,
   SmallLogoLongT,
   SmallLogoSweat,
@@ -1609,19 +1843,19 @@ export const itemsData: ItemDatum[] = [
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302, S301, TET, Logo, sequence, S311, SmallLogoT],
+    items: [S201, S308, S303, S302, S301, TET, Logo, sequence, S311, SmallLogoT, embryoT],
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie, immune],
+    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie, immune, S314_Hoodie],
   },
   {
     category: "Sweatshirt",
-    items: [S309_Sweatshirt, falling, S313, SmallLogoSweat],
+    items: [S309_Sweatshirt, falling, S313, SmallLogoSweat, embryo_Sweat],
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee, S307, S304, S312, alcohol, SmallLogoLongT],
+    items: [S310, S401, coffee, S307, S304, S312, alcohol, SmallLogoLongT, S314T],
   },
   {
     category: "Jacket",
