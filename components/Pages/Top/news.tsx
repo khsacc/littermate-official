@@ -48,7 +48,7 @@ export const News: NextPage = () => {
           {NewsList.map((news) => (
             <li key={news.id} className={classes.newsList}>
               <Link href={`/news/${news.id}`}>
-                <a className={classes.newsListLink}>{news.title}</a>
+                <p className={classes.newsListLink}>{news.title}</p>
               </Link>
             </li>
           ))}

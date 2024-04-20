@@ -229,15 +229,11 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         </ul>
 
         <Link href={`/item/${datum.id}`} scroll={true}>
-          <a>
-            <div
-              className={classes.imgContainer}
+            <div className={classes.imgContainer}
               style={{
                 backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
-              }}
-            ></div>
+              }}></div>
             <ViewMore className={classes.more} />
-          </a>
         </Link>
       </div>
     </>

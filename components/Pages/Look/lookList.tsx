@@ -91,7 +91,7 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
   return (
     <>
       <Link href={`/look/${itemDatum.id}`} scroll={true}>
-        <a className={classes.wrapAtag}>
+        <p className={classes.wrapAtag}>
           <div
             className={classes.itemContainer}
             style={
@@ -109,7 +109,7 @@ const LookItem: NextPage<{ itemDatum: ItemDatum }> = ({ itemDatum }) => {
             <span className={classes.itemName}>{itemDatum.name}</span>
             <ViewMore className={classes.more} />
           </div>
-        </a>
+        </p>
       </Link>
     </>
   );
