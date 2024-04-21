@@ -5,20 +5,18 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": [
     "html",
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact",
+    "typescriptreact"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "cSpell.words": [
-    "Littermate"
-  ],
+  "cSpell.words": ["Littermate"]
 }

@@ -47,8 +47,8 @@ export const News: NextPage = () => {
         <ul className={classes.newsListWrap}>
           {NewsList.map((news) => (
             <li key={news.id} className={classes.newsList}>
-              <Link href={`/news/${news.id}`}>
-                <p className={classes.newsListLink}>{news.title}</p>
+              <Link href={`/news/${news.id}`} className={classes.newsListLink}>
+              {news.title}
               </Link>
             </li>
           ))}
