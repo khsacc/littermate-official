@@ -19,7 +19,7 @@ export const BackToTop: NextPage = () => {
       {router.pathname !== "/" && (
         <div className={classes.wrap}>
           <Link href="/">
-            <a className={classes.link}>Back to Top</a>
+            <p className={classes.link}>Back to Top</p>
           </Link>
         </div>
       )}

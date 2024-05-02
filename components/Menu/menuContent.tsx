@@ -68,26 +68,22 @@ export const MenuContent: NextPage<{
   };
   return (
     <div className={classes.wrapper}>
-      <Link href="/">
-        <a
-          onClick={() => {
+      <Link href="/" onClick={() => {
             toggleOpen();
-          }}
-        >
+          }}>
           <LittermateLogo className={classes.logo} />
-        </a>
       </Link>
       <Social />
 
       <Link href={`/`}>
-        <a
+        <p
           className={[classes.categoryLink, classes.lookLink].join(" ")}
           onClick={() => {
             toggleOpen();
           }}
         >
           Top
-        </a>
+        </p>
       </Link>
 
       {/* {categoryData.map((category, idx) =>
@@ -126,7 +122,7 @@ export const MenuContent: NextPage<{
 
       {router.pathname !== "/" ? (
         <Link href={`/news`}>
-          <a
+          <p
             className={classes.categoryLink}
             onClick={() => {
               toggleOpen();
@@ -138,10 +134,10 @@ export const MenuContent: NextPage<{
             }}
           >
             News
-          </a>
+          </p>
         </Link>
       ) : (
-        <a
+        <p
           className={classes.categoryLink}
           onClick={() => {
             toggleOpen();
@@ -154,18 +150,18 @@ export const MenuContent: NextPage<{
           }}
         >
           News
-        </a>
+        </p>
       )}
 
       <Link href={`/look`}>
-        <a
+        <p
           className={[classes.categoryLink, classes.lookLink].join(" ")}
           onClick={() => {
             toggleOpen();
           }}
         >
           Look
-        </a>
+        </p>
       </Link>
       <a
         className={[classes.categoryLink, classes.lookLink].join(" ")}
