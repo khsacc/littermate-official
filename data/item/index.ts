@@ -25,6 +25,122 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const shortDay: ItemDatum = {
+  id: "shortDay",
+  name: "Short-day plant",
+  kind: "Sweatshirt",
+  isNew: false,
+  comment: `花はその多様さ故に季節によって世界を全く異なる風景に彩ります。
+  この多様性の一因は，植物が持つ，日照時間を基に季節を知る術にあります。
+  秋に花を咲かせる植物を「短日植物」と言います。短日植物は，暗期の時間が閾値を超えると花を咲かせます。例えばカランコエという赤い花を咲かせる多肉植物は，日照時間が12時間以下の日が続くと花を咲かせ，それよりも長いと蕾すらつけません。また，日照時間が12時間以下であっても暗期を一時光で妨げると蕾をつけないことも実験によって知られています。
+  花々が織りなす四季の風景はこのようなメカニズムの上に成り立っているのです。`,
+  images: [
+    {
+      colour: "Burgundy",
+      img: "/image/shortDay/shortDay-b1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322241",
+    },
+    {
+      colour: "White",
+      img: "/image/shortDay/shortDay-w1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322241",
+    },
+    {
+      colour: "Burgundy",
+      img: "/image/shortDay/shortDay-b2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322241",
+    },
+    {
+      colour: "White",
+      img: "/image/shortDay/shortDay-w2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322241",
+    },
+  ],
+};
+
+const abcModel: ItemDatum = {
+  id: "abcModel",
+  name: "ABCmodel",
+  kind: "Sweatshirt",
+  isNew: false,
+  comment: `花は雌しべを雄しべが囲み、更に花びらとがくがそれらを守るような構造をとっています。これらの器官の形成はたった3つの遺伝子A、B、Cの組み合わせによって決まり、これをABCモデルと呼びます。
+  遺伝子Aのみがはたらくする場合はがく、AとBの場合は花弁、BとCの場合は雄しべ、Cのみの場合は雌しべが形成されます。そのため，Bの遺伝子がはたらかなくなくなるとがくと雌しべのみの無弁花となります。
+  この単純で精巧なABCモデルが複雑で美しい花の形成を支えているのです。`,
+  images: [
+    {
+      colour: "Ash",
+      img: "/image/abc/abc-ash1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322183",
+    },
+    {
+      colour: "Ash",
+      img: "/image/abc/abc-ash2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322183",
+    },
+    {
+      colour: "Ash",
+      img: "/image/abc/abc-ash3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322183",
+    },
+    {
+      colour: "Ash",
+      img: "/image/abc/abc-ash4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322183",
+    },
+    {
+      colour: "Ash",
+      img: "/image/abc/abc-ash5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69322183",
+    },
+  ],
+};
+
+const lure: ItemDatum = {
+  id: "lure",
+  name: "LURE",
+  kind: "Hoodie",
+  isNew: false,
+  comment: `花は植物の生殖器官です。
+  花粉がめしべに付着して受粉すると、精細胞を卵細胞へと届けるために、花粉は管を伸ばします。 見事なのは、複雑な構造のめしべの奥深くにある卵細胞まで、迷うことなく一直線に花粉管が伸びていくことです。
+  このメカニズムには「ルアー」と呼ばれています。分泌することで、あたかも魚を誘き寄せるように、花粉管を誘導するのです。
+  美しい花の奥にはかくもダイナミックで精巧なイベントが行われていたのです。`,
+  images: [
+    {
+      colour: "Forest Green",
+      img: "/image/lure/lure-g1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69321965",
+    },
+    {
+      colour: "Forest Green",
+      img: "/image/lure/lure-g2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69321965",
+    },
+    {
+      colour: "Forest Green",
+      img: "/image/lure/lure-g3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69321965",
+    },
+    {
+      colour: "Forest Green",
+      img: "/image/lure/lure-g4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/69321965",
+    },
+  ],
+};
+
 const embryoT: ItemDatum = {
   id: "embryoT",
   name: "Embryo Dev",
@@ -458,7 +574,6 @@ const S313: ItemDatum = {
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/54830812",
     },
-
   ],
 };
 
@@ -563,7 +678,6 @@ const accessories: ItemDatum = {
       baseLink: "https://littermate.thebase.in/items/54831094",
     },
   ],
-
 };
 
 const alcohol: ItemDatum = {
@@ -610,7 +724,6 @@ const alcohol: ItemDatum = {
       lookOnly: false,
       baseLink: "https://littermate.thebase.in/items/54682635",
     },
-
   ],
 };
 
@@ -1803,6 +1916,9 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  shortDay,
+  abcModel,
+  lure,
   embryoT,
   embryo_Sweat,
   S314_Hoodie,
@@ -1843,19 +1959,58 @@ export const itemsData: ItemDatum[] = [
 export const categoryData: Category[] = [
   {
     category: "T-shirt",
-    items: [S201, S308, S303, S302, S301, TET, Logo, sequence, S311, SmallLogoT, embryoT],
+    items: [
+      S201,
+      S308,
+      S303,
+      S302,
+      S301,
+      TET,
+      Logo,
+      sequence,
+      S311,
+      SmallLogoT,
+      embryoT,
+    ],
   },
   {
     category: "Hoodie",
-    items: [S309_Hoodie, S401_Hoodie, S305, S312_Hoodie, seq_Hoodie, immune, S314_Hoodie],
+    items: [
+      S309_Hoodie,
+      S401_Hoodie,
+      S305,
+      S312_Hoodie,
+      seq_Hoodie,
+      immune,
+      S314_Hoodie,
+      lure,
+    ],
   },
   {
     category: "Sweatshirt",
-    items: [S309_Sweatshirt, falling, S313, SmallLogoSweat, embryo_Sweat],
+    items: [
+      S309_Sweatshirt,
+      falling,
+      S313,
+      SmallLogoSweat,
+      embryo_Sweat,
+      abcModel,
+      shortDay,
+    ],
   },
   {
     category: "Long-sleeve T-shirt",
-    items: [S310, S401, coffee, S307, S304, S312, alcohol, SmallLogoLongT, S314T],
+    items: [
+      S310,
+      S401,
+      coffee,
+      S307,
+      S304,
+      S312,
+      alcohol,
+      SmallLogoLongT,
+      S314T,
+    ],
   },
   {
     category: "Jacket",
@@ -1864,7 +2019,7 @@ export const categoryData: Category[] = [
   {
     category: "Aaccessories",
     items: [accessories],
-  }
+  },
 ];
 
 export const itemData = categoryData.reduce((pre, cur) => {
