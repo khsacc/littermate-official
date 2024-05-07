@@ -4,9 +4,7 @@ import { Theme } from "../../styles/theme";
 import { Social } from "../Common/social";
 import { LittermateLogo } from "../Logo";
 import Link from "next/link";
-import { categoryData } from "../../data/item";
 import { useRouter } from "next/router";
-import * as gtag from "../../plugins/gtag";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -68,10 +66,13 @@ export const MenuContent: NextPage<{
   };
   return (
     <div className={classes.wrapper}>
-      <Link href="/" onClick={() => {
-            toggleOpen();
-          }}>
-          <LittermateLogo className={classes.logo} />
+      <Link
+        href="/"
+        onClick={() => {
+          toggleOpen();
+        }}
+      >
+        <LittermateLogo className={classes.logo} />
       </Link>
       <Social />
 
@@ -86,51 +87,12 @@ export const MenuContent: NextPage<{
         </p>
       </Link>
 
-      {/* {categoryData.map((category, idx) =>
-        router.pathname !== "/" ? (
-          <Link key={idx} href={`/?category=${category.category}`}>
-            <a
-              className={classes.categoryLink}
-              onClick={() => {
-                gtag.logClickEvent({
-                  category: "menu-button",
-                  label: category.category,
-                  route: router.asPath,
-                });
-              }}
-            >
-              {category.category}
-            </a>
-          </Link>
-        ) : (
-          <a
-            key={idx}
-            className={classes.categoryLink}
-            onClick={() => {
-              handleScroll(category.category);
-              gtag.logClickEvent({
-                category: "menu-button",
-                label: category.category,
-                route: router.asPath,
-              });
-            }}
-          >
-            {category.category}
-          </a>
-        )
-      )} */}
-
       {router.pathname !== "/" ? (
         <Link href={`/news`}>
           <p
             className={classes.categoryLink}
             onClick={() => {
               toggleOpen();
-              gtag.logClickEvent({
-                category: "menu-button",
-                label: "news",
-                route: router.asPath,
-              });
             }}
           >
             News
@@ -142,11 +104,6 @@ export const MenuContent: NextPage<{
           onClick={() => {
             toggleOpen();
             handleScroll("news");
-            gtag.logClickEvent({
-              category: "menu-button",
-              label: "news",
-              route: router.asPath,
-            });
           }}
         >
           News

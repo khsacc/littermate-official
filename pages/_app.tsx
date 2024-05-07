@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
@@ -6,8 +6,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "../styles/theme";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import router from "next/router";
-import * as gtag from "../plugins/gtag";
 import { MenuSp } from "../components/Menu/menuSp";
 import { MenuPc } from "../components/Menu/menuPc";
 import { LoadAnim } from "../components/LoadAnim";
@@ -57,21 +55,6 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
-
-  useEffect(() => {
-    if (!gtag.isGaIdSet) {
-      return;
-    }
-
-    const handleRouteChange = (path: string) => {
-      gtag.pageView(path);
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
 
   return (
     <React.Fragment>
