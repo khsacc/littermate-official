@@ -17,6 +17,7 @@
     "ua-parser-js": "^1.0.37"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.19",
     "@types/node": "20.12.7",
     "@types/react": "^18.2.79",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
