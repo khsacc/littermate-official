@@ -145,8 +145,8 @@ const neuralNetworks: ItemDatum = {
 
 const neuralNetworksThreeQuarter: ItemDatum = {
   id: "neuralNetworksThreeQuarter",
-  name: `Neural
-  Networks`,
+  name: `Functional
+  connectivity`,
   kind: "Long Sleeve T-shirt",
   isNew: false,
   comment: `脳内はいくつかの領域に分かれ、異なる処理を専門的に担う領域が、
