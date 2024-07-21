@@ -97,6 +97,7 @@ const useStyles = makeStyles((theme) => {
       top: 0,
       left: "8vw",
       lineHeight: "0.5",
+      whiteSpace: "pre-line",
       [theme.breakpoints.up(540)]: {
         fontSize: 120,
         // transform: `rotate(-90deg) translateX(-22%) translateY(-32%)`,
@@ -229,11 +230,13 @@ export const ItemComponent: NextPage<{ datum: ItemDatum }> = ({ datum }) => {
         </ul>
 
         <Link href={`/item/${datum.id}`} scroll={true}>
-            <div className={classes.imgContainer}
-              style={{
-                backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
-              }}></div>
-            <ViewMore className={classes.more} />
+          <div
+            className={classes.imgContainer}
+            style={{
+              backgroundImage: `url(${displayData.topImages[currentDataIndex].img})`,
+            }}
+          ></div>
+          <ViewMore className={classes.more} />
         </Link>
       </div>
     </>

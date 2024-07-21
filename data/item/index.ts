@@ -25,9 +25,209 @@ export type Category = {
   items: ItemDatum[];
 };
 
+const neuralNetworks: ItemDatum = {
+  id: "neuralNetworks",
+  name: `Musicophilia`,
+  kind: "Long Sleeve T-shirt",
+  isNew: false,
+  comment: `脳内の情報処理は、脳神経の電気的な活動の連鎖で行われます。
+  科学者は様々な方法で、この電気的なシグナルを測定することで、脳の活動を捉えます。
+  それにより、音楽を聴いた時の様々な脳の反応がわかってきました。
+
+  例えば、ある特定の周波数の音を聴いた時、脳がその周波数に合わせた脳波を出すという、ASSR (聴性定常反応) が知られています。
+
+  常に様々な武器を駆使して、科学者は生命現象を顕にしようとしているのです。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/neuralNetworks/neuralNetworks-black1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859860",
+    },
+    {
+      colour: "Black",
+      img: "/image/neuralNetworks/neuralNetworks-black2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859860",
+    },
+    {
+      colour: "Black",
+      img: "/image/neuralNetworks/neuralNetworks-black3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859860",
+    },
+    {
+      colour: "Black",
+      img: "/image/neuralNetworks/neuralNetworks-black4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859860",
+    },
+    {
+      colour: "Black",
+      img: "/image/neuralNetworks/neuralNetworks-black5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859860",
+    },
+    {
+      colour: "Black",
+      img: "/image/neuralNetworks/neuralNetworks-black6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859860",
+    },
+    {
+      colour: "Blue",
+      img: "/image/neuralNetworks/neuralNetworks-blue1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859877",
+    },
+    {
+      colour: "Blue",
+      img: "/image/neuralNetworks/neuralNetworks-blue2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859877",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w4.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w5.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w6.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworksCap-1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88860075",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w7.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+    {
+      colour: "White",
+      img: "/image/neuralNetworks/neuralNetworks-w8.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88858520",
+    },
+  ],
+};
+
+const neuralNetworksThreeQuarter: ItemDatum = {
+  id: "neuralNetworksThreeQuarter",
+  name: `Neural
+  Networks`,
+  kind: "Long Sleeve T-shirt",
+  isNew: false,
+  comment: `脳内はいくつかの領域に分かれ、異なる処理を専門的に担う領域が、
+  互いにネットワークを形成して複雑な処理を行なっています。
+
+  科学者は脳の電気的なシグナルを測定することで、それぞれの部位の役割や関係性を紐解きます。
+  それにより、音楽を聴いた時の反応を司る様々な脳領域がわかってきました。
+
+  例えば、ある特定の周波数の音を聴いた時、脳がその周波数に合わせた脳波を出すという、ASSR (聴性定常反応) が知られていますが、
+  これは聴覚皮質や脳幹などの部位が、周波数ごとに役割分担をしながら処理しています。
+
+  常に様々な武器を駆使して、科学者は生命現象を顕にしようとしているのです。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/neuralNetworksThreeQuarter/neuralNetworksThreeQuarter-1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859903",
+    },
+    {
+      colour: "Black",
+      img: "/image/neuralNetworksThreeQuarter/neuralNetworksThreeQuarter-2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859903",
+    },
+  ],
+};
+
+const S315: ItemDatum = {
+  id: "S315",
+  name: "S315",
+  kind: "T-shirt",
+  isNew: false,
+  comment: `音楽を聴いているとき、脳はその旋律を予測します。
+  これは頭に接地した脳波計で測ることができ、
+  予想通りの音が続くときには、振れ幅の小さい波形を見ることができます。
+
+  しかし、予測とは異なる音が提示されると脳は反応を示し、
+  MMN (Mismatch Negativity) と言われる脳波の反応を
+  ディスプレイ上で観察することができます。
+
+  音楽に関するMMNは、音楽の専門家と非専門家で異なる反応を示すことも報告されています。
+  古来より"心"を動かす音楽を、実は私たちは無機質で工学的な仕組みで聴いているのかもしれません。`,
+  images: [
+    {
+      colour: "Black",
+      img: "/image/S315/s315-b1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859938",
+    },
+    {
+      colour: "Black",
+      img: "/image/S315/s315-b3.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859938",
+    },
+    {
+      colour: "White",
+      img: "/image/S315/s315-w1.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859949",
+    },
+    {
+      colour: "White",
+      img: "/image/S315/s315-w2.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859949",
+    },
+    {
+      colour: "Black",
+      img: "/image/S315/s315.jpg",
+      lookOnly: false,
+      baseLink: "https://littermate.thebase.in/items/88859949",
+    },
+  ],
+};
+
 const shortDay: ItemDatum = {
   id: "shortDay",
-  name: "Short-day plant",
+  name: `Short-day
+  plant`,
   kind: "Sweatshirt",
   isNew: false,
   comment: `花はその多様さ故に季節によって世界を全く異なる風景に彩ります。
@@ -1916,6 +2116,9 @@ const S310: ItemDatum = {
 };
 
 export const itemsData: ItemDatum[] = [
+  neuralNetworks,
+  neuralNetworksThreeQuarter,
+  S315,
   shortDay,
   abcModel,
   lure,
@@ -1971,6 +2174,8 @@ export const categoryData: Category[] = [
       S311,
       SmallLogoT,
       embryoT,
+      S315,
+      neuralNetworks,
     ],
   },
   {
@@ -2010,6 +2215,8 @@ export const categoryData: Category[] = [
       alcohol,
       SmallLogoLongT,
       S314T,
+      neuralNetworks,
+      neuralNetworksThreeQuarter,
     ],
   },
   {
