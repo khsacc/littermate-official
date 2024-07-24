@@ -1,5 +1,10 @@
 export const NewsList = [
   {
+    id: "2023-cognicode",
+    title:
+      "Littermate初となるアートイベント「Cognicode」 2023年12月2日(土)〜12月3日(日)",
+  },
+  {
     id: "2022-spring-popup",
     title: "新宿マルイでの期間限定POPUP 2022年3月8日(火)〜3月27日(日)",
   },
