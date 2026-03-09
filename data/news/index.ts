@@ -1,5 +1,10 @@
 export const NewsList = [
   {
+    id: "2026-anthro-evol",
+    title:
+      "アートイベント「Anthro Ëvol」 2026年4月11日(土)〜4月12日(日)",
+  },
+  {
     id: "2023-cognicode",
     title:
       "Littermate初となるアートイベント「Cognicode」 2023年12月2日(土)〜12月3日(日)",
