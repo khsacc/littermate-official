@@ -3,6 +3,7 @@ import { SpringPopupNews } from "./content/2022-spring-popup";
 import { HatchPopupNews } from "./content/2021-hatch-popup";
 import { PopupNews } from "./content/2021-summer-popup";
 import { CognicodeNews } from "./content/2023-cognicode";
+import { AnthroEvolNews } from "./content/2026-anthro-evol";
 
 export const NewsContents: { id: string; content: NextPage }[] = [
   {
@@ -20,5 +21,9 @@ export const NewsContents: { id: string; content: NextPage }[] = [
   {
     id: "2023-cognicode",
     content: CognicodeNews,
+  },
+  {
+    id: "2026-anthro-evol",
+    content: AnthroEvolNews,
   },
 ];
