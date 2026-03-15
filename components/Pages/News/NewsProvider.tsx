@@ -7,6 +7,14 @@ const useStyles = makeStyles((theme) => {
   return {
     wrap: {
       padding: 20,
+      "& ul": {
+        margin: "0.5em 0",
+        paddingLeft: "1.5em",
+        listStyleType: "disc",
+      },
+      "& li": {
+        margin: "0.25em 0",
+      },
     },
 
     newsLetter: {
@@ -22,6 +30,7 @@ const useStyles = makeStyles((theme) => {
       fontSize: 40,
       textAlign: "center",
       // padding: 20,
+      whiteSpace: "pre-wrap",
     },
   };
 });

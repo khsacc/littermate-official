@@ -40,12 +40,9 @@ export const AnthroEvolNews: NextPage = () => {
       <ul>
         <li> 期間：2026年4月11日(土)〜4月12日(日)</li>
         <li> 時間：4/11 12:00〜19:00 ／ 4/12 10:00〜19:00 </li>
-        <li>
-          場所：東京都渋谷区南平台8-11 2F Conteiner Graphic Gallary
-          <br />
-          <img src="/image/news/anthro-evol.png" className={classes.map} />
-        </li>
+        <li>場所：東京都渋谷区南平台8-11 2F Conteiner Graphic Gallary</li>
       </ul>
+      <img src="/image/news/anthro-evol.png" className={classes.map} />
     </>
   );
 };
